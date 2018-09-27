@@ -15,8 +15,15 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
+
+// If deployed, use the deployed database. Otherwise use the local articles database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ontap";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
+var db = require('./models');
 
 // Start the API server
 app.listen(PORT, function() {
