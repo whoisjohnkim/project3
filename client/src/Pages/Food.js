@@ -1,9 +1,11 @@
-import React from "react";
+import React, {Component} from 'react';
+class Food extends Component {
 
-const Food = () => (
-    <div>
-        <h1>Test</h1>
-    </div>
-);
+    render() {
+        return (
+            <div>FOOOOOOOOOD</div>
+        )
+    }
+}
 
 export default Food;
