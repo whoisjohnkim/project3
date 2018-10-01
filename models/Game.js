@@ -12,7 +12,7 @@ var GamesSchema = new Schema({
     },
     // Description of the game is required and type String
     description: {
-        type: String,
+        type: Array,
         required: true,
         unqiue: true
     },
