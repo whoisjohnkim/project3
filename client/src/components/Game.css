@@ -1,0 +1,14 @@
+.games-img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(20,20,20, .3), 
+        rgba(20,20,20, .3)),
+        url("../images/playing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+}

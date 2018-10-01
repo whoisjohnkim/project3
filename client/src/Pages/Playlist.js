@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 
-class Guides extends Component {
+class Playlist extends Component {
     render() {
         return (
             <div>
-                <div>GUIDES</div>
+                PLAYLIST
             </div>
         )
     }
 }
 
-export default Guides;
+export default Playlist;
