@@ -9,7 +9,7 @@ class Game extends Component {
         return (
             <div>
                 <div class="games-img">
-                <p id= "game"> Game </p>
+                <p id= "game"> just the tipsy </p>
                 </div>
             </div>
         )
