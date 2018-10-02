@@ -2,10 +2,16 @@ import React, {Component} from "react";
 import "../components/Game.css";
 import Navbar from "../components/Navbar";
 import playing from "../images/playing.jpg";
- 
+
 
 
 class Game extends Component {
+    state =  {
+        turns: [],
+        order: []
+    };
+
+
     render () {
         return (
             <div>
