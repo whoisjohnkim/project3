@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import Navbar from "../components/Navbar";
+
 class Food extends Component {
 
     render() {
         return (
-            <div>FOOOOOOOOOD</div>
+            <div>
+                <Navbar />
+            </div>
         )
     }
 }
