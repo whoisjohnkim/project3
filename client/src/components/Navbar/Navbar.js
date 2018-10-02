@@ -2,6 +2,10 @@ import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+
+
 
 class Navbar extends Component {
 
@@ -12,23 +16,52 @@ class Navbar extends Component {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
-
+           
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                 <a className="nav-link" href="/home/game">GAME</a>
                 </li>
-                <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/home/guides" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    GUIDE
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="/">Action</a>
-                    <a className="dropdown-item" href="/">Another action</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="/">Something else here</a>
-                </div>
-                </li>
+
+                <UncontrolledDropdown>
+                <DropdownToggle caret>
+                {/* <a className="nav-link" href="/home/guide">GUIDE</a> */}
+                <a className="nav-link" href="/home/guide">GUIDE </a>
+                </DropdownToggle>
+                <DropdownMenu>
+                    <center>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/kingscup">KING'S CUP</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                        <a className="nav-link" href="/home/waterfall">WATERFALL</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/beerpong">BEER PONG</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/21cup">21 CUP</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/odds">ODDS</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/skullanddice">SKULL AND DICE</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/cheerstothegovernor">CHEERS TO THE GOVERNOR</a>
+                    </DropdownItem>
+                    </center>
+                </DropdownMenu>
+            </UncontrolledDropdown>
+
                 <li className="nav-item">
                 <a className="nav-link" href="/home/playlist">PLAYLIST</a>
                 </li><li className="nav-item">
@@ -41,6 +74,8 @@ class Navbar extends Component {
             </form>
             </div>
         </nav>
+
+        
         );
     }
 }
