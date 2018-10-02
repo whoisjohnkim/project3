@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "../components/BeerPong.css";
-import prettybp from "../images/prettybp.jpg";
+// import prettybp from "../images/prettybp.jpg";
 
 class BeerPong extends Component {
     render() {

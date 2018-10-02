@@ -5,7 +5,7 @@ module.exports = {
     // Returns all static games in the database
     findAll: function(req, res) {
         db.Games
-            .find(req.query)
+            .find(req.body)
             .then(dbModel =>res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
@@ -28,7 +28,7 @@ module.exports = {
         db.Games
             .findById({_id: req.params.id})
             .then(dbModel => dbModel.remove())
-            .then(dbMdoel => res.json(dbModel))
+            .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     // Update a static game based on ID
