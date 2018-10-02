@@ -14,8 +14,8 @@ class OnTap extends Component {
     render() {
         return (
             <div> 
-                <div class="bg-img">
-                <div class="loadingContent">
+                <div className="bg-img">
+                <div className="loadingContent">
                 {/* <img id= "logo" src={require('../images/OnTapLogo.svg')} /> */}
                 <img id= "circle" src={require('../images/circle.png')} />
                 <p id= "ontapword"> ON TAP </p>
