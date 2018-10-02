@@ -9,6 +9,29 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 70px;
+    color: white;
+}
+
+.dropdown {
+    margin-top: 3%;
+    margin-left: 42%;
+}
+
+.btn-lg{
+    font-size: 1.7rem;
+    background-color: transparent;
+    color: white;
+
+}
+.dropdown-menu {
+    margin-left: 4%;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+}
+.dropdown-item {
+    color: white;
 
 }
