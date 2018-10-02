@@ -21,12 +21,12 @@ var GamesSchema = new Schema({
         type: Number,
         required: true,
         default: 0
-    },
-    picture: {
-        type: String,
-        required: true,
-        unique: true
     }
+    // picture: {
+    //     type: String,
+    //     required: true,
+    //     unique: true
+    // }
 });
 
 // Create model from above schema

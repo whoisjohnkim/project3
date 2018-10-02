@@ -21,8 +21,7 @@ const gamesSeed = [
 
         "5. Whoever says 21 gets to make up a new rule. New rules can be things like, 'whoever says 5 has to drink', 'number 10 says the pledge of allegiance', etc. The only limit is your imagination.",
         ],
-        rating: 3,
-        picture: "../client/src/images/"
+        rating: 3
     },
     {
         title: "King's Cup",
