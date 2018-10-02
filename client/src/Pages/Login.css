@@ -1,0 +1,11 @@
+#left {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+#right {
+    postion: relative;
+    float: right;
+    width: 50%;
+}

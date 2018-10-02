@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import OnTap from './Pages/OnTap';
 import Home from './Pages/Home';
+import Login from './components/Login/Login';
+// import Navbar from "./components/Navbar";
 import Game from './Pages/Game';
 import Guides from './Pages/Guides';
 import Food from './Pages/Food';
@@ -17,6 +19,7 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={OnTap} />
+            <Route exact path="/login" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/home/game" component={Game} />
             <Route exact path="/home/guides" component={Guides} />
