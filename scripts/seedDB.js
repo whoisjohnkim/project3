@@ -14,14 +14,14 @@ const gamesSeed = [
         "1. Everyone goes around in a circle and take turns counting to 21.",
 
         "2. The only thing you need to know is that you start off with a base rule (I explain this in more detail in a section later in this article).",
-        
+
         "3. Whoever messes up has to drink, and the round starts back at the number 1." ,
-        
+
         "4. When someone gets to 21, they say 'cheers to the governor!' Everyone raises their glasses and drinks.",
-        
+
         "5. Whoever says 21 gets to make up a new rule. New rules can be things like, 'whoever says 5 has to drink', 'number 10 says the pledge of allegiance', etc. The only limit is your imagination.",
         ],
-        rating: 3  
+        rating: 3
     },
     {
         title: "King's Cup",
@@ -112,55 +112,55 @@ const gamesSeed = [
         "Beer Pong Rules",
 
         "Although there are currently no 'official' beer pong rules, we’ve provided a skeleton below with the most basic, commonly accepted rules. Feel free to add, subtract, or alter these rules when you play with your friends.",
-        
+
         "Start Your Beer Pong Game:",
 
         "One player from each team is selected to take an initial shot to determine which team goes first in the actual game.",
-        
+
         "While looking each other in the eye, the chosen opposing players count to three and take a shot at the same time. If only one of them makes the shot, their team goes first. If they both make or miss their shot, players go again.",
-        
+
         "After the first game, the winning team gets the first shot.",
-        
+
         "Turns:",
 
         "Each beer pong team shoots twice per turn; each player taking one shot. If both players make their shot, “throwbacks” are given, and that team receives another turn.",
-        
+
         "Shooting:",
 
         "The ball can be tossed or bounced into the cup.",
-        
+
         "A tossed ball that sinks is worth one cup (the cup it lands in). A bounced shot that sinks is worth two cups (the one in which the shot was made and another from the pyramid)",
-        
+
         "There’s a catch: the defending (non-throwing) team may block a bounced ball once it hits the table, whereas tossed shots are indefensible.",
-        
+
         "Sinking Cups",
         "A beer pong cup is “sunk” as soon as the ball touches the contents of the cup.",
-        
+
         "Any cup that is sunk must be immediately removed from the table and the defending team is responsible for drinking its contents. Team members alternate drinking.",
-        
+
         "Warning: Watch your cups that have been sunk but are left undrank. If the opposing team sinks a ball in the cup you’re drinking from, it’s game over.",
-        
+
         "If one cup is sunk, and the next player shoots, hitting the same cup, that also ends the game.",
-        
+
         "Any cups accidentally knocked over are considered sunk.",
-        
+
         "Re-Racking",
         "A team is allowed to request a “re-rack” at the end of a turn, in order to maintain a compact shape.",
-        
+
         "Each team gets two re-racks per game, which can be used at almost any time*. The standard beer pong rule is to take one re-rack with 6 cups remaining, and the other when 2 or 3 cups remain. Note: if you’re playing beer pong with 6 cups each – there is one re-rack allowed per team, per game.",
-        
+
         "You can not re-rack if you’re shooting during 'throwbacks'"
-        
-        *"You can not re-rack during a 'redemption round'", 
-        
+
+        *"You can not re-rack during a 'redemption round'",
+
         "Game Ending Situations",
 
         "When a team eliminates the last beer pong cup of the opposing team, they haven’t won yet. The defending team has a “redemption round” where each player gets a turn. Redemption rounds are shoot until you miss. If the defending team sinks the remaining cups in the redemption round, overtime is forced. If the team is not able to force the game into overtime, they lose and are responsible for drinking the contents of the remaining team’s cups in addition to their own remaining cups.",
-        
+
         "Overtime",
 
         "Should the game be forced into overtime, each team sets up three cups in a triangle and fills them with beer. The team who hit the last cup to force the overtime shoots first.",
-        
+
         "Overtime is played like a normal game (without re-racks), and double or triple overtime may be necessary, until one team wins.",
         ],
         rating: 20
@@ -189,16 +189,16 @@ const gamesSeed = [
 
         "Then person C counts down from 3, and persons A and B say a number between 1 and 20, or whatever person B dictated as the odds. IF you both say the same number, person B must do the thing.",
 
-        "Example:", 
-        
+        "Example:",
+
         "'Hey Nick, what are the odds you'll cut a huge clump of your hair off right now?'",
-        
+
         "'1 in 30' 3 2 1",
-        
+
         "'17'",
-        
+
         "'17!'",
-        
+
        "Nick has to cut his hair.",
         ],
         rating: -2
@@ -209,23 +209,23 @@ const gamesSeed = [
         "This game happens very fast, so you have to be very alert!",
 
         "Step 1: You need to make sure you have your dice in hand.",
-        
+
         "Step 2: Make sure that all players understand the scoring system / rules as you don't want anyone complaining that they didn't understand when they 'fail'(I've listed the rules below).",
-        
+
         "Step 3: Make sure that there is plenty of alcohol and mixers on deck (avoid playing with shots).",
-        
-        "Step 4: All players need to sit in a circle - there should be at least four players.", 
-        
+
+        "Step 4: All players need to sit in a circle - there should be at least four players.",
+
         "Next, the host shouts 'SKULL' and everyone has to drink whatever is in front of them. Each player then rolls the dice in turn clockwise.",
-        
+
         "The rules are as follows:",
-        
+
         "If a player rolls a '1' or '6' he/she has to drink.",
-        
+
         "If a '2' or '4' is rolled, the player is safe and doesn't have to drink.",
-        
+
         "If a '3' is rolled, the player has to take two gulps from their drink and roll again. If that player rolls another drink, then he shouts 'SKULL' and everyone playing has to drink.",
-        
+
         "If a '5' is rolled, then that player chooses another player to drink.",
         ],
         rating: 100
