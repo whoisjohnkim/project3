@@ -1,20 +1,16 @@
 import React, {Component} from "react";
 import Navbar from "../components/Navbar";
 import "../components/Game.css";
+import token1 from "../images/onePixel.png";
+import token2 from "../images/twoPixel.png";
+import token3 from "../images/threePixel.png";
+import token4 from "../images/fourPixel.png";
+import token5 from "../images/fivePixel.png";
  
 
 
 class Game extends Component {
-    state = {
-        isOpen: false
-    };
-
-    toggleOpen = () => this.setState({
-        isOpen: !this.state.isOpen
-    });
-
     render () {
-        const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""} text-center`;
         return (
             <div>
                 <Navbar />
@@ -22,18 +18,25 @@ class Game extends Component {
                     <div className="row">
                         <div className="col-md-6 offset-md-3 text-center">Who's Playing?</div>
                     </div>
-                        <div className="dropdown" onClick={this.toggleOpen}>
-                            <button className="btn dropdown-toggle text-center btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Players!
-                            </button>
-                            <div className= {menuClass} aria-labelledby="dropdownMenuButton">
-                                <a className="dropdown-item rounded" href="#nogo">One</a>
-                                <a className="dropdown-item rounded" href="#nogo">Two</a>
-                                <a className="dropdown-item rounded" href="#nogo">Three</a>
-                                <a className="dropdown-item rounded" href="#nogo">Four</a>
-                                <a className="dropdown-item rounded" href="#nogo">Five</a>
-                            </div>                          
-                        </div>
+
+                    <div className="btn-group stage" role="group" aria-label="Basic example">
+                        <button type="button" className="btn btn-secondary">
+                            <img className="spinner" src={token1} alt="one token" width="100px" />
+                        </button>
+                        <button type="button" className="btn btn-secondary">
+                            <img className="spinner" src={token2} alt="one token" width="100px" />
+                        </button>
+                        <button type="button" className="btn btn-secondary">
+                            <img className="spinner" src={token3} alt="one token" width="100px" />
+                        </button>
+                        <button type="button" className="btn btn-secondary">
+                            <img className="spinner" src={token4} alt="one token" width="100px" />
+                        </button>
+                        <button type="button" className="btn btn-secondary">
+                            <img className="spinner" src={token5} alt="one token" width="100px" />
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         )
