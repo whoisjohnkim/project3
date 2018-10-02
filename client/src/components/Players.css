@@ -1,0 +1,73 @@
+.games-img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(20,20,20, .3), 
+        rgba(20,20,20, .3)),
+        url("../images/playing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 70px;
+    color: white;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+/* for starting the 3d effects! */
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+
+  .stage {
+    margin: 1em auto;
+    margin-left: 26%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+  .spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3.5s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3.5s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
