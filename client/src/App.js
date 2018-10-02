@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import OnTap from './Pages/OnTap';
 import Home from './Pages/Home';
-// import Games from './Pages/Games';
+// import Game from './Pages/Game';
 // import Guides from './Pages/Guides';
 // import Food from './Pages/Food';
 // import Playlist from './Pages/Playlist';
