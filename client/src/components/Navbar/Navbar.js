@@ -36,10 +36,6 @@ class Navbar extends Component {
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
-                        <a className="nav-link" href="/home/waterfall">WATERFALL</a>
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
                     <a className="nav-link" href="/home/beerpong">BEER PONG</a>
                     </DropdownItem>
                     <DropdownItem divider />
@@ -48,7 +44,19 @@ class Navbar extends Component {
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
+                    <a className="nav-link" href="/home/flipcup">FLIP CUP</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
                     <a className="nav-link" href="/home/odds">ODDS</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/titanic">TITANIC</a>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                    <a className="nav-link" href="/home/stackcup">STACK CUP</a>
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
