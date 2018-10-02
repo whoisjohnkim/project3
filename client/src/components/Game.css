@@ -13,10 +13,47 @@
     
 }
 
+ #container-game {
+
+
+} 
+
 #game {
-    margin-top: 16%;
+    display: inline;
+    margin-top: 17%;
     margin-left: 30%;
     color: white;
     font-size: 100px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,  
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+     /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: grey; */ 
+    
+
+
+}
+
+#tipsy {
+    font-size: 120px;
+    color: rgb(124, 193, 240);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 15.6%;
+    margin-left: 20px;
     letter-spacing: 3px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:white;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,  
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+
+
+
 }
