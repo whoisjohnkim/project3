@@ -21,14 +21,23 @@
   },
   "dependencies": {
     "api": "^1.0.0",
+    "bcrypt": "^3.0.1",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+<<<<<<< HEAD
+    "express-router": "^0.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.17",
+    "nodemon": "^1.18.4",
+    "react-router": "^4.3.1",
+=======
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.17",
     "nodemon": "^1.18.4",
     "react-simple-dropdown": "^3.2.3",
     "reactstrap": "^6.4.0",
+>>>>>>> master
     "yarn": "^1.10.1"
   }
 }
