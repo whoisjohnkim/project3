@@ -2,27 +2,33 @@ import React, {Component} from "react";
 import Navbar from "../components/Navbar";
 import "../components/Guides.css";
 
-
 import API from "../utils/API";
 
-class Guides extends Component {
+class Guide extends Component {
     state = {
-        guides: [],
+        title: "",
+        rating: 0,
+        description: [],
         id: ""
     };
 
     componentDidMount() {
-        this.loadGuides();
+        console.log(this.props.match.params.id);
+        this.loadGuide();
     };
 
-    loadGuides = () => {
-        API.getGames()
-            .then(res =>
-                this.setState({guides: res.data})
+    loadGuide = () => {
+        API.getGame(this.props.match.params.id)
+            .then(res => {
+                this.setState({id: this.props.match.params.id, title: res.data.title, rating: res.data.rating, description: res.data.description});
+                // console.log(this.state.title);
+                // console.log(this.state.rating);
+                // console.log(this.state.description);
+            }
+
             )
             .catch(err => console.log(err));
     };
-
 
     render() {
         return (
@@ -30,21 +36,19 @@ class Guides extends Component {
                 <Navbar />
                 <div className="guides-img">
                 </div>
-                Games:
                 <ul>
-                    {this.state.guides.map(guide => (
                         <li>
                             <ul>
                                 <li>
-                                    Title: {guide.title}
+                                    Title: {this.state.title}
                                 </li>
                                 <li>
-                                    Rating: {guide.rating}
+                                    Rating: {this.state.rating}
                                 </li>
                                 <li>
                                     Directions
                                     <ul>
-                                        {guide.description.map(step=> (
+                                        {this.state.description.map(step=> (
                                             <li>
                                                 {step}
                                             </li>
@@ -54,11 +58,10 @@ class Guides extends Component {
                                 </li>
                             </ul>
                         </li>
-                    ))}
                 </ul>
             </div>
         );
     };
 };
 
-export default Guides;
+export default Guide;
