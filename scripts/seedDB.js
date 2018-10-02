@@ -14,7 +14,7 @@ const gamesSeed = [
         "1. Everyone goes around in a circle and take turns counting to 21.",
 
         "2. The only thing you need to know is that you start off with a base rule. Whenever I play Cheers to the Governor, we always have a starting rule. A starting rule is just a rule that starts the game off. An example of a starting rule would be 'replacing 7 with 14 and 14 with 7', doing an action instead of saying a number, etc.",
-        
+
         "3. Whoever messes up has to drink, and the round starts back at the number 1." ,
 
         "4. When someone gets to 21, they say 'cheers to the governor!' Everyone raises their glasses and drinks.",
@@ -205,23 +205,23 @@ const gamesSeed = [
         "Arrange the Cups, line up the plastic Solo cups along each side of the table so that each side has the same number of cups. Two cups for each player.",
 
         "There are two teams in flip cup: one on each side of the table, each team should have an equal number of players.",
-        
+
         "Fill each cup up between 1/4, and 1/2 of the way full with beer, try to keep each cup around the same amount to keep the game fair.",
-        
+
         "Players take turns drinking the beer in their cup, then flipping the empty cup on the edge of the table until it lands perfectly upside down on the tabletop.",
-        
-        "Make sure everyone knows which direction the flipping will go. This game is a relay race and each round of flip cup always begins and ends at the same end of the table.", 
-        
+
+        "Make sure everyone knows which direction the flipping will go. This game is a relay race and each round of flip cup always begins and ends at the same end of the table.",
+
         "The first player for each team drinks their beer as fast as they can from their first cup. When you finish your beer set the empty cup on the edge of the table, open side up, so that it slightly hands off the edge.",
-        
+
         "Flip the cup. Use your finger to flick the bottom of the cup, flipping it into the air. Try to tap lightly enough that the cup only flips over 180 degrees. You want the cup to land on the table open side down. If the cup doesn't land correctly, keep trying until you get it right.",
-        
+
         "Once the first teammate successfully flips their cup, the next player on their team starts drinking, and attempts to flip their cup. Continue down the line until it hits the last player.",
-        
+
         "The last player in line for each team is known as the 'Anchor' this is because they have to drink twice in a row. The anchor must complete the above steps back to back.",
-        
+
         "After the anchor finishes their turn the relay continues back down the line until it reaches the players who originally started the game.",
-        
+
         "The first team to finish, and successfully flip their cups is the winner!",
         ],
         rating: 45
@@ -232,15 +232,15 @@ const gamesSeed = [
         "You will need a solo cup, beer, a shot class, and Soju or Vodka.",
 
         "Everyone playing should sit on the floor in a circle.",
-        
+
         "Fill the cup about halfway with beer, then place the shot glass in the cup. The shot glass should float, not sink.",
-        
+
         "Place the cup in the middle of the circle, everyone should take turns with the bottle of Soju/Vodka and pour at least one drop into the shot glass.",
-        
-        "Try to pour as little as possible, as the shot glass fills it will move down into the beer.", 
-        
+
+        "Try to pour as little as possible, as the shot glass fills it will move down into the beer.",
+
         "Whoever sinks the Titanic(shot glass) has to drink the mixture in one shot.",
-        
+
         "This game is a ton of fun with friends, especially because there is usually one person in the group who is awful at it, and provides a good laugh!",
         ],
         rating: 25
@@ -251,29 +251,29 @@ const gamesSeed = [
         "This game is best played with a round table, but can be played on any table.",
 
         "You need 3+ players(the more the merrier), a table, beer, 20-30 solo cups, and 2 ping-pong balls.",
-        
+
         "Start by setting two cups aside, and then filling another cup all the way up(death cup), place this cup at the center of the table",
-        
-        "Fill the remaining cups with 1/4th of the way up, and then placing them around the death cup.", 
-        
+
+        "Fill the remaining cups with 1/4th of the way up, and then placing them around the death cup.",
+
         "The two starting players should be directly across from one another at the table, each should have a ping-pong ball, and one of the earlier set aside cups.",
-        
+
         "Start! Players will both attempt to bounce their ball into the empty cup in front of them, and pass to the left once their shot is made. If a player makes it into the cup on their first shot they may pass to any player(not already shooting).",
-        
+
         "If the player directly to your left is still shooting when you make a cup, stack your cup on theirs and pass the stack and ball to the player on his left!",
-        
+
         "If you get passed/stacked you must take a cup from the center and drink it, once you have finished your drink continue to try and make your ball into the new cup. Be quick though, as the player to your left does not wait for you to finish! ",
 
         "This game increases in difficulty(and fun) as the stack grows, making it harder to easily make a shot into the stack. Since cups are stacked throughout the game, people who are “passed” have somewhat of an advantage to help them catch up",
-        
+
         "The player to get passed/stacked when only the death cup remains is the loser(winner) and must finish the entire cup.",
 
         " **Pro tip: As mentioned before, bouncing the ping-pong ball into the Solo Cup on your first attempt earns you the right to choose who you will pass the Solo Cup and ping-pong ball to.  Most people will pass it to the player directly to the right or left of whoever is currently bouncing the other ping-pong ball.  That way, the pressure is on and someone usually ends up drinking!",
-        
+
         ],
         rating: 50
     }
-    
+
 ]
 
 db.Games

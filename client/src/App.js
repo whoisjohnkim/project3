@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 // import Navbar from "./components/Navbar";
 import Game from './Pages/Game';
 import Guides from './Pages/Guides';
+import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
 // import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/home" component={Home} />
             <Route exact path="/home/game" component={Game} />
             <Route exact path="/home/guides" component={Guides} />
+            <Route exact path="/home/guides/:id" component={Guide} />
             <Route exact path="/home/food" component={Food} />
             <Route exact path="/home/playlist" component={Playlist} />
           </Switch>
