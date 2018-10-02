@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import OnTap from './Pages/OnTap';
 import Home from './Pages/Home';
-// import Games from './Pages/Games';
+import Login from './components/Login/Login';
+// import Game from './Pages/Game';
 // import Guides from './Pages/Guides';
 // import Food from './Pages/Food';
 // import Playlist from './Pages/Playlist';
@@ -17,6 +18,7 @@ class App extends Component {
       <Router>
           <Switch>
               <Route exact path="/" component={OnTap} />
+              <Route exact path="/login" component={Login} />
               <Route path="/home" component={Home} />
           </Switch>
       </Router>

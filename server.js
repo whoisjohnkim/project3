@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+// const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
 
 
 // If deployed, use the deployed database. Otherwise use the local articles database
@@ -53,8 +53,8 @@ app.post("/api/register", (req, res) => {
 });
 
 
-// Signin Route
-app.post("/api/signin", (req, res) => {
+// Login Route
+app.post("/api/login", (req, res) => {
   if(!req.body.email || !req.body.password){
       return res.json({success: false, message: "Missing Username or Password"});
   }

@@ -14,13 +14,13 @@ var UsersSchema = new Schema({
     password: {
         type: String,
         required: true,
-        unqiue: true
+        unqiue: false
     },
     // Game rating is required and type Int
     topScore: {
         type: Number,
         required: true,
-        unique: true,
+        unique: false,
         default: 0
     }
 })
