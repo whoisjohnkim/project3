@@ -1,4 +1,8 @@
 import React, {Component} from "react";
+import Navbar from "../components/Navbar";
+import "../components/Guides.css";
+
+
 import API from "../utils/API";
 
 class Guides extends Component {
@@ -25,6 +29,9 @@ class Guides extends Component {
     render() {
         return (
             <div>
+                <Navbar />
+                <div className="guides-img">
+                </div>
             Games:
             <ul>
                 {this.state.guides.map(guide => (
@@ -51,8 +58,8 @@ class Guides extends Component {
                 ))}
             </ul>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Guides;
