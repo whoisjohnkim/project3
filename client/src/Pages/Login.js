@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {Component} from 'react';
 class Login extends Component {
 
@@ -29,5 +30,14 @@ class Login extends Component {
         )
     }
 }
+=======
+import React from "react";
+
+const Login = () => (
+    <div>
+        <h1>Test</h1>
+    </div>
+);
+>>>>>>> master
 
 export default Login;
