@@ -5,28 +5,23 @@ var Schema = mongoose.Schema;
 
 var UsersSchema = new Schema({
     // `title` is required and of type String
-    title: {
+    email: {
         type: String,
         required: true,
         unique: true
     },
     // Description of the game is required and type String
-    description: {
+    password: {
         type: String,
         required: true,
         unqiue: true
     },
     // Game rating is required and type Int
-    rating: {
+    topScore: {
         type: Number,
         required: true,
         unique: true,
         default: 0
-    },
-    // An Array containing turns for the user
-    turns: {
-        type: Array,
-        required: true,
     }
 })
 
