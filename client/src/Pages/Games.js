@@ -1,9 +1,9 @@
 import React from "react";
 
-const Login = () => (
+const Games = () => (
     <div>
         <h1>Test</h1>
     </div>
 );
 
-export default Login;
+export default Games;

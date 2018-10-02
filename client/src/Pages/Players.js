@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Navbar from "../components/Navbar";
-import "../components/Game.css";
+import "../components/Players";
 import token1 from "../images/onePixel.png";
 import token2 from "../images/twoPixel.png";
 import token3 from "../images/threePixel.png";
