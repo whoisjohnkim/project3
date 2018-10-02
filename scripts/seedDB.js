@@ -13,8 +13,8 @@ const gamesSeed = [
         description: [
         "1. Everyone goes around in a circle and take turns counting to 21.",
 
-        "2. The only thing you need to know is that you start off with a base rule (I explain this in more detail in a section later in this article).",
-
+        "2. The only thing you need to know is that you start off with a base rule. Whenever I play Cheers to the Governor, we always have a starting rule. A starting rule is just a rule that starts the game off. An example of a starting rule would be 'replacing 7 with 14 and 14 with 7', doing an action instead of saying a number, etc.",
+        
         "3. Whoever messes up has to drink, and the round starts back at the number 1." ,
 
         "4. When someone gets to 21, they say 'cheers to the governor!' Everyone raises their glasses and drinks.",
@@ -54,7 +54,7 @@ const gamesSeed = [
 
             "4: 'Whores': All women must take a drink.",
 
-            "5: 'Drive': All players interact with this card. Everyone holds out their hands as if they were holding on to a steering wheele. You will use the terms 'Vroom' and 'Skert to saw which direction you turn your hands. The first person starts the directoin of the 'Vroom' and which ever direction the player turns their hands like turning a steering wheele is the direction stated. The player in which he turned towards now has to either keep the same direction and say 'Vroom' or this player can switch the original direction but has to say 'Skert'. If a player turns their hands the wrong direction as the term they use, they have to drink. ",
+            "5: 'Drive': All players interact with this card. Everyone holds out their hands as if they were holding on to a steering wheel. You will use the terms 'Vroom' and 'Skert to saw which direction you turn your hands. The first person starts the directoin of the 'Vroom' and which ever direction the player turns their hands like turning a steering wheele is the direction stated. The player in which he turned towards now has to either keep the same direction and say 'Vroom' or this player can switch the original direction but has to say 'Skert'. If a player turns their hands the wrong direction as the term they use, they have to drink. ",
 
             "6: 'Dicks': All men must take a drink.",
 
@@ -74,37 +74,6 @@ const gamesSeed = [
 
         ],
         rating: 8
-    },
-    {
-        title: "Waterfall",
-        description:[
-        "2: Give 2 – The player can make another player take two sips",
-
-        "3: Drink 3 – The player who picks this card has to drink 3 sips",
-
-        "4: Girls drink! – All the girls in the game have to drink!",
-
-        "5: Bust a jive! – The person who picks the card has to come up with a dance move. The next person has to do that dance move and add to it. This continues until someone makes a mistake and has to drink.",
-
-        "6: Guys drink – All the guys in the game have to drink!",
-
-        "7: Heaven – All players reach for the sky. The last person to do so has to drink.",
-
-        "8: Mate – The player who picks the card chooses another player to be their mate. This means when one of them drinks they both drink.",
-
-        "9: Bust a Rhyme – The player who picks this card says a word and all the players after him/her has to say a word that rhymes with this word. First one to not come up with a word has to drink.",
-
-        "10: Categories – The player who picked the card chooses a category. Then everyone goes around and says something that fits in the chosen category. Whoever cannot think of anything in the category has to drink. Good categories to use include types of liquor, car companies, and types of cereal.",
-
-        "Jack: Thumb – Drawing a Jack makes you the Thumb Master. Whenever you choose you can put your thumb on the table causing all players to race to do the same. Last player to do so has to drink. You remain Thumb Master until a new Jack is drawn.",
-
-        "Queen: Question – Ask a question from any other player, who must in turn ask a different player a question. Whoever doesn’t answer with a question has to drink, and you can’t ask a question back to the person who last asked you.",
-
-        "King: New rule – The player who picks a King gets to create a new rule for the game. If the rule is not followed the person who broke the rule has to drink. A good rule is to for example only be allowed to hold the drink in your left hand.",
-
-        "Ace: Waterfall – Once an ace is drawn, everyone starts to drink. The player who picked the card can stop whenever he/she wants, but others have to keep drinking. Once he/she decides to stop, the player on his/her right can stop and so on. The last player in the ring has to finish last."
-        ],
-        rating: 9
     },
     {
         title: "Beer Pong",
@@ -229,7 +198,82 @@ const gamesSeed = [
         "If a '5' is rolled, then that player chooses another player to drink.",
         ],
         rating: 100
+    },
+    {
+        title: "Flip Cup",
+        description:[
+        "Arrange the Cups, line up the plastic Solo cups along each side of the table so that each side has the same number of cups. Two cups for each player.",
+
+        "There are two teams in flip cup: one on each side of the table, each team should have an equal number of players.",
+        
+        "Fill each cup up between 1/4, and 1/2 of the way full with beer, try to keep each cup around the same amount to keep the game fair.",
+        
+        "Players take turns drinking the beer in their cup, then flipping the empty cup on the edge of the table until it lands perfectly upside down on the tabletop.",
+        
+        "Make sure everyone knows which direction the flipping will go. This game is a relay race and each round of flip cup always begins and ends at the same end of the table.", 
+        
+        "The first player for each team drinks their beer as fast as they can from their first cup. When you finish your beer set the empty cup on the edge of the table, open side up, so that it slightly hands off the edge.",
+        
+        "Flip the cup. Use your finger to flick the bottom of the cup, flipping it into the air. Try to tap lightly enough that the cup only flips over 180 degrees. You want the cup to land on the table open side down. If the cup doesn't land correctly, keep trying until you get it right.",
+        
+        "Once the first teammate successfully flips their cup, the next player on their team starts drinking, and attempts to flip their cup. Continue down the line until it hits the last player.",
+        
+        "The last player in line for each team is known as the 'Anchor' this is because they have to drink twice in a row. The anchor must complete the above steps back to back.",
+        
+        "After the anchor finishes their turn the relay continues back down the line until it reaches the players who originally started the game.",
+        
+        "The first team to finish, and successfully flip their cups is the winner!",
+        ],
+        rating: 45
+    },
+    {
+        title: "Titanic",
+        description:[
+        "You will need a solo cup, beer, a shot class, and Soju or Vodka.",
+
+        "Everyone playing should sit on the floor in a circle.",
+        
+        "Fill the cup about halfway with beer, then place the shot glass in the cup. The shot glass should float, not sink.",
+        
+        "Place the cup in the middle of the circle, everyone should take turns with the bottle of Soju/Vodka and pour at least one drop into the shot glass.",
+        
+        "Try to pour as little as possible, as the shot glass fills it will move down into the beer.", 
+        
+        "Whoever sinks the Titanic(shot glass) has to drink the mixture in one shot.",
+        
+        "This game is a ton of fun with friends, especially because there is usually one person in the group who is awful at it, and provides a good laugh!",
+        ],
+        rating: 25
+    },
+    {
+        title: "Stack Cup",
+        description:[
+        "This game is best played with a round table, but can be played on any table.",
+
+        "You need 3+ players(the more the merrier), a table, beer, 20-30 solo cups, and 2 ping-pong balls.",
+        
+        "Start by setting two cups aside, and then filling another cup all the way up(death cup), place this cup at the center of the table",
+        
+        "Fill the remaining cups with 1/4th of the way up, and then placing them around the death cup.", 
+        
+        "The two starting players should be directly across from one another at the table, each should have a ping-pong ball, and one of the earlier set aside cups.",
+        
+        "Start! Players will both attempt to bounce their ball into the empty cup in front of them, and pass to the left once their shot is made. If a player makes it into the cup on their first shot they may pass to any player(not already shooting).",
+        
+        "If the player directly to your left is still shooting when you make a cup, stack your cup on theirs and pass the stack and ball to the player on his left!",
+        
+        "If you get passed/stacked you must take a cup from the center and drink it, once you have finished your drink continue to try and make your ball into the new cup. Be quick though, as the player to your left does not wait for you to finish! ",
+
+        "This game increases in difficulty(and fun) as the stack grows, making it harder to easily make a shot into the stack. Since cups are stacked throughout the game, people who are “passed” have somewhat of an advantage to help them catch up",
+        
+        "The player to get passed/stacked when only the death cup remains is the loser(winner) and must finish the entire cup.",
+
+        " **Pro tip: As mentioned before, bouncing the ping-pong ball into the Solo Cup on your first attempt earns you the right to choose who you will pass the Solo Cup and ping-pong ball to.  Most people will pass it to the player directly to the right or left of whoever is currently bouncing the other ping-pong ball.  That way, the pressure is on and someone usually ends up drinking!",
+        
+        ],
+        rating: 50
     }
+    
 ]
 
 db.Games
