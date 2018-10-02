@@ -1,10 +1,19 @@
-import React from "react";
+import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 
-const Navbar = props => (
+class Navbar extends Component {
+    state = {
+        isOpen: false
+    };
 
+    toggleOpen = () => this.setState({isOpen: !this.state.isOpen });
+
+    render(){
+        const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
+
+        return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
             ON TAP
@@ -28,18 +37,19 @@ const Navbar = props => (
                     </Link>
                     </li>
 
-                    <li className="nav-item">
+                    <li className="nav-item dropdown" onClick={this.toggleOpen}>
                     <Link
                         to="/home/guides"
                         className={
                             window.location.pathname === "/home/guides"
-                            ? "nav-link active"
+                            ? "nav-link dropdown-toggle"
                             : "nav-link"
                         }
                         >
                         GUIDE
                     </Link>
-                    {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    <div className={menuClass} aria-labelledby="navbarDropdown">
                         <Link
                             to="/"
                             className="dropdown-item">
@@ -55,7 +65,7 @@ const Navbar = props => (
                             className="dropdown-item">
                         Something else here
                         </Link>
-                    </div> */}
+                    </div>
                     </li>
 
                     <li className="nav-item">
@@ -91,6 +101,8 @@ const Navbar = props => (
             </form>
             </div>
         </nav>
-);
+        )
+    };
+};
 
 export default Navbar;
