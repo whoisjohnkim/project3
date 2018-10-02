@@ -4,6 +4,13 @@ import Game from './Game';
 import Guides from './Guides';
 import Food from './Food';
 import Playlist from './Playlist';
+import KingsCup from './KingsCup';
+import Waterfall from './Waterfall';
+import BeerPong from './BeerPong';
+import Cup from './21cup';
+import Odds from './Odds';
+import Skull from './SkullAndDice';
+import Cheers from './CheersToTheGovernor';
 import Navbar from "../components/Navbar";
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
@@ -37,7 +44,8 @@ class Home extends Component {
                 </span>
                 <span class="part part--center">
                     <span class="letter letter--i">I</span>
-                    <span class="letter letter--o">U</span>
+                    {/* <span class="letter letter--o">A</span> */}
+                    <span class="letter letter--U">U</span>
                 </span>
                 <span class="part part--right">
                     <span class="letter">N</span>

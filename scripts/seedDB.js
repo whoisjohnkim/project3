@@ -54,7 +54,7 @@ const gamesSeed = [
 
             "4: 'Whores': All women must take a drink.",
 
-            "5: 'Drive': All players interact with this card. Everyone holds out their hands as if they were holding on to a steering wheele. You will use the terms 'Vroom' and 'Skert to saw which direction you turn your hands. The first person starts the directoin of the 'Vroom' and which ever direction the player turns their hands like turning a steering wheele is the direction stated. The player in which he turned towards now has to either keep the same direction and say 'Vroom' or this player can switch the original direction but has to say 'Skert'. If a player turns their hands the wrong direction as the term they use, they have to drink. ",
+            "5: 'Drive': All players interact with this card. Everyone holds out their hands as if they were holding on to a steering wheel. You will use the terms 'Vroom' and 'Skert to saw which direction you turn your hands. The first person starts the directoin of the 'Vroom' and which ever direction the player turns their hands like turning a steering wheele is the direction stated. The player in which he turned towards now has to either keep the same direction and say 'Vroom' or this player can switch the original direction but has to say 'Skert'. If a player turns their hands the wrong direction as the term they use, they have to drink. ",
 
             "6: 'Dicks': All men must take a drink.",
 
