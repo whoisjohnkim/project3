@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+// const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -22,7 +22,7 @@ else{
     app.use(express.static("client/public"))
 }
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
 
 
 // If deployed, use the deployed database. Otherwise use the local articles database
@@ -55,6 +55,41 @@ var db = require('./models');
 
 // });
 
+<<<<<<< HEAD
+// Login Route
+app.post("/api/login", (req, res) => {
+  if(!req.body.email || !req.body.password){
+      return res.json({success: false, message: "Missing Username or Password"});
+  }
+  const { email, password } = req.body;
+  connection.query("SELECT * FROM users WHERE email =  ?", [email], function(err, results) {
+      if(err){
+          return res.json({success: false, message: "Ran into some issue"});
+      }
+      console.log(results);
+      if(results.length === 0){
+          return res.json({success: false, message: "No User matches that Email"});
+      }
+      bcrypt.compare(password, results[0].password, function(err, bcryptResult) {
+          if(err){
+              return res.json({success: false, message: "Password and User did not match"});
+          }else{
+              
+              //this is where we return the data
+              if(bcryptResult){
+                  var token = jwt.sign({ id: results[0].id, expires: +Date.now() + 360000 }, process.env.JWT_SECRET); //should be SECRET .env
+                  return res.json({success: true, token: token});
+              } else {
+                  return res.json({success: false});
+              }
+              
+          }
+      });
+      
+      
+  });
+});
+=======
 
 // // Signin Route
 // app.post("/api/signin", (req, res) => {
@@ -89,6 +124,7 @@ var db = require('./models');
 
 //   });
 // });
+>>>>>>> master
 
 // Start the API server
 app.listen(PORT, function() {
