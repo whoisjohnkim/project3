@@ -3,21 +3,22 @@ var mongoose = require("mongoose");
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;
 
-var UsersSchema = new Schema({
+var GroupSchema = new Schema({
     // `title` is required and of type String
-    email: {
-        type: String,
+    number: {
+        type: Number,
         required: true,
         unique: true
     },
     // Description of the game is required and type String
-    password: {
-        type: String,
+    numMembers: {
+        type: Number,
         required: true,
-        unqiue: false
+        unqiue: false,
+        default: 1
     },
     // Game rating is required and type Int
-    topScore: {
+    scores: {
         type: Number,
         required: true,
         unique: false,
@@ -25,7 +26,7 @@ var UsersSchema = new Schema({
     }
 })
 
-var User = mongoose.model("User", UsersSchema);
+var Group = mongoose.model("Group", GroupSchema);
 
-// Export the User model
-module.exports = User;
+// Export the Group model
+module.exports = Group;

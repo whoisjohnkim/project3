@@ -8,9 +8,9 @@ import {
   withRouter
 } from "react-router-dom";
 
-import './Login.css';
+import './Signup.css';
 const cheers = require('../../images/cheers.jpg');
-class Login extends Component {
+class Signup extends Component {
 
     state = {
         startTime: +Date.now(),
@@ -37,7 +37,7 @@ class Login extends Component {
       handleLoginButton = event => {
         event.preventDefault();
         //console.log(event.target);
-        axios.get("/api/login", {email: this.state.email, password: this.state.password}).then(function(response){
+        axios.post("/api/register", {email: this.state.email, password: this.state.password}).then(function(response){
           
         })
         this.setState({ email: "", password: ""});
@@ -49,31 +49,13 @@ class Login extends Component {
         console.log();
       }
 
-      // const AuthExample = () => (
-      //   <Router>
-      //     <div>
-      //       <AuthButton />
-      //       <ul>
-      //         <li>
-      //           <Link to="/public">Public Page</Link>
-      //         </li>
-      //         <li>
-      //           <Link to="/protected">Protected Page</Link>
-      //         </li>
-      //       </ul>
-      //       <Route path="/public" component={Public} />
-      //       <Route path="/login" component={Login} />
-      //       <PrivateRoute path="/protected" component={Protected} />
-      //     </div>
-      //   </Router>
-      // );
 
     render() {
         return (
             <div>
-              <div>
-                <h2>Login to play some games!</h2>
-              </div>
+                <div>
+                <h2>Sign up to experience greatness!</h2>
+                </div>
                 <div id="left">
                     <img src={ cheers } />
                 </div>
@@ -88,12 +70,11 @@ class Login extends Component {
                         <label for="exampleInputPassword1">Password</label>
                         <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="Password" />
                     </div>
-                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Log In</button>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Sign Up</button>
                     </form>
                 </div>
             </div>
         )
     }
 }
-
-export default Login;
+export default Signup;
