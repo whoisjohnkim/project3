@@ -34,6 +34,7 @@ class Guides extends Component {
                 <ul>
                     {this.state.guides.map(guide => (
                         <li>
+                            <img src={guide.picture}/>
                             <ul>
                                 <li>
                                     Title: {guide.title}
