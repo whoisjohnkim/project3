@@ -10,18 +10,23 @@ var GamesSchema = new Schema({
         required: true,
         unique: true
     },
-    // Description of the game is required and type String
+    // Description of the game is required and type Array
     description: {
         type: Array,
         required: true,
-        unqiue: true
+        unique: true
     },
-    // Game rating is required and type Int
+    // Game rating is required and type Number
     rating: {
         type: Number,
         required: true,
         default: 0
     }
+    // picture: {
+    //     type: String,
+    //     required: true,
+    //     unique: true
+    // }
 });
 
 // Create model from above schema

@@ -1,10 +1,24 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import API from "../../utils/API";
 
 class Navbar extends Component {
     state = {
-        isOpen: false
+        isOpen: false,
+        guides: []
+    };
+
+    componentDidMount() {
+        this.loadGuides();
+    };
+
+    loadGuides = () => {
+        API.getGames()
+            .then(res =>
+                this.setState({guides: res.data})
+            )
+            .catch(err => console.log(err));
     };
 
     toggleOpen = () => this.setState({isOpen: !this.state.isOpen });
@@ -20,7 +34,7 @@ class Navbar extends Component {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-           
+
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
@@ -49,21 +63,12 @@ class Navbar extends Component {
                     </Link>
 
                     <div className={menuClass} aria-labelledby="navbarDropdown">
-                        <Link
-                            to="/"
-                            className="dropdown-item">
-                        Action
-                        </Link>
-                        <Link to="/"
-                        className="dropdown-item">
-                        Another action
-                        </Link>
-                        <div className="dropdown-divider"></div>
-                        <Link
-                            to="/"
-                            className="dropdown-item">
-                        Something else here
-                        </Link>
+
+                        {this.state.guides.map(guide => (
+                            <Link to={"/home/guides/" + guide._id} className="dropdown-item">
+                                {guide.title}
+                            </Link>
+                        ))}
                     </div>
                     </li>
 
@@ -79,7 +84,7 @@ class Navbar extends Component {
                     PLAYLIST
                     </Link>
                     </li>
-                    
+
                     <li className="nav-item">
                     <Link
                         to="/food"

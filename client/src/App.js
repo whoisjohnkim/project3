@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 // import Navbar from "./components/Navbar";
 import Game from './Pages/Game';
 import Guides from './Pages/Guides';
+import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
 // import Footer from "./components/Footer";
