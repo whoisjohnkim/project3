@@ -56,7 +56,7 @@ var db = require('./models');
 // });
 
 
-// // Signin Route
+// Signin Route
 // app.post("/api/signin", (req, res) => {
 //   if(!req.body.email || !req.body.password){
 //       return res.json({success: false, message: "Missing Username or Password"});
