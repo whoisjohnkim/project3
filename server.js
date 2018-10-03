@@ -34,9 +34,16 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 var db = require('./models');
 
+app.get("/users", (req, res) => {
+    connection.query("SELECT * FROM users", function(err, results){
+        res.json(results);
+    })
+})
+
 
 // Register Route
 app.post("/api/register", (req, res) => {
+    console.log("app post on server.js ran");
   if(!req.body.email || !req.body.password){
       return res.json({success: false, message: "Missing Username or Password"});
   }
@@ -55,9 +62,8 @@ app.post("/api/register", (req, res) => {
 
 });
 
-
-// Signin Route
-app.post("/api/signin", (req, res) => {
+// Login Route
+app.post("/api/login", (req, res) => {
   if(!req.body.email || !req.body.password){
       return res.json({success: false, message: "Missing Username or Password"});
   }
@@ -74,7 +80,7 @@ app.post("/api/signin", (req, res) => {
           if(err){
               return res.json({success: false, message: "Password and User did not match"});
           }else{
-
+              
               //this is where we return the data
               if(bcryptResult){
                   var token = jwt.sign({ id: results[0].id, expires: +Date.now() + 360000 }, process.env.JWT_SECRET); //should be SECRET .env
@@ -82,11 +88,11 @@ app.post("/api/signin", (req, res) => {
               } else {
                   return res.json({success: false});
               }
-
+              
           }
       });
-
-
+      
+      
   });
 });
 

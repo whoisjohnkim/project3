@@ -3,20 +3,20 @@ var mongoose = require("mongoose");
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;
 
-var UsersSchema = new Schema({
-    // `title` is required and of type String
+var UserSchema = new Schema({
+    // email is required and of type String
     email: {
         type: String,
         required: true,
         unique: true
     },
-    // Description of the game is required and type String
+    // required password not uniqe
     password: {
         type: String,
         required: true,
         unqiue: false
     },
-    // Game rating is required and type Int
+    // Store each user's top score for later use
     topScore: {
         type: Number,
         required: true,
@@ -25,7 +25,7 @@ var UsersSchema = new Schema({
     }
 })
 
-var User = mongoose.model("User", UsersSchema);
+var User = mongoose.model("User", UserSchema);
 
 // Export the User model
 module.exports = User;

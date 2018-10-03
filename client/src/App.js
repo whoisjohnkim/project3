@@ -9,6 +9,7 @@ import Guides from './Pages/Guides';
 import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
+import Signup from './components/Signup/Signup';
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
 // import Jumbotron from "./components/Jumbotron";
@@ -21,12 +22,12 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={OnTap} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
             <Route exact path="/home" component={Home} />
-            <Route exact path="/home/game" component={Game} />
-            <Route exact path="/home/guides" component={Guides} />
-            <Route exact path="/home/guides/:id" component={Guide} />
-            <Route exact path="/home/food" component={Food} />
-            <Route exact path="/home/playlist" component={Playlist} />
+            <Route exact path="/game" component={Game} />
+            <Route exact path="/guides" component={Guides} />
+            <Route exact path="/food" component={Food} />
+            <Route exact path="/playlist" component={Playlist} />
           </Switch>
         </div>
       </Router>
