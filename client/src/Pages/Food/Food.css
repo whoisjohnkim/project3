@@ -1,13 +1,8 @@
-.games-img {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(20,20,20, .3), 
-        rgba(20,20,20, .3));
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+.divContainer {
+    text-align: center;
+    margin: auto;
     
+}
+ul{
+    position: relative;
 }
