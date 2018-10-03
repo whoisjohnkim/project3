@@ -4,19 +4,19 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    // `title` is required and of type String
+    // email is required and of type String
     email: {
         type: String,
         required: true,
         unique: true
     },
-    // Description of the game is required and type String
+    // required password not uniqe
     password: {
         type: String,
         required: true,
         unqiue: false
     },
-    // Game rating is required and type Int
+    // Store each user's top score for later use
     topScore: {
         type: Number,
         required: true,

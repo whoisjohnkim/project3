@@ -42,7 +42,7 @@ class Signup extends Component {
         })
         this.setState({ email: "", password: ""});
         // Route to homepage
-        <Link to="/home" />
+
       }
     
       componentDidUpdate(){
