@@ -285,11 +285,30 @@ const gamesSeed = [
 
 ]
 
+
+
 db.Games
     .remove({})
     .then(() => db.Games.collection.insertMany(gamesSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
+    process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    })
+
+const userSeed = {
+    email: "test@test.com",
+    password: "abc123"
+}
+
+db.Users 
+    .remove({})
+    .then(() => db.Users.collection.insertOne(userSeed))
+    .then(data => {
+        console.log(data.result.n + " record inserted!");
     process.exit(0);
     })
     .catch(err => {
