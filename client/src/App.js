@@ -21,10 +21,10 @@ class App extends Component {
             <Route exact path="/" component={OnTap} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/home" component={Home} />
-            <Route exact path="/home/game" component={Game} />
-            <Route exact path="/home/guides" component={Guides} />
-            <Route exact path="/home/food" component={Food} />
-            <Route exact path="/home/playlist" component={Playlist} />
+            <Route exact path="/game" component={Game} />
+            <Route exact path="/guides" component={Guides} />
+            <Route exact path="/food" component={Food} />
+            <Route exact path="/playlist" component={Playlist} />
           </Switch>
         </div>
       </Router>

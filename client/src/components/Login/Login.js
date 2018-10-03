@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Router} from 'react-router';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from "react-router-dom";
+
 import './Login.css';
 const cheers = require('../../images/cheers.jpg');
 class Login extends Component {
@@ -35,12 +42,31 @@ class Login extends Component {
         })
         this.setState({ email: "", password: ""});
         // Route to homepage
-        
+        <Link to="/home" />
       }
     
       componentDidUpdate(){
         console.log();
       }
+
+      const AuthExample = () => (
+        <Router>
+          <div>
+            <AuthButton />
+            <ul>
+              <li>
+                <Link to="/public">Public Page</Link>
+              </li>
+              <li>
+                <Link to="/protected">Protected Page</Link>
+              </li>
+            </ul>
+            <Route path="/public" component={Public} />
+            <Route path="/login" component={Login} />
+            <PrivateRoute path="/protected" component={Protected} />
+          </div>
+        </Router>
+      );
 
     render() {
         return (
