@@ -9,7 +9,8 @@ class Guide extends Component {
         title: "",
         rating: 0,
         description: [],
-        id: ""
+        id: "",
+        picture: ""
     };
 
     componentDidMount() {
@@ -20,10 +21,7 @@ class Guide extends Component {
     loadGuide = () => {
         API.getGame(this.props.match.params.id)
             .then(res => {
-                this.setState({id: this.props.match.params.id, title: res.data.title, rating: res.data.rating, description: res.data.description});
-                // console.log(this.state.title);
-                // console.log(this.state.rating);
-                // console.log(this.state.description);
+                this.setState({id: this.props.match.params.id, title: res.data.title, rating: res.data.rating, description: res.data.description, picture: res.data.picture});
             }
 
             )
@@ -36,29 +34,28 @@ class Guide extends Component {
                 <Navbar />
                 <div className="guides-img">
                 </div>
-                <ul>
-                        <li>
-                            <ul>
-                                <li>
-                                    Title: {this.state.title}
-                                </li>
-                                <li>
-                                    Rating: {this.state.rating}
-                                </li>
-                                <li>
-                                    Directions
-                                    <ul>
-                                        {this.state.description.map(step=> (
-                                            <li>
-                                                {step}
-                                            </li>
-                                        ))}
-                                    </ul>
+                    <img src={this.state.picture}/>
+                    <li>
+                        <ul>
+                            <li>
+                                Title: {this.state.title}
+                            </li>
+                            <li>
+                                Rating: {this.state.rating}
+                            </li>
+                            <li>
+                                Directions
+                                <ul>
+                                    {this.state.description.map(step=> (
+                                        <li>
+                                            {step}
+                                        </li>
+                                    ))}
+                                </ul>
 
-                                </li>
-                            </ul>
-                        </li>
-                </ul>
+                            </li>
+                        </ul>
+                    </li>
             </div>
         );
     };
