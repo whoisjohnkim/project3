@@ -299,12 +299,38 @@ db.Games
         process.exit(1);
     })
 
+const interactiveSeed = {
+    title: "Just the Tipsy",
+    description: "A fun, interactive drinking game for you and your friends where either you follow the instructions, or you drink!",
+    rating: 0,
+    turns: [
+        "Player 1 has to lick Player 3's face",
+        "Player 2 has to finish his/her drink",
+        "Player 1 has to get spanked by Player 4",
+        "Player 3 has to keep his/her hand on Player 2's lap for the next 5 turns",
+        "Player 4 has to interlock toes with Player 2 for 2 turns",
+        "Player 2 has to drink anytime Player 3 drinks for the next 5 turns"
+    ]
+}
+
+db.Interactive
+    .remove({})
+        .then(() => db.Interactive.collection.insertOne(interactiveSeed))
+        .then(data => {
+            console.log(data.result.n + " record inserted!");
+        process.exit(0);
+        })
+        .catch(err => {
+            console.error(err);
+            process.exit(1);
+        })
+
 const userSeed = {
     email: "test@test.com",
     password: "abc123"
 }
 
-db.Users 
+db.Users
     .remove({})
     .then(() => db.Users.collection.insertOne(userSeed))
     .then(data => {

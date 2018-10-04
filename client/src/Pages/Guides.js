@@ -63,6 +63,7 @@ class Guides extends Component {
                 <ul>
                     {this.state.guides.map(guide => (
                         <GuideWrapper
+                            key={guide._id}
                             title={guide.title}
                             rating={guide.rating}
                             upVote={this.upVote}
