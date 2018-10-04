@@ -21,7 +21,7 @@ class Game extends Component {
     loadGame = () => {
         API.getInteractive()
             .then(res => {
-                this.setState({title: res.data.title, description: res.data.description, rating: res.data.rating, turns: res.DataCue.turns})
+                this.setState({title: res.data.title, description: res.data.description, rating: res.data.rating, turns: res.data.turns})
             })
             .catch(err => console.log(err));
     };
