@@ -22,21 +22,22 @@ import music from './images/EQIcon.gif';
 class Popup extends React.Component {
   render() {
     return (
+      
       <div className='popup'>
         <div className='popup_inner'>
           <MusicController />
-        
+
         </div>
       </div>
     );
   }
 }
     
-const showPopup = {
+const showup = {
   visibility: 'visible',
 };
 
-const hidePopup = {
+const hide = {
   visibility: 'hidden',
 };
 
@@ -52,10 +53,8 @@ class App extends Component {
     this.setState({
       showPopup: !this.state.showPopup
     });
+  
   }
-
-
-
 
   render() {
     return (
@@ -71,19 +70,20 @@ class App extends Component {
             <Route exact path="/food" component={Food} />
             <Route exact path="/playlist" component={Playlist} />
           </Switch>
+          <div style={ hide }> 
+                <Popup />
+              </div>
 
-          <Popup style={ hidePopup } />
-          {/* {this.state.showPopup ? 
-          <Popup
-            text='Close Me'
-            closePopup={this.togglePopup.bind(this)}
-          />
-          : null
-        } */}
           {this.state.showPopup ? 
-            <Popup style={ hidePopup } />
-            : <Popup style={ showPopup } />
-          }
+              <div style={ hide }> 
+                <Popup />
+              </div>
+              : <div style={ showup }> 
+              <Popup />
+            </div>
+            }
+
+     
           <img alt="eq" id="eq" src={ music } onClick={this.togglePopup.bind(this)}/>
         </div>
       </Router>
