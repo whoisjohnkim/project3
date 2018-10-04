@@ -12,6 +12,7 @@ import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
 import Signup from './components/Signup/Signup';
+import Uber from './Pages/Uber';
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
 // import Jumbotron from "./components/Jumbotron";
@@ -32,6 +33,7 @@ class App extends Component {
             <Route exact path="/guides" component={Guides} />
             <Route exact path="/food" component={Food} />
             <Route exact path="/playlist" component={Playlist} />
+            <Route exact path="/uber" component={Uber} />
           </Switch>
           <img id="eq" src={ music } />
         </div>
