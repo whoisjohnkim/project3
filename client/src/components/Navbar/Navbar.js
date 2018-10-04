@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import API from "../../utils/API";
 
+import onTapLogo from "../../images/OnTapLogo.svg";
+
+
 class Navbar extends Component {
     state = {
         isOpen: false,
@@ -29,7 +32,7 @@ class Navbar extends Component {
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
-            ON TAP
+            <img id="logo" src={ onTapLogo } alt="logo" />
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -38,10 +41,10 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                    <Link
-                        to="/home/game"
+                    <Link 
+                        to="/game"
                         className={
-                            window.location.pathname === "/home/game"
+                            window.location.pathname === "/game"
                             ? "nav-link active"
                             : "nav-link"
                         }
@@ -52,9 +55,9 @@ class Navbar extends Component {
 
                     <li className="nav-item dropdown" onClick={this.toggleOpen}>
                     <Link
-                        to="/home/guides"
+                        to="/guides"
                         className={
-                            window.location.pathname === "/home/guides"
+                            window.location.pathname === "/guides"
                             ? "nav-link dropdown-toggle"
                             : "nav-link"
                         }
@@ -74,9 +77,9 @@ class Navbar extends Component {
 
                     <li className="nav-item">
                     <Link
-                        to="/home/playlist"
+                        to="/playlist"
                         className={
-                            window.location.pathname === "/home/playlist"
+                            window.location.pathname === "/playlist"
                               ? "nav-link active"
                               : "nav-link"
                           }
@@ -87,9 +90,9 @@ class Navbar extends Component {
 
                     <li className="nav-item">
                     <Link
-                        to="/home/food"
+                        to="/food"
                         className={
-                            window.location.pathname === "/home/food"
+                            window.location.pathname === "/food"
                               ? "nav-link active"
                               : "nav-link"
                           }

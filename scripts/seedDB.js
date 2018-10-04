@@ -11,18 +11,18 @@ const gamesSeed = [
     {
         title: "Cheers To the Governor",
         description: [
-        "1. Everyone goes around in a circle and take turns counting to 21.",
+        "Everyone goes around in a circle and take turns counting to 21.",
 
-        "2. The only thing you need to know is that you start off with a base rule. Whenever I play Cheers to the Governor, we always have a starting rule. A starting rule is just a rule that starts the game off. An example of a starting rule would be 'replacing 7 with 14 and 14 with 7', doing an action instead of saying a number, etc.",
+        "The only thing you need to know is that you start off with a base rule. Whenever I play Cheers to the Governor, we always have a starting rule. A starting rule is just a rule that starts the game off. An example of a starting rule would be 'replacing 7 with 14 and 14 with 7', doing an action instead of saying a number, etc.",
 
-        "3. Whoever messes up has to drink, and the round starts back at the number 1." ,
+        "Whoever messes up has to drink, and the round starts back at the number 1." ,
 
-        "4. When someone gets to 21, they say 'cheers to the governor!' Everyone raises their glasses and drinks.",
+        "When someone gets to 21, they say 'cheers to the governor!' Everyone raises their glasses and drinks.",
 
-        "5. Whoever says 21 gets to make up a new rule. New rules can be things like, 'whoever says 5 has to drink', 'number 10 says the pledge of allegiance', etc. The only limit is your imagination.",
+        "Whoever says 21 gets to make up a new rule. New rules can be things like, 'whoever says 5 has to drink', 'number 10 says the pledge of allegiance', etc. The only limit is your imagination.",
         ],
         rating: 3,
-        picture: "./images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "King's Cup",
@@ -135,7 +135,7 @@ const gamesSeed = [
         "Overtime is played like a normal game (without re-racks), and double or triple overtime may be necessary, until one team wins.",
         ],
         rating: 20,
-        picture: "../../images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "21 Cup",
@@ -151,7 +151,7 @@ const gamesSeed = [
         "The team that gets rid of all of the cups first is the victors, and they advance to the next round.  If both teams duel at the end, with a one-on-one cup faceoff, and each team lands the shot at the same time, they all advance to the next round. "
         ],
         rating: 40,
-        picture: "../../client/src/images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "Odds",
@@ -175,7 +175,7 @@ const gamesSeed = [
        "Nick has to cut his hair.",
         ],
         rating: -2,
-        picture: "../client/src/images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "Skull and Dice",
@@ -203,7 +203,7 @@ const gamesSeed = [
         "If a '5' is rolled, then that player chooses another player to drink.",
         ],
         rating: 100,
-        picture: "./client/src/images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "Flip Cup",
@@ -231,7 +231,7 @@ const gamesSeed = [
         "The first team to finish, and successfully flip their cups is the winner!",
         ],
         rating: 45,
-        picture: "./beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "Titanic",
@@ -251,7 +251,7 @@ const gamesSeed = [
         "This game is a ton of fun with friends, especially because there is usually one person in the group who is awful at it, and provides a good laugh!",
         ],
         rating: 25,
-        picture: "../src/images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     },
     {
         title: "Stack Cup",
@@ -280,16 +280,35 @@ const gamesSeed = [
 
         ],
         rating: 50,
-        picture: "../client/src/images/beertattoo.jpg"
+        picture: "../images/beertattoo.jpg"
     }
 
 ]
+
+
 
 db.Games
     .remove({})
     .then(() => db.Games.collection.insertMany(gamesSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
+    process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    })
+
+const userSeed = {
+    email: "test@test.com",
+    password: "abc123"
+}
+
+db.Users 
+    .remove({})
+    .then(() => db.Users.collection.insertOne(userSeed))
+    .then(data => {
+        console.log(data.result.n + " record inserted!");
     process.exit(0);
     })
     .catch(err => {
