@@ -8,9 +8,10 @@ ul{
 }
 
 .foodcard{
-    width: 700px;
-    margin: auto;
+    width: 500px;
+    margin: auto 50px ;
     float: left;
+    position: relative;
 }
 
 #cheetos{
