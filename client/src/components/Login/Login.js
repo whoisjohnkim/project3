@@ -7,6 +7,8 @@ import {
   Redirect,
   withRouter
 } from "react-router-dom";
+import logo from "../images/OnTapLogoUpdated.png";
+
 
 import './Login.css';
 const cheers = require('../../images/cheers.jpg');
@@ -71,29 +73,50 @@ class Login extends Component {
     render() {
         return (
             <div>
-              <div>
-                <h2>Login to play some games!</h2>
+              
+              {/* <div id="header">
+                <p>Header</p>
+              </div> */}
+
+              <div id="content">
+                <img src={ cheers } />
+                    <center>
+                    <p id= "welcome"> WELCOME BACK. </p>
+                    <p id= "waiting"> we've been waiting for you. </p>
+
+                    </center>
               </div>
-                <div id="left">
-                    <img src={ cheers } />
-                </div>
-                <div id="right">
+                    
+          
+              <div id="sidebar">
+              <img id= "circle" src={require('../images/OnTapLogoUpdated.png')} />
+
+                <p id="usual"> the usual for you?</p>
+                <br/>
+                <center>
                     <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input name="email" onChange={this.handleInputChange} type="email" value={this.state.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                        <label for="exampleInputEmail1">email address</label>
+                        <input name="email" onChange={this.handleInputChange} type="email" value={this.state.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter email" />
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="Password" />
+                        <label for="exampleInputPassword1">password</label>
+                        <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="password" />
                     </div>
                     <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Log In</button>
                     </form>
+                    </center>
                 </div>
+                {/* <div id="footer">
+                  <p>Footer</p>
+                </div> */}
             </div>
         )
     }
 }
 
 export default Login;
+
+
+
