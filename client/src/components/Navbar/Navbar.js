@@ -38,7 +38,7 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                    <Link 
+                    <Link
                         to="/game"
                         className={
                             window.location.pathname === "/game"
@@ -65,7 +65,7 @@ class Navbar extends Component {
                     <div className={menuClass} aria-labelledby="navbarDropdown">
 
                         {this.state.guides.map(guide => (
-                            <Link to={"/home/guides/" + guide._id} className="dropdown-item">
+                            <Link to={"/guides/" + guide._id} className="dropdown-item">
                                 {guide.title}
                             </Link>
                         ))}
