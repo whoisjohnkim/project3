@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import OnTap from './Pages/OnTap';
 import Home from './Pages/Home';
 import Login from './components/Login/Login';
+import './App.css';
+
 // import Navbar from "./components/Navbar";
 import Game from './Pages/Game';
 import Guides from './Pages/Guides';
@@ -13,6 +15,8 @@ import Signup from './components/Signup/Signup';
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
 // import Jumbotron from "./components/Jumbotron";
+
+import music from './images/EQIcon.gif';
 
 class App extends Component {
   render() {
@@ -29,6 +33,7 @@ class App extends Component {
             <Route exact path="/food" component={Food} />
             <Route exact path="/playlist" component={Playlist} />
           </Switch>
+          <img id="eq" src={ music } />
         </div>
       </Router>
     );
