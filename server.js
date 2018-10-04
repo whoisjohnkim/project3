@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-// const routes = require("./routes");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -22,7 +22,7 @@ else{
     app.use(express.static("client/public"))
 }
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 
 // If deployed, use the deployed database. Otherwise use the local articles database
