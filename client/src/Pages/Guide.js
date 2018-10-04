@@ -63,6 +63,7 @@ class Guide extends Component {
                 </div>
                 <img src={this.state.picture}/>
                 <GuideWrapper
+                    key={this.state.id}
                     title={this.state.title}
                     rating={this.state.rating}
                     upVote={this.upVote}
