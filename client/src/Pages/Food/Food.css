@@ -8,8 +8,8 @@ ul{
 }
 
 .foodcard{
-    width: 500px;
-    margin: auto 50px ;
+    width: 450px;
+    margin: 20px 50px ;
     float: left;
     position: relative;
 }
@@ -24,4 +24,6 @@ ul{
     margin: auto;
     
 }
-
+CardImg{
+    width: 200px;
+}
