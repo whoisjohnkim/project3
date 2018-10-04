@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import API from "../../utils/API";
 
-import onTapLogo from "../../images/OnTapLogo.svg";
+import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
 
 class Navbar extends Component {
