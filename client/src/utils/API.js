@@ -13,6 +13,9 @@ export default {
     saveGame: function(gameData) {
         return axios.post("/api/games", gameData);
     },
+    updateGame: function(id, gameData) {
+        return axios.put("/api/games/" + id, gameData);
+    },
     getInteractive: function() {
         return axios.get("/api/games/interactive")
     }

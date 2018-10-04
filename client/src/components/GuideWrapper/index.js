@@ -1,1 +1,1 @@
-export { default } from "./GuideWrapper.js";
+export { default } from "./GuideWrapper";
