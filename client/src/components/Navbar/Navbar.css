@@ -8,3 +8,12 @@ nav.navbar.navbar-default {
     letter-spacing: 2px;
   }
 
+  #logo {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: 10%;
+  }
