@@ -6,3 +6,21 @@
 ul{
     position: relative;
 }
+
+.foodcard{
+    width: 700px;
+    margin: auto;
+    float: left;
+}
+
+#cheetos{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.foodcard2{
+    width: 700px;
+    margin: auto;
+    
+}
+
