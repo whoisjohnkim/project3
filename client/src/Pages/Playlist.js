@@ -11,6 +11,7 @@ class Playlist extends Component {
                 <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M" width="1680" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 
                 <div className="playlist-img"></div>
+                <iframe id="playlist" src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M" width="1680" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
             </div>
         )
     }

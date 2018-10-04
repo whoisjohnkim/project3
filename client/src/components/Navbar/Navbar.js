@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import API from "../../utils/API";
 
+import onTapLogo from "../../images/OnTapLogoUpdated.svg";
+
+
 class Navbar extends Component {
     state = {
         isOpen: false,
@@ -29,7 +32,7 @@ class Navbar extends Component {
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
-            ON TAP
+            <img id="logo" src={ onTapLogo } alt="logo" />
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -38,7 +41,7 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                    <Link 
+                    <Link
                         to="/game"
                         className={
                             window.location.pathname === "/game"
@@ -65,7 +68,7 @@ class Navbar extends Component {
                     <div className={menuClass} aria-labelledby="navbarDropdown">
 
                         {this.state.guides.map(guide => (
-                            <Link to={"/home/guides/" + guide._id} className="dropdown-item">
+                            <Link to={"/guides/" + guide._id} className="dropdown-item">
                                 {guide.title}
                             </Link>
                         ))}

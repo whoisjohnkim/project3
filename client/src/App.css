@@ -1,0 +1,13 @@
+#eq {
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    width: 10%;
+}
+
+.popup {
+    position: absolute;
+    top: 76%;
+    left: 45%;
+    width: 50%;
+}
