@@ -13,7 +13,7 @@ router.route("/:id")
     .delete(gamesController.remove);
 
 // Matches with "/api/interactive"
-router.route("/")
+router.route("/game")
     .get(gamesController.findInteractive);
 
 module.exports = router;

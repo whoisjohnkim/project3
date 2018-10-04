@@ -17,6 +17,6 @@ export default {
         return axios.put("/api/games/" + id, gameData);
     },
     getInteractive: function() {
-        return axios.get("/api/games/interactive")
+        return axios.get("/api/games/game")
     }
 };
