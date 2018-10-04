@@ -4,18 +4,12 @@ import OnTap from './Pages/OnTap';
 import Home from './Pages/Home';
 import Login from './components/Login/Login';
 import './App.css';
-
-// import Navbar from "./components/Navbar";
 import Game from './Pages/Game';
 import Guides from './Pages/Guides';
 import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
 import Signup from './components/Signup/Signup';
-import Uber from './Pages/Uber';
-// import Footer from "./components/Footer";
-// import Wrapper from "./components/Wrapper";
-// import Jumbotron from "./components/Jumbotron";
 
 import music from './images/EQIcon.gif';
 
@@ -31,6 +25,7 @@ class App extends Component {
             <Route exact path="/home" component={Home} />
             <Route exact path="/game" component={Game} />
             <Route exact path="/guides" component={Guides} />
+            <Route exact path="/guides/:id" component={Guide}/>
             <Route exact path="/food" component={Food} />
             <Route exact path="/playlist" component={Playlist} />
             <Route exact path="/uber" component={Uber} />
