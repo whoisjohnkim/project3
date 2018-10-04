@@ -38,10 +38,10 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                    <Link
-                        to="/home/game"
+                    <Link 
+                        to="/game"
                         className={
-                            window.location.pathname === "/home/game"
+                            window.location.pathname === "/game"
                             ? "nav-link active"
                             : "nav-link"
                         }
@@ -52,9 +52,9 @@ class Navbar extends Component {
 
                     <li className="nav-item dropdown" onClick={this.toggleOpen}>
                     <Link
-                        to="/home/guides"
+                        to="/guides"
                         className={
-                            window.location.pathname === "/home/guides"
+                            window.location.pathname === "/guides"
                             ? "nav-link dropdown-toggle"
                             : "nav-link"
                         }
@@ -74,9 +74,9 @@ class Navbar extends Component {
 
                     <li className="nav-item">
                     <Link
-                        to="/home/playlist"
+                        to="/playlist"
                         className={
-                            window.location.pathname === "/home/playlist"
+                            window.location.pathname === "/playlist"
                               ? "nav-link active"
                               : "nav-link"
                           }
@@ -87,9 +87,9 @@ class Navbar extends Component {
 
                     <li className="nav-item">
                     <Link
-                        to="/home/food"
+                        to="/food"
                         className={
-                            window.location.pathname === "/home/food"
+                            window.location.pathname === "/food"
                               ? "nav-link active"
                               : "nav-link"
                           }

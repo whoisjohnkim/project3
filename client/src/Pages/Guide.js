@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Navbar from "../components/Navbar";
 import "../components/Guides.css";
+import GuideWrapper from "../components/GuideWrapper"
 
 import API from "../utils/API";
 
@@ -9,7 +10,8 @@ class Guide extends Component {
         title: "",
         rating: 0,
         description: [],
-        id: ""
+        id: "",
+        picture: ""
     };
 
     componentDidMount() {
@@ -17,16 +19,39 @@ class Guide extends Component {
         this.loadGuide();
     };
 
+    upVote = () => {
+        API.updateGame(this.state.id,
+            {
+                title: this.state.title,
+                rating: this.state.rating + 1,
+                description: this.state.description,
+                picture: this.state.picture
+            })
+            .then(
+                    this.setState({rating: this.state.rating + 1})
+                )
+            .catch(err => console.log(err));
+    }
+
+    downVote = () => {
+        API.updateGame(this.state.id,
+            {
+                title: this.state.title,
+                rating: this.state.rating - 1,
+                description: this.state.description,
+                picture: this.state.picture
+            })
+            .then(
+                this.setState({rating: this.state.rating - 1})
+                )
+            .catch(err => console.log(err));
+    }
+
     loadGuide = () => {
         API.getGame(this.props.match.params.id)
             .then(res => {
-                this.setState({id: this.props.match.params.id, title: res.data.title, rating: res.data.rating, description: res.data.description});
-                // console.log(this.state.title);
-                // console.log(this.state.rating);
-                // console.log(this.state.description);
-            }
-
-            )
+                this.setState({id: this.props.match.params.id, title: res.data.title, rating: res.data.rating, description: res.data.description, picture: res.data.picture});
+            })
             .catch(err => console.log(err));
     };
 
@@ -36,29 +61,14 @@ class Guide extends Component {
                 <Navbar />
                 <div className="guides-img">
                 </div>
-                <ul>
-                        <li>
-                            <ul>
-                                <li>
-                                    Title: {this.state.title}
-                                </li>
-                                <li>
-                                    Rating: {this.state.rating}
-                                </li>
-                                <li>
-                                    Directions
-                                    <ul>
-                                        {this.state.description.map(step=> (
-                                            <li>
-                                                {step}
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                </li>
-                            </ul>
-                        </li>
-                </ul>
+                <img src={this.state.picture}/>
+                <GuideWrapper
+                    title={this.state.title}
+                    rating={this.state.rating}
+                    upVote={this.upVote}
+                    downVote={this.downVote}
+                    description={this.state.description}
+                />
             </div>
         );
     };
