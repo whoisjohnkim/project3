@@ -1,14 +1,5 @@
 import React, {Component} from 'react';
-import Home from './Home';
 import "../components/OnTap/OnTap.css";
-import OnTapLogo from "../images/OnTapLogo.svg";
-import smolbeer from "../images/smolbeer.png";
-import circle from "../images/circle.png";
-import cheers from "../images/cheers.jpg";
-import bright from "../images/bright.jpg";
-
-
-
 
 class OnTap extends Component {
     render() {
@@ -28,8 +19,8 @@ class OnTap extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default OnTap;
