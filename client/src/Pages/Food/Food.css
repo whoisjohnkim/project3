@@ -6,6 +6,9 @@
 ul{
     position: relative;
 }
+.jumbotron{
+    background-color: #b1dfe8;
+}
 
 .foodcard{
     width: 450px;
