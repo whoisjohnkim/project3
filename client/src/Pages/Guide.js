@@ -60,16 +60,15 @@ class Guide extends Component {
             <div>
                 <Navbar />
                 <div className="guides-img">
+                    <GuideWrapper
+                            key={this.state.id}
+                            title={this.state.title}
+                            rating={this.state.rating}
+                            upVote={this.upVote}
+                            downVote={this.downVote}
+                            description={this.state.description}
+                        />
                 </div>
-                <img src={this.state.picture}/>
-                <GuideWrapper
-                    key={this.state.id}
-                    title={this.state.title}
-                    rating={this.state.rating}
-                    upVote={this.upVote}
-                    downVote={this.downVote}
-                    description={this.state.description}
-                />
             </div>
         );
     };
