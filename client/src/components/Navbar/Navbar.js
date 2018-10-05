@@ -7,10 +7,22 @@ import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
 
 class Navbar extends Component {
-    state = {
-        isOpen: false,
-        guides: []
-    };
+    constructor (props) {
+        super(props)
+        this.state = {
+            isOpen: false,
+            guides: []
+        };
+
+    }
+
+    handleOpen = () => {
+        this.setState({ isOpen: true })
+    }
+
+    handleClose = () => {
+        this.setState({ isOpen: false })
+    }
 
     componentDidMount() {
         this.loadGuides();
@@ -24,10 +36,8 @@ class Navbar extends Component {
             .catch(err => console.log(err));
     };
 
-    toggleOpen = () => this.setState({isOpen: !this.state.isOpen });
-
     render(){
-        const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
+        const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
 
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,19 +63,21 @@ class Navbar extends Component {
                     </Link>
                     </li>
 
-                    <li className="nav-item dropdown" onClick={this.toggleOpen}>
+                    <li className="nav-item dropdown"
+                        onMouseOver={this.handleOpen}
+                        onMouseLeave={this.handleClose}
+                        open={this.state.is}
+                    >
                     <Link
                         to="/guides"
                         className={
-                            window.location.pathname === "/guides"
-                            ? "nav-link dropdown-toggle"
-                            : "nav-link"
-                        }
+                             "nav-link dropdown-toggle"
+                        } 
                         >
                         GUIDE
                     </Link>
 
-                    <div className={menuClass} aria-labelledby="navbarDropdown">
+                    <div aria-labelledby="navbarDropdown" className={menuClass} >
 
                         {this.state.guides.map(guide => (
                             <Link to={"/guides/" + guide._id} className="dropdown-item">
