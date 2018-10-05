@@ -37,7 +37,8 @@ class Signup extends Component {
       handleLoginButton = event => {
         event.preventDefault();
         //console.log(event.target);
-        axios.post("/api/register", {email: this.state.email, password: this.state.password}).then(function(response){
+        axios.post("/api/registers/signup", {email: this.state.email, password: this.state.password}).then(function(response){
+            console.log("test1")
           
         })
         this.setState({ email: "", password: ""});

@@ -336,14 +336,14 @@ db.Interactive
             process.exit(1);
         })
 
-const userSeed = {
+const usersSeed = {
     email: "test@test.com",
     password: "abc123"
 }
 
 db.Users
     .remove({})
-    .then(() => db.Users.collection.insertOne(userSeed))
+    .then(() => db.Users.collection.insertOne(usersSeed))
     .then(data => {
         console.log(data.result.n + " record inserted!");
     process.exit(0);
