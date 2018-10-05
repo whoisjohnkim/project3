@@ -4,6 +4,11 @@ import OnTap from './Pages/OnTap';
 import Home from './Pages/Home';
 import Login from './components/Login/Login';
 import './App.css';
+
+import MusicController from './components/MusicController/MusicController';
+
+// import Navbar from "./components/Navbar";
+
 import Game from './Pages/Game';
 import Guides from './Pages/Guides';
 import Guide from './Pages/Guide';
@@ -13,7 +18,43 @@ import Signup from './components/Signup/Signup';
 import music from './images/EQIcon.gif';
 import Uber from './Pages/Uber';
 
+class Popup extends React.Component {
+  render() {
+    return (
+      
+      <div className='popup'>
+        <div className='popup_inner'>
+          <MusicController />
+
+        </div>
+      </div>
+    );
+  }
+}
+    
+const showup = {
+  visibility: 'visible',
+};
+
+const hide = {
+  visibility: 'hidden',
+};
+
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  
+  }
+
   render() {
     return (
       <Router>
@@ -30,7 +71,21 @@ class App extends Component {
             <Route exact path="/playlist" component={Playlist} />
             <Route exact path="/uber" component={Uber} />
           </Switch>
-          <img id="eq" src={ music } />
+          <div style={ hide }> 
+                <Popup />
+              </div>
+
+          {this.state.showPopup ? 
+              <div style={ hide }> 
+                <Popup />
+              </div>
+              : <div style={ showup }> 
+              <Popup />
+            </div>
+            }
+
+     
+          <img alt="eq" id="eq" src={ music } onClick={this.togglePopup.bind(this)}/>
         </div>
       </Router>
     );
