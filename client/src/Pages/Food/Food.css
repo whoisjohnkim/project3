@@ -1,0 +1,43 @@
+.divContainer {
+    text-align: center;
+    margin: auto;
+    
+}
+
+ul{
+    position: relative;
+}
+
+.jumbotron{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLJniUr4EFCulbGflXNYssRnOq9GP_RHCksKEqxrO7XnASBxoRQ");
+    color: white;
+}
+
+.h1D{
+    font-family: 'Indie Flower', cursive;
+}
+
+.cardTitle{
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
+
+.foodcard{
+    width: 450px;
+    margin: 20px 50px ;
+    float: left;
+    position: relative;
+}
+
+.secondcardimage{
+    width: 420px;
+    
+}
+
+.link:hover{
+    text-decoration: underline;
+    
+}
+.link:visited{
+    color: purple;
+}
