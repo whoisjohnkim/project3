@@ -15,8 +15,8 @@ import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
 import Signup from './components/Signup/Signup';
-
 import music from './images/EQIcon.gif';
+import Uber from './Pages/Uber';
 
 class Popup extends React.Component {
   render() {
@@ -69,6 +69,7 @@ class App extends Component {
             <Route exact path="/guides/:id" component={Guide}/>
             <Route exact path="/food" component={Food} />
             <Route exact path="/playlist" component={Playlist} />
+            <Route exact path="/uber" component={Uber} />
           </Switch>
           <div style={ hide }> 
                 <Popup />
