@@ -1,16 +1,12 @@
 import React from "react";
-import "./GuideWrapper.css";
 
 const GuideWrapper = props => (
-    <div className="game">
+    <div>
         <h3>{props.title}</h3>
         <h5>Rating: {props.rating}</h5>
-        <span className="buttonContainer">
-            <button type="button" className="btn btn-success" onClick={props.upVote}>Up Vote</button>
-            <button type="button" className="btn btn-danger" onClick={props.downVote}>Down Vote</button>
-        </span>
-
-        <ul className="instructions">
+        <button type="button" onClick={props.upVote}>Up Vote</button>
+        <button type="button" onClick={props.downVote}>Down Vote</button>
+        <ul>
             {props.description.map( step => (
                 <li>
                     {step}
