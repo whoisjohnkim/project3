@@ -15,16 +15,17 @@ class OnTap extends Component {
         return (
             <div> 
                 <div className="bg-img">
-                <div className="loadingContent">
-                {/* <img id= "logo" src={require('../images/OnTapLogo.svg')} /> */}
-                <img id= "circle" src={require('../images/circle.png')} />
-                <p id= "ontapword"> ON TAP </p>
-                <br/>
-                <p id= "beerbtn"> <a href="./Home">
-                <img id= "smolbeer" src={require('../images/smolbeer.png')} /> </a></p>
-                <br />
-                <p id= "toplay">click to play!</p>
-                </div>
+                    <div className="loadingContent container">
+                        {/* <img id= "logo" src={require('../images/OnTapLogo.svg')} /> */}
+                        <img id= "circle" src={require('../images/circle.png')} />
+                        <div className="text-center same-stuff">
+                            <h1 id= "ontapword"> ON TAP </h1>                            
+                            <a href="./Home">
+                                <img id= "smolbeer" src={require('../images/smolbeer.png')} />
+                            </a>
+                            <h4 id= "toplay"> click to play! </h4>                        
+                        </div>
+                    </div>
                 </div>
             </div>
         )
