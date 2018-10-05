@@ -38,6 +38,20 @@
 
 }
 
+#gameText {
+    display: inline;
+    margin: 17% auto;
+    color: white;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
 #tipsy {
     font-size: 120px;
     color: rgb(124, 193, 240);
