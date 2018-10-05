@@ -10,8 +10,8 @@ import Guide from './Pages/Guide';
 import Food from './Pages/Food';
 import Playlist from './Pages/Playlist';
 import Signup from './components/Signup/Signup';
-
 import music from './images/EQIcon.gif';
+import Uber from './Pages/Uber';
 
 class App extends Component {
   render() {
