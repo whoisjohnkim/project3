@@ -1,11 +1,8 @@
 const router = require("express").Router();
 const gameRoutes = require("./games");
-<<<<<<< HEAD
 const registerRoutes = require("./registers");
-=======
 const foodRoutes = require("./food");
 
->>>>>>> master
 
 
 //Game Routes
