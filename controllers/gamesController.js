@@ -41,7 +41,7 @@ module.exports = {
     // Returns info on the interactive Game
     findInteractive: function(req, res) {
         db.Interactive
-            .find(req.query)
+            .find(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }
