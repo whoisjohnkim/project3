@@ -3,5 +3,6 @@
 module.exports = {
     Games: require("./Game"),
     Interactive: require("./Interactive"),
-    Users: require("./User")
+    Users: require("./User"),
+    Food: require("./Food")
 };
