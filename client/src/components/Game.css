@@ -33,9 +33,20 @@
     1px 1px 0 #3E333F;
      /* -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: grey; */
+}
 
-
-
+#gameText {
+    display: inline;
+    margin: 17% auto;
+    color: white;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
 }
 
 #tipsy {

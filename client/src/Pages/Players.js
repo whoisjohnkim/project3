@@ -6,7 +6,7 @@ import token2 from "../images/twoPixel.png";
 import token3 from "../images/threePixel.png";
 import token4 from "../images/fourPixel.png";
 import token5 from "../images/fivePixel.png";
- 
+
 
 
 class Game extends Component {
@@ -36,7 +36,6 @@ class Game extends Component {
                             <img className="spinner" src={token5} alt="one token" width="100px" />
                         </button>
                     </div>
-                    
                 </div>
             </div>
         )
