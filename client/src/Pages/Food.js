@@ -34,7 +34,7 @@ class Food extends Component {
                 <Navbar />
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
-                        <h1 className="display-4">DRUNCHIES!!!</h1>
+                        <h1 className="display-4 h1D">DRUNCHIES!!!</h1>
                         <br></br>
                         <p className="lead">This is all the food that your drunchies heart desires!</p>
                     </div>
@@ -44,7 +44,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle>Mac N Cheetos</CardTitle>
+                            <CardTitle className="cardTitle">Mac N Cheetos</CardTitle>
                             <br></br>
                             <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -53,7 +53,7 @@ class Food extends Component {
                             <CardBody>
                             <CardText>It's like fried macaroni but better! Instead of regualr breadding around the macaroni it's a Cheetos breading to make it even cheesier!</CardText>
                             <br></br>
-                            <CardLink target="_blank" href="https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000">Buy</CardLink>
+                            <CardLink className="link" target="_blank" href="https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000">Buy</CardLink>
                             </CardBody>
                         </Card>
                     </div>
@@ -61,7 +61,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle>Pizza Hut</CardTitle>
+                            <CardTitle className="cardTitle">Pizza Hut</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -70,7 +70,7 @@ class Food extends Component {
                             <CardBody>
                             <CardText>Some warm pizza is always the way to go after a long night of drinking.</CardText>
                             <br></br>
-                            <CardLink className="linkButton" target="_blank" href="https://www.pizzahut.com/?gclid=Cj0KCQjw9NbdBRCwARIsAPLsnFbOQolxeOtsJpAcdueFQ5IwoM3eKGqaEr4LWeoZTE-b1O4LmC9rzmsaAkAYEALw_wcB&gclsrc=aw.ds&dclid=CJifw83h7d0CFY6-wAodCEwGpA">Order</CardLink>
+                            <CardLink className="link" target="_blank" href="https://www.pizzahut.com/?gclid=Cj0KCQjw9NbdBRCwARIsAPLsnFbOQolxeOtsJpAcdueFQ5IwoM3eKGqaEr4LWeoZTE-b1O4LmC9rzmsaAkAYEALw_wcB&gclsrc=aw.ds&dclid=CJifw83h7d0CFY6-wAodCEwGpA">Order</CardLink>
                             </CardBody>
                         </Card>
                     </div>
@@ -78,7 +78,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle>Tyson's Tacos</CardTitle>
+                            <CardTitle className="cardTitle">Tyson's Tacos</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -87,7 +87,7 @@ class Food extends Component {
                             <CardBody>
                             <CardText>Nothing's a better snack to grab with some friends after a night of drinking than tacos! Tyson Taco's has some of the best tacos in the Austin area.</CardText>
                             <br></br>
-                            <CardLink target="_blank" href="http://www.tysonstacos.com/">Tyson's Taco</CardLink>
+                            <CardLink className="link" target="_blank" href="http://www.tysonstacos.com/">Tyson's Taco</CardLink>
                             </CardBody>
                         </Card>
                     </div>
@@ -95,7 +95,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle>Chili Dog</CardTitle>
+                            <CardTitle className="cardTitle">Chili Dog</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -104,7 +104,7 @@ class Food extends Component {
                             <CardBody>
                             <CardText>Chili Dogs are a classic stomach filler. They are easy to make but still amazing.</CardText>
                             <br></br>
-                            <CardLink target="_blank" href="https://www.allrecipes.com/recipe/223538/jeffs-hot-dog-chili/">Make Your Own</CardLink>
+                            <CardLink className="link" target="_blank" href="https://www.allrecipes.com/recipe/223538/jeffs-hot-dog-chili/">Make Your Own</CardLink>
                             </CardBody>
                         </Card>
                     </div>
@@ -112,7 +112,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle>Nachos</CardTitle>
+                            <CardTitle className="cardTitle">Nachos</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -121,7 +121,7 @@ class Food extends Component {
                             <CardBody>
                             <CardText>Some nachos are always great but you can also add whatever you have at home!</CardText>
                             <br></br>
-                            <CardLink target="_blank" href="https://www.allrecipes.com/recipe/51147/super-nachos/">Build Your Own</CardLink>
+                            <CardLink className="link" target="_blank" href="https://www.allrecipes.com/recipe/51147/super-nachos/">Build Your Own</CardLink>
                             </CardBody>
                         </Card>
                     </div>
@@ -129,7 +129,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle>Taco Bell</CardTitle>
+                            <CardTitle className="cardTitle">Taco Bell</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -138,7 +138,7 @@ class Food extends Component {
                             <CardBody>
                             <CardText>Some foods are just only enjoyed after you've had a lot to drink. This place is the first on that list.</CardText> 
                             <br></br>
-                            <CardLink target="_blank" href="https://www.tacobell.com/locations">Find The Closetest Taco Bell</CardLink>
+                            <CardLink className="link" target="_blank" href="https://www.tacobell.com/locations">Find The Closetest Taco Bell</CardLink>
                             </CardBody>
                         </Card>
                     </div>
