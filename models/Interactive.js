@@ -16,7 +16,7 @@ var InteractiveSchema = new Schema({
         required: true,
         unqiue: true
     },
-    // Game rating is required and type Int
+    // Game rating is required and type Number
     rating: {
         type: Number,
         required: true,
@@ -26,7 +26,7 @@ var InteractiveSchema = new Schema({
     // An Array containing turns for the user
     turns: {
         type: Array,
-        required: true,
+        required: true
     }
 })
 

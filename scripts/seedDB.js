@@ -282,7 +282,6 @@ const gamesSeed = [
         rating: 50,
         picture: "../images/beertattoo.jpg"
     }
-
 ]
 
 const foodsSeed = [
