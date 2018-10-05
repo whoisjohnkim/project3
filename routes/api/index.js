@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const gameRoutes = require("./games");
-const registerRoutes = require("./register");
+const registerRoutes = require("./registers");
 
 
 //Game Routes
