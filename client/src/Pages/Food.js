@@ -34,9 +34,9 @@ class Food extends Component {
                 <Navbar />
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
-                        <h1 className="display-4 h1D">DRUNCHIES!!!</h1>
+                        <h1 className="display-4 h1D">DRUNCHIES</h1>
                         <br></br>
-                        <p className="lead">This is all the food that your drunchies heart desires!</p>
+                        <p className="lead">All the fried and saucy late night snacks.</p>
                     </div>
                 </div>
 
