@@ -56,7 +56,7 @@ class Signup extends Component {
         return (
             <div>
               <div id="content">
-                <img src={ hip } />
+                <img id="hip" src={ hip } />
                     <center>
                     <p id= "hello"> HELLO. </p>
                     <p id= "seat"> come on in and take a seat. </p>

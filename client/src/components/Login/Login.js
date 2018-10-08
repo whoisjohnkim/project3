@@ -75,7 +75,7 @@ class Login extends Component {
         return (
             <div>
               <div id="content">
-                <img src={ cheers } />
+                <img id="cheers" src={ cheers } />
                     <center>
                     <p id= "welcome"> WELCOME BACK. </p>
                     <p id= "waiting"> we've been waiting for you. </p>
