@@ -10,3 +10,15 @@
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
 }
+.playlistContainer{
+    background-color: black;
+}
+.wholePage{
+    background-color: black;
+}
+
+.jumbotron{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLJniUr4EFCulbGflXNYssRnOq9GP_RHCksKEqxrO7XnASBxoRQ");
+    color: white;
+    text-align: center;
+}

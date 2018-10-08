@@ -30,7 +30,7 @@ class Food extends Component {
     render() {
         return (
             
-            <div className= "divContainer">
+            <div className= "FoodDivContainer">
                 <Navbar />
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
@@ -148,3 +148,5 @@ class Food extends Component {
 }
 
 export default Food;
+
+
