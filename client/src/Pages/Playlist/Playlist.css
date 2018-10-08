@@ -1,0 +1,24 @@
+.playlistcard{
+    width: 450px;
+    height: 584px;
+    margin: 20px 50px ;
+    float: left;
+    position: relative;
+}
+.cardsubtitle{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
+.playlistContainer{
+    background-color: black;
+}
+.wholePage{
+    background-color: black;
+}
+
+.jumbotron{
+    background-image: url("http://getwallpapers.com/wallpaper/full/c/c/6/698350-cool-music-backgrounds-1920x1080-hd-1080p.jpg");
+    color: white;
+    text-align: center;
+}
