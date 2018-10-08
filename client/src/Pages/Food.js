@@ -30,7 +30,7 @@ class Food extends Component {
     render() {
         return (
             
-            <div className= "divContainer">
+            <div className= "FoodDivContainer">
                 <Navbar />
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
@@ -46,8 +46,8 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">Mac N Cheetos</CardTitle>
                             <br></br>
-                            <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
+                            <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
+                            
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://i5.walmartimages.com/asr/cf3a2658-2f36-4d7d-887c-b57f7d5bdd03_1.2acac3766810ce6641b3aede6633b599.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" alt="Card image cap" />
                             <CardBody>
@@ -81,7 +81,6 @@ class Food extends Component {
                             <CardTitle className="cardTitle">Tyson's Tacos</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://static1.squarespace.com/static/57ae2aaee58c62414bd26a20/57ae31e55016e1690c423e21/57ae322ce3df28c4ce928147/1484591339729/Tyson%27s+Tacos.jpg?format=1500w" alt="Card image cap" />
                             <CardBody>
@@ -149,3 +148,5 @@ class Food extends Component {
 }
 
 export default Food;
+
+
