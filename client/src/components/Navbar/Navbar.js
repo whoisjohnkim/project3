@@ -38,7 +38,6 @@ class Navbar extends Component {
 
     render(){
         const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
-
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
@@ -63,7 +62,41 @@ class Navbar extends Component {
                     </Link>
                     </li>
 
-                    <li className="nav-item dropdown"
+                    <li 
+                        className="dropdown"
+                        onMouseOver={this.handleOpen}
+                        onMouseLeave={this.handleClose}
+                        open={this.state.is}
+                        >
+                    <Link 
+                        to="/guides" 
+                        className="dropdown-toggle" 
+                        data-toggle="dropdown">
+                    Dropdown
+                    </Link>
+                    <ul className="dropdown-menu">
+                        {this.state.guides.map(guide => (
+                            <Link to={"/guides/" + guide._id} className="dropdown-item">
+                                {guide.title}
+                            </Link>
+                        ))}
+                    </ul>
+                    </li>
+                        {/* <a class="dropdown-item" href="#">
+                            Action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            Another action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            Something else here
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            Separated link
+                        </a> */}
+
+                    {/* <li className="nav-item dropdown"
                         onMouseOver={this.handleOpen}
                         onMouseLeave={this.handleClose}
                         open={this.state.is}
@@ -77,7 +110,7 @@ class Navbar extends Component {
                         GUIDE
                     </Link>
 
-                    <div aria-labelledby="navbarDropdown" className={menuClass} >
+                    <div aria-labelledby="navbarDropdown" >
 
                         {this.state.guides.map(guide => (
                             <Link to={"/guides/" + guide._id} className="dropdown-item">
@@ -85,7 +118,7 @@ class Navbar extends Component {
                             </Link>
                         ))}
                     </div>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item">
                     <Link
@@ -125,3 +158,5 @@ class Navbar extends Component {
 };
 
 export default Navbar;
+
+// const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
