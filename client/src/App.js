@@ -58,7 +58,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div >
           <Switch>
             <Route exact path="/" component={OnTap} />
             <Route exact path="/login" component={Login} />
@@ -84,8 +84,10 @@ class App extends Component {
             </div>
             }
 
+          <div id="musics" >
+           <img alt="eq" id="eq" src={ music } onClick={this.togglePopup.bind(this)}/>
+          </div>
 
-          <img alt="eq" id="eq" src={ music } onClick={this.togglePopup.bind(this)}/>
         </div>
       </Router>
     );
