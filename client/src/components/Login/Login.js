@@ -74,9 +74,6 @@ class Login extends Component {
     render() {
         return (
             <div>
-              {/* <div id="header">
-                <p>Header</p>
-              </div> */}
               <div id="content">
                 <img src={ cheers } />
                     <center>
@@ -107,9 +104,7 @@ class Login extends Component {
                     </form>
                     
                 </div>
-                {/* <div id="footer">
-                  <p>Footer</p>
-                </div> */}
+               
             </div>
         )
     }
