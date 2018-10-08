@@ -47,7 +47,7 @@ class Navbar extends Component {
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
-            <img id="logo" src={ onTapLogo } alt="logo" />
+            <img id="logoNav" src={ onTapLogo } alt="logo" />
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -87,7 +87,7 @@ class Navbar extends Component {
                         <div id="hovermenu" aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
                             
                             {this.state.guides.map(guide => (
-                                <Link to={"/guides/" + guide._id} className="dropdown-item">
+                                <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
                                     {guide.title}
                                 </Link>
                             ))}
@@ -126,7 +126,7 @@ class Navbar extends Component {
                     </Link>
                     </li>
                 </ul>
-                ${this.state.logged ? <Logged /> : "No user currently Logged In"}
+                {/* ${ this.state.logged ? <Logged /> : "No user currently Logged In"} */}
             </div>
         </nav>
         )

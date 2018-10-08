@@ -1,16 +1,20 @@
 nav.navbar.navbar-default {
     margin-bottom: 0;
     /* margin-top: -100px; */
-  
     }
+
+  .collapse {
+    z-index: 1;
+  }
 
   .nav-item {
     letter-spacing: 2px;
   }
 
-  #logo {
+  #logoNav {
     position: relative;
     float: left;
+    margin: 0 0;
     width: 100%;
   }
 
