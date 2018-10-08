@@ -46,7 +46,7 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">Mac N Cheetos</CardTitle>
                             <br></br>
-                            <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
+                            <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
                             
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://i5.walmartimages.com/asr/cf3a2658-2f36-4d7d-887c-b57f7d5bdd03_1.2acac3766810ce6641b3aede6633b599.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" alt="Card image cap" />

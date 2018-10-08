@@ -15,10 +15,9 @@ class Playlist extends Component {
                 <div className='playlistcard'>
                     <Card>
                         <CardBody>
+                            <CardSubtitle className="cardsubtitle">Tailgate Party</CardSubtitle>
+                            <br></br>
                             <CardTitle className="cardTitle"><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXdgnLr18vPvu" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></CardTitle>
-                            <br></br>
-                            <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                         </CardBody>
                     </Card>
                 </div>
@@ -28,10 +27,10 @@ class Playlist extends Component {
                 <div className='playlistcard'>
                     <Card>
                         <CardBody>
+                            <CardSubtitle className="cardsubtitle">Chill Hits</CardSubtitle>
+                            <br></br>
                             <CardTitle className="cardTitle"><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4WYpdgoIcn6" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></CardTitle>
-                            <br></br>
-                            <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
+                            
                         </CardBody>
                     </Card>
                 </div>
@@ -41,10 +40,21 @@ class Playlist extends Component {
                 <div className='playlistcard'>
                     <Card>
                         <CardBody>
+                            <CardSubtitle className="cardsubtitle">Rap Caviar</CardSubtitle>
+                            <br></br>
                             <CardTitle className="cardTitle"><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX0XUsuxWHRQd" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></CardTitle>
+                            
+                        </CardBody>
+                    </Card>
+                </div>
+
+                <div className='playlistcard'>
+                    <Card>
+                        <CardBody>
+                            <CardSubtitle className="cardsubtitle">Housewerk</CardSubtitle>
                             <br></br>
-                            <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
+                            <CardTitle className="cardTitle"><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXa8NOEUWPn9W" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></CardTitle>
+                            
                         </CardBody>
                     </Card>
                 </div>
@@ -57,3 +67,4 @@ class Playlist extends Component {
 }
 
 export default Playlist;
+

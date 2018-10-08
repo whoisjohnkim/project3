@@ -1,4 +1,12 @@
 .playlistcard{
-    margin: 10px;
-    width: 33%;
+    width: 450px;
+    height: 584px;
+    margin: 20px 50px ;
+    float: left;
+    position: relative;
+}
+.cardsubtitle{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
 }
