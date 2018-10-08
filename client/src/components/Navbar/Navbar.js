@@ -75,8 +75,8 @@ class Navbar extends Component {
                     <Link
                         to="/guides"
                         className={
-                             "nav-link dropdown-toggle"
-                        } 
+                             "nav-link dropdown-toggle" 
+                        } id="dropdownMenuButton"
                         >
                         GUIDE
                     </Link>
@@ -84,7 +84,7 @@ class Navbar extends Component {
                         this.state.showGuide
 
                         ? (
-                        <div aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
+                        <div id="hovermenu" aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
                             
                             {this.state.guides.map(guide => (
                                 <Link to={"/guides/" + guide._id} className="dropdown-item">
