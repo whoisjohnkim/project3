@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import API from "../../utils/API";
+import Logged from "../Logged/Logged";
 
 import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
@@ -101,11 +102,7 @@ class Navbar extends Component {
                     </Link>
                     </li>
                 </ul>
-
-            <form className="form-inline my-2 my-lg-0">
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+                ${this.state.logged ? <Logged /> : "No user currently Logged In"}
             </div>
         </nav>
         )
