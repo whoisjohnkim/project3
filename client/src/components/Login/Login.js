@@ -37,7 +37,7 @@ class Login extends Component {
       handleLoginButton = event => {
         event.preventDefault();
         //console.log(event.target);
-        axios.get("/api/login", {email: this.state.email, password: this.state.password}).then(function(response){
+        axios.get("/api/login/login", {email: this.state.email, password: this.state.password}).then(function(response){
           
         })
         this.setState({ email: "", password: ""});
