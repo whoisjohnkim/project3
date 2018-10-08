@@ -11,10 +11,10 @@ class OnTap extends Component {
                         {/* <img id= "logo" src={require('../images/OnTapLogo.svg')} /> */}
                         <img id= "circle" src={require('../images/circle.png')} />
                         <div className="text-center same-stuff">
-                         <a href="./Home">
-                         <img id="MainLogo" src={ logo } alt="logo" />                           
+                         
+                         <img id="MainLogo" src={ logo } alt="logo" OnClick="/signup" />                           
                             <h4 id= "toplay"> click to play! </h4>
-                         </a>
+                         
                                                     
                         </div>
                     </div>
