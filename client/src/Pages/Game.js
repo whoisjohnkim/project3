@@ -120,14 +120,6 @@ class Game extends Component {
         else if(this.state.phase === "players"){
             display = (<div className="games-img">
                 <span className="playerSpan">
-                    <span className="spinnerSpan">
-                        <img className="spinner" src={token1} alt="one token" />
-                        <img className="spinner" src={token2} alt="one token" />
-                        <img className="spinner" src={token3} alt="one token" />
-                        <img className="spinner" src={token4} alt="one token" />
-                        <img className="spinner" src={token5} alt="one token" />
-                    </span>
-                    <br/>
                     <input type="text" className="playerName" value={this.state.value} onChange={this.handleChange}/><br></br>
                     <button type="button" className="playerButton btn btn-secondary" onClick={this.addPlayer}>Add Player</button>
                     <button type="button" className="playerButton btn btn-success" onClick={this.setOrder}>Start Game</button>
