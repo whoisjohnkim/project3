@@ -7,21 +7,23 @@ import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
 
 class Navbar extends Component {
-    constructor (props) {
-        super(props)
+    constructor () {
+        super();
         this.state = {
-            isOpen: false,
+            showGuide: false,
             guides: []
         };
 
+        this.showGuide = this.showGuide.bind(this);
+
     }
 
-    handleOpen = () => {
-        this.setState({ isOpen: true })
-    }
+    showGuide(event) {
+        event.preventDefault();
 
-    handleClose = () => {
-        this.setState({ isOpen: false })
+        this.setState({
+            showGuide: true,
+        });
     }
 
     componentDidMount() {
@@ -36,8 +38,11 @@ class Navbar extends Component {
             .catch(err => console.log(err));
     };
 
+    refreshPage = () => {
+        window.location.reload();
+    }
+
     render(){
-        const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
@@ -46,7 +51,7 @@ class Navbar extends Component {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-
+            {/* ////////////////////////////////////////// */}
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
@@ -61,45 +66,10 @@ class Navbar extends Component {
                     GAME
                     </Link>
                     </li>
+                {/* ////////////////////////////////////////// */}
 
-                    <li 
-                        className="dropdown"
-                        onMouseOver={this.handleOpen}
-                        onMouseLeave={this.handleClose}
-                        open={this.state.is}
-                        >
-                    <Link 
-                        to="/guides" 
-                        className="dropdown-toggle" 
-                        data-toggle="dropdown">
-                    Dropdown
-                    </Link>
-                    <ul className="dropdown-menu">
-                        {this.state.guides.map(guide => (
-                            <Link to={"/guides/" + guide._id} className="dropdown-item">
-                                {guide.title}
-                            </Link>
-                        ))}
-                    </ul>
-                    </li>
-                        {/* <a class="dropdown-item" href="#">
-                            Action
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            Another action
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            Something else here
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                            Separated link
-                        </a> */}
-
-                    {/* <li className="nav-item dropdown"
-                        onMouseOver={this.handleOpen}
-                        onMouseLeave={this.handleClose}
-                        open={this.state.is}
+                    <li className="nav-item dropdown"
+                        onMouseOver={this.showGuide}
                     >
                     <Link
                         to="/guides"
@@ -109,17 +79,26 @@ class Navbar extends Component {
                         >
                         GUIDE
                     </Link>
+                    {
+                        this.state.showGuide
 
-                    <div aria-labelledby="navbarDropdown" >
+                        ? (
+                        <div aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
+                            
+                            {this.state.guides.map(guide => (
+                                <Link to={"/guides/" + guide._id} className="dropdown-item">
+                                    {guide.title}
+                                </Link>
+                            ))}
+                        </div>
+                        )
+                        : (
+                            null
+                        )
+                    }
+                    </li>
 
-                        {this.state.guides.map(guide => (
-                            <Link to={"/guides/" + guide._id} className="dropdown-item">
-                                {guide.title}
-                            </Link>
-                        ))}
-                    </div>
-                    </li> */}
-
+                    {/* ////////////////////////////////////////// */}
                     <li className="nav-item">
                     <Link
                         to="/playlist"
@@ -132,7 +111,7 @@ class Navbar extends Component {
                     PLAYLIST
                     </Link>
                     </li>
-
+                    {/* ////////////////////////////////////////// */}
                     <li className="nav-item">
                     <Link
                         to="/food"
