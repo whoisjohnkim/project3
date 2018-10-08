@@ -8,10 +8,24 @@ import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
 
 class Navbar extends Component {
-    state = {
-        isOpen: false,
-        guides: []
-    };
+    constructor () {
+        super();
+        this.state = {
+            showGuide: false,
+            guides: []
+        };
+
+        this.showGuide = this.showGuide.bind(this);
+
+    }
+
+    showGuide(event) {
+        event.preventDefault();
+
+        this.setState({
+            showGuide: true,
+        });
+    }
 
     componentDidMount() {
         this.loadGuides();
@@ -25,11 +39,11 @@ class Navbar extends Component {
             .catch(err => console.log(err));
     };
 
-    toggleOpen = () => this.setState({isOpen: !this.state.isOpen });
+    refreshPage = () => {
+        window.location.reload();
+    }
 
     render(){
-        const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
-
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
@@ -38,7 +52,7 @@ class Navbar extends Component {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-
+            {/* ////////////////////////////////////////// */}
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
@@ -53,29 +67,39 @@ class Navbar extends Component {
                     GAME
                     </Link>
                     </li>
+                {/* ////////////////////////////////////////// */}
 
-                    <li className="nav-item dropdown" onClick={this.toggleOpen}>
+                    <li className="nav-item dropdown"
+                        onMouseOver={this.showGuide}
+                    >
                     <Link
                         to="/guides"
                         className={
-                            window.location.pathname === "/guides"
-                            ? "nav-link dropdown-toggle"
-                            : "nav-link"
-                        }
+                             "nav-link dropdown-toggle"
+                        } 
                         >
                         GUIDE
                     </Link>
+                    {
+                        this.state.showGuide
 
-                    <div className={menuClass} aria-labelledby="navbarDropdown">
-
-                        {this.state.guides.map(guide => (
-                            <Link to={"/guides/" + guide._id} className="dropdown-item">
-                                {guide.title}
-                            </Link>
-                        ))}
-                    </div>
+                        ? (
+                        <div aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
+                            
+                            {this.state.guides.map(guide => (
+                                <Link to={"/guides/" + guide._id} className="dropdown-item">
+                                    {guide.title}
+                                </Link>
+                            ))}
+                        </div>
+                        )
+                        : (
+                            null
+                        )
+                    }
                     </li>
 
+                    {/* ////////////////////////////////////////// */}
                     <li className="nav-item">
                     <Link
                         to="/playlist"
@@ -88,7 +112,7 @@ class Navbar extends Component {
                     PLAYLIST
                     </Link>
                     </li>
-
+                    {/* ////////////////////////////////////////// */}
                     <li className="nav-item">
                     <Link
                         to="/food"
@@ -110,3 +134,5 @@ class Navbar extends Component {
 };
 
 export default Navbar;
+
+// const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
