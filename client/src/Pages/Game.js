@@ -55,12 +55,18 @@ class Game extends Component {
     };
 
     setOrder = () => {
-        var order = [];
-        for(var i = 0; i < this.state.turns.length; i++){
-            order.push(i);
+        if(this.state.players.length < 2){
+            this.setState({phase: "players"})
         }
-        this.setState({order: order, turnNumber: 0, phase: "started",  currentTurn: "Everyone Take a Drink!"});
-        this.shuffle();
+        else{
+            var order = [];
+            for(var i = 0; i < this.state.turns.length; i++){
+                order.push(i);
+            }
+            this.setState({order: order, turnNumber: 0, phase: "started",  currentTurn: "Everyone Take a Drink!"});
+            this.shuffle();
+        }
+
     };
 
     shuffle = () => {
@@ -80,7 +86,7 @@ class Game extends Component {
     };
 
     nextTurn = () => {
-        if(this.state.players.length !== 0) {
+        if(this.state.players.length > 1) {
             var name1, name2;
             var random1, random2;
             random1 = Math.floor(Math.random() * this.state.players.length);
@@ -94,6 +100,9 @@ class Game extends Component {
             else{
                 this.setState({currentTurn: this.state.players[random1] + this.state.turns[this.state.turnNumber] + this.state.players[random2], turnNumber: this.state.turnNumber + 1});
             }
+        }
+        else{
+            this.setState({currentTurn: "Please Enter At Least Two Players To Play This Game", phase: "players"});
         }
 
     };
