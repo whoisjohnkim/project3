@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import "../components/OnTap/OnTap.css";
+const landinglogo = require('../images/OnTapLogoUpdated.png');
+
 
 class OnTap extends Component {
     render() {
@@ -10,7 +12,9 @@ class OnTap extends Component {
                         {/* <img id= "logo" src={require('../images/OnTapLogo.svg')} /> */}
                         <img id= "circle" src={require('../images/circle.png')} />
                         <div className="text-center same-stuff">
-                            <h1 id= "ontapword"> ON TAP </h1>                            
+                            {/* <h1 id= "ontapword"> ON TAP </h1>                             */}
+                            <img id="landinglogo" src={ landinglogo } />
+                            <br/>
                             <a href="./Home">
                                 <img id= "smolbeer" src={require('../images/smolbeer.png')} />
                             </a>
