@@ -42,6 +42,43 @@
     text-align: center;
 }
 
+.currentPlayers {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
+.playerList {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
+.playerHeader {
+    display: inline;
+    color: white;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
 .playerSpan {
     display: block;
     width: 80%;
