@@ -35,9 +35,16 @@
     -webkit-text-stroke-color: grey; */
 }
 
+.gameSpan {
+    display: block;
+    width: 80%;
+    margin: 15% auto;
+    text-align: center;
+}
+
 .playerSpan {
     display: block;
-    width: 600px;
+    width: 80%;
     margin: 15% auto;
     text-align: center;
 }
@@ -64,7 +71,7 @@
 
 
 .playerButton {
-    width: 30px;
+    width: 100px;
     text-align: center;
 }
 
