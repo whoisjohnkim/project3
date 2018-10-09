@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import NewNavbar from "../components/Navbar";
+import SoundWave from "../components/SoundWave/SoundWave";
 import "../components/Playlist.css";
 import {
   Carousel,
@@ -98,6 +99,7 @@ class Playlist extends Component {
             <div>
                 <NewNavbar />
                 <div className="playlist-img">
+                    <SoundWave />
                     <Carousel
                         activeIndex={activeIndex}
                         next={this.next}
