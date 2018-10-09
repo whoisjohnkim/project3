@@ -9,24 +9,30 @@ body {
 }
 #sidebar {
     float:left;
-    width:33%;
+    width:34%;
+    background: white;
+    margin-top: 5.18%;
+
+ 
 }
 
 .form-group {
     margin-top: -5px;
+    padding-bottom: 10px;
 }
 
-#logo {
+#signuplogo {
     margin-top: 10%;
     padding-top: 30px;
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
     
 }
 
 #what {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 0%;
     font-size: 35px;
     font-family: 'Cookie', cursive;
     /* color: #B1DFE8; */
@@ -39,7 +45,8 @@ body {
 #hip {
     width: 100%;
     padding-left: 10px;
-    height:110%;
+    /* height:110%; */
+    margin-top: 6%;
 }
 
 input {

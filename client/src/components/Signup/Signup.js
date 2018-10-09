@@ -7,10 +7,11 @@ import {
   Redirect,
   withRouter
 } from "react-router-dom";
+import Helmet from 'react-helmet';
 
 import './Signup.css';
 const hip = require('../../images/hip.jpg');
-const logo = require('../../images/OnTapLogoUpdated.png');
+const signlogo = require('../../images/OnTapLogoUpdated.png');
 class Signup extends Component {
 
     state = {
@@ -55,6 +56,7 @@ class Signup extends Component {
     render() {
         return (
             <div>
+               <Helmet bodyAttributes={{style: 'background: #eee'}}/>
               <div id="content">
                 <img id="hip" src={ hip } />
                     <center>
@@ -64,7 +66,7 @@ class Signup extends Component {
                     </center>
               </div>
               <div id="sidebar">
-              <img id= "logo" src={ logo } />
+              <img id= "signuplogo" src={ signlogo } />
               <br/>
                 <p id="what"> what can we get for you to drink?</p>
                 <br/>
@@ -74,7 +76,7 @@ class Signup extends Component {
                     <div class="form-group">
                         <label for="exampleInputEmail1" id="formquestion">email address</label>
                         <input name="email" onChange={this.handleInputChange} type="email" value={this.state.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter email" />
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <small id="emailHelp" class="form-text text-muted">we'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1" id="formquestion">password</label>
@@ -83,6 +85,7 @@ class Signup extends Component {
                     <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">sign up</button>
                     <p id= "log"> already have an account? </p>
                     <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">login</button>
+                    
                     </center>
                     </form>
                     

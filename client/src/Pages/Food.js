@@ -3,6 +3,8 @@ import "./Food/Food.css";
 import NewNavbar from "../components/Navbar";
 import { Card, CardImg, CardText, CardBody, CardLink,
 CardTitle, CardSubtitle, Button } from 'reactstrap';
+import Helmet from 'react-helmet';
+
 import food from "../images/food.jpg";
 import pizza from "../images/pizza.png";
 import mac from "../images/macncheetos.jpg";
@@ -14,10 +16,6 @@ import pou from "../images/poutine.jpg";
 import lo from "../images/lomein.jpg";
 import nacho from "../images/nachos.jpg";
 import spoon from "../images/spoon.png";
-
-
-
-
 
 
 
@@ -60,6 +58,7 @@ class Food extends Component {
         return (
             
             <div className="food-img">
+            <Helmet bodyAttributes={{style: 'background: #eee'}}/>
             <div className= "FoodDivContainer">
                 <NewNavbar />
                 <div className="foodjumbotron">
@@ -67,7 +66,7 @@ class Food extends Component {
                     <div className="container">
                         <h1 className="display-3">DRUNCHIES</h1>
                         <br></br>
-                        <p className="lead">All the fried and saucy late night snacks we know you're craving.</p>
+                        <p className="lead">ALL THE FRIED AND SAUCY, LATE NIGHT SNACKS WE KNOW YOU'RE CRAVING.</p>
                     </div>
                 </div>
 
@@ -78,9 +77,6 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">POUTINE</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={poutine} />
                             <CardBody>
@@ -98,13 +94,11 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">LOADED TATER TOTS</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
+                           
                             </CardBody>
                             <CardImg className="secondcardimage" width="200px" height="300px" src={tatertots} />
                             <CardBody>
-                            <CardText>Just when you thought TATER TOTS couldn't get any better. Can I get a little more bacon on that?</CardText>
+                            <CardText>Cheese, green onions, and bacon? Just when you thought TATER TOTS couldn't get any better.</CardText>
                             <hr />
                             <CardLink className="link" target="_blank" href="https://www.savoryexperiments.com/cheesy-bacon-tots/">MAKE IT AT HOME</CardLink>
                             </CardBody>
@@ -115,13 +109,10 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">PIZZA HUT</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={pizzahut}/>
                             <CardBody>
-                            <CardText> Damn, look at that melted cheese. Nothing more comforting then a PIZZA this. </CardText>
+                            <CardText> Damn, look at that melted cheese. <br/>Nothing more comforting then a PIZZA this. </CardText>
                            
                             <hr />
                             <CardLink className="link" target="_blank" href="https://www.pizzahut.com/?gclid=Cj0KCQjw9NbdBRCwARIsAPLsnFbOQolxeOtsJpAcdueFQ5IwoM3eKGqaEr4LWeoZTE-b1O4LmC9rzmsaAkAYEALw_wcB&gclsrc=aw.ds&dclid=CJifw83h7d0CFY6-wAodCEwGpA">ORDER</CardLink>
@@ -134,13 +125,10 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">TSO CHINESE DELIVERY</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={lomein} />
                             <CardBody>
-                            <CardText> Chinese takeout, anyone?? TSO CHINESE DELIVERY revolutionized the game with its delivery of fast and delicious chinese food. It's TSO GOOD! </CardText> 
+                            <CardText> Chinese takeout, anyone? TSO CHINESE DELIVERY revolutionized the game with its delivery of fast and delicious Chinese food. <br/>It's TSO GOOD! </CardText> 
                             <hr />
                             <CardLink className="link" target="_blank" href="https://tsodelivery.com/">TSO READY TO ORDER</CardLink>
                             </CardBody>
@@ -153,9 +141,6 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">KERBEY LANE</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={pancake} />
                             <CardBody>
@@ -170,14 +155,10 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">NACHOS</CardTitle>
                             <hr />
-
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={nachos} />
                             <CardBody>
-                            <CardText>NEED. <br /> WE. <br /> SAY MORE?</CardText>
+                            <CardText>NEED <br /> WE <br /> SAY <br /> MORE?</CardText>
                             <hr />
                             <CardLink className="link" target="_blank" href="https://www.allrecipes.com/recipe/51147/super-nachos/">MAKE IT AT HOME</CardLink>
                             
@@ -190,12 +171,9 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">TYSON'S TACOS</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={tysons} />
                             <CardBody>
-                            <br/>
                             <CardText>Open 24/7 with an unbelievable selection of tacos, TYSON'S TACOS is an Austin gem.</CardText>
                             <hr />
                             <CardLink className="link" target="_blank" href="http://www.tysonstacos.com/">ORDER</CardLink>
@@ -208,9 +186,6 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">GYRO</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={gyro} />
                             <CardBody>
@@ -226,13 +201,10 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">MAC N CHEETOS</CardTitle>
                             <hr />
-                            <br></br>
-                            <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src={macncheetos} />
                             <CardBody>
-                            <CardText>Wait a second... Did someone ay MAC N CHEETOS?? <br/> Help, I've fallen and I can't get up.</CardText>
+                            <CardText>Wait a second... Did someone say MAC N CHEETOS?? Help, I've fallen and I can't get up.</CardText>
                             <hr />
                             <CardLink className="link" target="_blank" href="https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000">Buy</CardLink>
                             </CardBody>

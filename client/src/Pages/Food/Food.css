@@ -27,6 +27,8 @@
     font-size: 80px;
     padding-top: 5%;
     opacity: 0.9;
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
+
 
 }
 
@@ -42,6 +44,8 @@
 
 .secondcardimage{
     width: 418px;
+    padding: 20px;
+    margin-top: -40px;
     
 }
 
@@ -51,11 +55,13 @@
     
 }
 .link:visited{
-    color: purple;
+    color: lightslategrey;
 }
 
 .lead {
     font-weight: bold;
+    filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.8));
+
 }
 
 .cardTitle {
@@ -77,8 +83,9 @@
 
 .link {
     letter-spacing: 1px;
-    color: GREY;
+    color: lightgrey;
     padding: 8px;
     font-weight: bold;
+
     
 }
