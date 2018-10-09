@@ -86,7 +86,7 @@ class Playlist extends Component {
                 className="playlist-card"
             >
                 <CardBody>
-                    <iframe title="Spotify Playlist" src={item.src} width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe title="Spotify Playlist" src={item.src} width="410" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </CardBody>
             </Card>
 

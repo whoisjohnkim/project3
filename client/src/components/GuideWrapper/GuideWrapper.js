@@ -18,8 +18,8 @@ const GuideWrapper = props => (
             <button type="button" className="btn btn-danger" onClick={props.downVote}>Down Vote</button>
         </span>
          <ul className="instructions">
-            {props.description.map( step => (
-                <li>
+            {props.description.map( (step, i) => (
+                <li key={i}>
                     {step}
                 </li>
             ))}
