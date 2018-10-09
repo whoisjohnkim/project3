@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
+  BrowserRouter as
+  // Router,
+  // Route,
+  Link
+  // Redirect,
+  // withRouter
 } from "react-router-dom";
 // import logo from "../../images/OnTapLogoUpdated.png";
 
@@ -21,7 +22,7 @@ class Login extends Component {
         password: ""
       }
       componentDidMount(){
-    
+
         // setInterval(() => {
         //   const timeSince = (+Date.now() - this.state.startTime)/1000;
         //   this.setState({title: `Are you still there? It's been ${timeSince} seconds`}, function(){
@@ -29,7 +30,7 @@ class Login extends Component {
         //   })
         // }, 1000)
       }
-    
+
       handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -41,13 +42,13 @@ class Login extends Component {
         event.preventDefault();
         //console.log(event.target);
         axios.get("/api/logins/login", {email: this.state.email, password: this.state.password}).then(function(response){
-          
+
         })
         this.setState({ email: "", password: ""});
         // Route to homepage
         <Link to="/home" />
       }
-    
+
       componentDidUpdate(){
         console.log();
       }
@@ -75,7 +76,7 @@ class Login extends Component {
         return (
             <div>
               <div id="content">
-                <img id="cheers" src={ cheers } />
+                <img id="cheers" alt="cheers" src={ cheers } />
                     <center>
                     <p id= "welcome"> WELCOME BACK. </p>
                     <p id= "waiting"> we've been waiting for you. </p>
@@ -83,11 +84,11 @@ class Login extends Component {
                     </center>
               </div>
               <div id="sidebar">
-              <img id= "logo" src={ logo } />
+              <img id= "logo" alt="logo" src={ logo } />
               <br/>
                 <p id="usual"> the usual for you?</p>
                 <br/>
-                
+
                     <form>
                     <center>
                     <div class="form-group">
@@ -102,9 +103,9 @@ class Login extends Component {
                     <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Log In</button>
                     </center>
                     </form>
-                    
+
                 </div>
-               
+
             </div>
         )
     }
