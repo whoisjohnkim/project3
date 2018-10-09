@@ -131,6 +131,9 @@ class Game extends Component {
             display = (<div className="games-img" onClick={this.loadGame}>
                 <p id= "game"> just the </p>
                 <p id= "tipsy"> tipsy </p>
+                <br/>
+                <img id= "gamesmolbeer" src={require('../images/smolbeer.png')} />
+                <h4 id= "gametoplay"> click to play! </h4>
             </div>)
         }
         else if(this.state.phase === "players"){

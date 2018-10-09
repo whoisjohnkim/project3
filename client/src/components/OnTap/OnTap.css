@@ -13,11 +13,6 @@
 
 }
 
-#MainLogo {
-    height: 150px;
-    width: 50%;
-}
-
 .bg-img:after {
     content: '';
     position: absolute;
@@ -73,7 +68,7 @@
     height: 9%;
     width: 9%;
     margin-left: -4%;
-    margin-top:2%;
+    margin-top:1%;
     filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.8));
 
 }
@@ -81,10 +76,10 @@
 #toplay {
     z-index: 99;
     color: white;
-    margin-left: -4%;
+    margin-left: -3%;
     font-size: 12px;
     letter-spacing: 3px;
-    margin-top:1%;
+    margin-top:0%;
     font-weight: bold;
 
 }

@@ -22,12 +22,12 @@
 
 } */
 
-#we {
+#time {
     color: white;
-    margin-top: -2.5%;
-    margin-left: 43%;
-    font-size: 230px;
-    font-family: 'Sacramento', cursive;
+    margin-top: 3%;
+    margin-left: 36%;
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
     text-shadow:
     3px 3px 0 #3E333F,
   -1px -1px 0 #3E333F,  
@@ -70,7 +70,7 @@ $c-shadow: rgba(255 ,255, 255, 1); */
   line-height: 1;
 	letter-spacing: -0.06em;
 
-  --center {
+  /* --center {
     width: 0.35em;
     height: 0.89em;
   }
@@ -81,7 +81,7 @@ $c-shadow: rgba(255 ,255, 255, 1); */
 	
 	&--right {
 		animation: move_right 0.9s cubic-bezier(.5,.05,.46,1.04) 0.9s forwards alternate;
-	}
+	} */
 }
 
 .letter {
@@ -93,19 +93,19 @@ $c-shadow: rgba(255 ,255, 255, 1); */
 		-5px 4px rgba(255 ,255, 255, 1),
 		-6px 5px rgba(255 ,255, 255, 1);
 	
-  &--i, &--u {
+  /* &--i, &--u {
     position: absolute;
     display: block;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-  }
+  } */
   
-  &--i {
+  /* &--i {
     animation: letter_i 1.8s cubic-bezier(.5,.05,.46,1.04) 0s forwards alternate;
   }
-  
-  &--u {
+   */
+  /* &--u {
 		transform-origin: 50% 53%;
     animation: letter_u 1.8s cubic-bezier(.5,.05,.46,1.04) 0s forwards alternate;
 		text-shadow: -2px -1px rgba(255 ,255, 255, 1), 
@@ -113,7 +113,7 @@ $c-shadow: rgba(255 ,255, 255, 1); */
 		-4px -3px rgba(255 ,255, 255, 1),            
 		-5px -4px rgba(255 ,255, 255, 1), 
 		-6px -5px rgba(255 ,255, 255, 1);
-  }
+  } */
 }
 
 @keyframes letter_i {
