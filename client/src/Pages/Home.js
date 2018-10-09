@@ -4,7 +4,7 @@ import Game from './Game';
 import Guides from './Guides';
 import Food from './Food';
 import Playlist from './Playlist';
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
 import Jumbotron from "../components/Jumbotron";
@@ -21,7 +21,7 @@ class Home extends Component {
         return (
             <div>
                 {/* <Jumbotron /> */}
-                <Navbar />
+                <NewNavbar />
                 <div className="home-img">
                 <p id="we"> we </p>
                 <div className= "drunk">

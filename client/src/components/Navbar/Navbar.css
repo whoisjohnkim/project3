@@ -27,3 +27,11 @@ nav.navbar.navbar-default {
   .navbar-brand {
     width: 10%;
   }
+
+  .navbar-collapse {
+    flex-grow: unset;
+  }
+
+.dropdown-menu {
+  background-color: white;
+}

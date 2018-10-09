@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "./Food/Food.css";
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 import { Card, CardImg, CardText, CardBody, CardLink,
 CardTitle, CardSubtitle, Button } from 'reactstrap';
 
@@ -35,8 +35,9 @@ class Food extends Component {
         return (
             
             <div className= "FoodDivContainer">
-                <Navbar />
+                <NewNavbar />
                 <div className="foodjumbotron">
+                
                     <div className="container">
                         <h1 className="display-3">DRUNCHIES</h1>
                         <br></br>
