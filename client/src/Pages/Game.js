@@ -107,6 +107,10 @@ class Game extends Component {
 
     };
 
+    restart = () => {
+        this.setState({phase: "title"});
+    }
+
     addPlayer = () => {
         var array = this.state.players;
         array.push(this.state.value);
@@ -117,7 +121,11 @@ class Game extends Component {
         let display;
         if(this.state.phase === "started"){
             display = (<div className="games-img" onClick={this.nextTurn}>
-                        <p id="gameText">{this.state.currentTurn}</p>
+                        <span className="gameSpan">
+                            <p id="gameText">{this.state.currentTurn}</p>
+                            <br/>
+                            <button type="button" className="btn btn-success playerButton " onClick={this.restart}>Restart Game</button>
+                        </span>
                     </div>)
         }
         else if(this.state.phase === "title"){
@@ -129,14 +137,15 @@ class Game extends Component {
         else if(this.state.phase === "players"){
             display = (<div className="games-img">
                 <span className="playerSpan">
+                    <p class="playerHeader">Who's Playing?</p>
                     <input type="text" className="playerName" value={this.state.value} onChange={this.handleChange}/><br></br>
-                    <button type="button" className="playerButton btn btn-secondary" onClick={this.addPlayer}>Add Player</button>
-                    <button type="button" className="playerButton btn btn-success" onClick={this.setOrder}>Start Game</button>
-                    <button type="button" className="playerButton btn btn-secondary" onClick={this.clearPlayers}>Clear Players</button>
+                    <button type="button" className="btn btn-secondary playerButton " onClick={this.addPlayer}>Add Player</button>
+                    <button type="button" className="btn btn-success playerButton " onClick={this.setOrder}>Start Game</button>
+                    <button type="button" className="btn btn-secondary playerButton " onClick={this.clearPlayers}>Clear Players</button>
                     <span className="players">
-                        <h3>Current Players:</h3>
+                        <h3 class="currentPlayers">Current Players:</h3>
                         {this.state.players.map(player => (
-                            <p>{player}</p>
+                            <p class="playerList">{player}</p>
                         ))}
                     </span>
                 </span>

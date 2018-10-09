@@ -35,9 +35,53 @@
     -webkit-text-stroke-color: grey; */
 }
 
+.gameSpan {
+    display: block;
+    width: 80%;
+    margin: 15% auto;
+    text-align: center;
+}
+
+.currentPlayers {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
+.playerList {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
+.playerHeader {
+    display: inline;
+    color: white;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
 .playerSpan {
     display: block;
-    width: 600px;
+    width: 80%;
     margin: 15% auto;
     text-align: center;
 }
@@ -64,7 +108,7 @@
 
 
 .playerButton {
-    width: 30px;
+    width: 100px;
     text-align: center;
 }
 
