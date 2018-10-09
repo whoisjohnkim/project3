@@ -72,18 +72,6 @@ class Playlist extends Component {
 
     render() {
 
-<<<<<<< HEAD
-                    <div className='playlistcard' id="">
-                        <Card>
-                            <CardBody>
-                                <CardSubtitle className="cardsubtitle">Rock Anthems</CardSubtitle>
-                                <br></br>
-                                <CardTitle className="cardTitle"><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWWwzidNQX6jx" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></CardTitle>
-                                
-                            </CardBody>
-                        </Card>
-                    </div>
-=======
         const { activeIndex } = this.state;
 
         const slides = items.map((item) => {
@@ -121,7 +109,6 @@ class Playlist extends Component {
                         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous}/>
                         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next}/>
                     </Carousel>
->>>>>>> 9951a93c763acce0af29a8645a73d1f352455e25
                 </div>
             </div>
         )
