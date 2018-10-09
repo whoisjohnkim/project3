@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Helmet from 'react-helmet';
 import axios from 'axios';
 // import {
 //   BrowserRouter// as
@@ -8,7 +9,6 @@ import axios from 'axios';
 //   // Redirect,
 //   // withRouter
 // } from "react-router-dom";
-
 import './Signup.css';
 const hip = require('../../images/hip.jpg');
 const signlogo = require('../../images/OnTapLogoUpdated.png');
@@ -82,10 +82,10 @@ class Signup extends Component {
                         <label for="exampleInputPassword1" id="formquestion">password</label>
                         <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="password" />
                     </div>
-                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">sign up</button>
+                    <button type="submit" href="/home" class="btn btn-primary">sign up</button>
                     <p id= "log"> already have an account? </p>
-                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">log in</button>
-                    
+                    <button type="submit" href="/home" class="btn btn-primary">log in</button>
+
                     </center>
                     </form>
 
