@@ -42,6 +42,18 @@
     text-align: center;
 }
 
+.instructions {
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-shadow:
+    3px 3px 0 #3E333F,
+  -1px -1px 0 #3E333F,
+   1px -1px 0 #3E333F,
+   -1px 1px 0 #3E333F,
+    1px 1px 0 #3E333F;
+}
+
 .currentPlayers {
     color: white;
     font-size: 40px;
