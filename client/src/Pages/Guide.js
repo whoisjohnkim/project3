@@ -15,7 +15,6 @@ class Guide extends Component {
     };
 
     componentDidMount() {
-        console.log(this.props.match.params.id);
         this.loadGuide();
     };
 
