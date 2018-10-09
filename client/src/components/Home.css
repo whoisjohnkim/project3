@@ -58,8 +58,8 @@ $c-shadow: rgba(255 ,255, 255, 1); */
   font-family: 'Open Sans', sans-serif;
   font-size: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
     animation: font_color 1.8s cubic-bezier(.5,.05,.46,1.04) 0s forwards alternate;
-    margin-left: -23%;
-    margin-top: 11%;
+    margin-left: -21%;
+    margin-top: 13%;
    
 }
 
