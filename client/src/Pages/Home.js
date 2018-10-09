@@ -11,7 +11,7 @@ import Cup from './21cup';
 import Odds from './Odds';
 import Skull from './SkullAndDice';
 import Cheers from './CheersToTheGovernor';
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
 import Jumbotron from "../components/Jumbotron";
@@ -28,7 +28,7 @@ class Home extends Component {
         return (
             <div>
                 {/* <Jumbotron /> */}
-                <Navbar />
+                <NewNavbar />
                 <div className="home-img">
                 <p id="we"> we </p>
                 <div className= "drunk">

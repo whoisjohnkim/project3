@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 import "../components/Playlist.css";
 import {
   Carousel,
@@ -35,7 +35,9 @@ class Playlist extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { activeIndex: 0};
+        this.state = { 
+            activeIndex: 0,
+        };
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
         this.goToIndex = this.goToIndex.bind(this);
@@ -68,7 +70,6 @@ class Playlist extends Component {
         this.setState({ activeIndex: newIndex });
       }
 
-
     render() {
   
         const { activeIndex } = this.state;
@@ -95,7 +96,7 @@ class Playlist extends Component {
         
         return (
             <div>
-                <Navbar />
+                <NewNavbar />
                 <div className="playlist-img">
                     <Carousel
                         activeIndex={activeIndex}

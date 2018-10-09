@@ -4,28 +4,41 @@ import "./Navbar.css";
 import API from "../../utils/API";
 import Logged from "../Logged/Logged";
 
+//stuff from reactstrap for new nav
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
+
 import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
 
-class Navbar extends Component {
-    constructor () {
-        super();
+class NewNavbar extends Component {
+
+    // new navbar states
+    constructor(props) {
+        super(props);
+    
+        this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false,
-            guides: []
+          isOpen: false,
+          guides: []
+
         };
-
-    }
-
-    handleOpen (event) {
-        event.preventDefault();
-        
-        this.setState({isOpen: true})
-    }
-
-    handleClose () {
-
-    }
+      }
+      toggle() {
+        this.setState({
+          isOpen: !this.state.isOpen
+        });
+      }
 
     componentDidMount() {
         this.loadGuides();
@@ -39,103 +52,63 @@ class Navbar extends Component {
             .catch(err => console.log(err));
     };
 
+    // SO THAT THE GUIDES WILL SHOW WHEN CLICKED
     refreshPage = () => {
         window.location.reload();
     }
 
     render(){
 
-        const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
-
         return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to="/home">
-            <img id="logoNav" src={ onTapLogo } alt="logo" />
-            </Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            {/* ////////////////////////////////////////// */}
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                    <Link
-                        to="/game"
-                        className={
-                            window.location.pathname === "/game"
-                            ? "nav-link active"
-                            : "nav-link"
-                        }
-                    >
-                    GAME
-                    </Link>
-                    </li>
-                {/* ////////////////////////////////////////// */}
+            <div>
+                {/* THIS IS THE NEW NAVBAR */}
 
-                    <li 
-                        className="nav-item dropdown"
-                        // onMouseOver={this.showGuide}
-                    >
-                    <Link
-                        to="/guides"
-                        className={
-                             "nav-link dropdown-toggle" 
-                        } id="dropdownMenuButton"
-                        >
-                        GUIDE
-                    </Link>
-                    {
-                        this.state.showGuide
+                <Navbar color="light" light expand="md">
+                    <NavbarBrand href="/home">
+                        <img id="logoNav" src={ onTapLogo } alt="logo" />
+                    </NavbarBrand>
 
-                        ? (
-                        <div className={menuClass} id="hovermenu" aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
-                            
-                            {this.state.guides.map(guide => (
-                                <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
-                                    {guide.title}
-                                </Link>
-                            ))}
-                        </div>
-                        )
-                        : (
-                            null
-                        )
-                    }
-                    </li>
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink href="/game">GAME</NavLink>
+                            </NavItem>
 
-                    {/* ////////////////////////////////////////// */}
-                    <li className="nav-item">
-                    <Link
-                        to="/playlist"
-                        className={
-                            window.location.pathname === "/playlist"
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
-                     >
-                    PLAYLIST
-                    </Link>
-                    </li>
-                    {/* ////////////////////////////////////////// */}
-                    <li className="nav-item">
-                    <Link
-                        to="/food"
-                        className={
-                            window.location.pathname === "/food"
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
-                    >
-                    DRUNCHIES
-                    </Link>
-                    </li>
-                </ul>
-                {/* ${ this.state.logged ? <Logged /> : "No user currently Logged In"} */}
-            </div>
-        </nav>
+                            {/* THE GUIDE THAT WORKS */}
+                            <UncontrolledDropdown nav inNavbar>
+                                <DropdownToggle nav caret>
+                                GUIDE
+                                </DropdownToggle>
+
+                                {/* RENDERING THE GUIDES */}
+                                <DropdownMenu right>                            
+                                    <DropdownItem onClick={this.refreshPage}>
+                                    {this.state.guides.map(guide => (
+                                    <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
+                                        {guide.title}
+                                    </Link>
+                                    ))}
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+
+                            <NavItem>
+                                <NavLink href="/playlist">PLAYLIST</NavLink>
+                            </NavItem>
+
+                            <NavItem>
+                                <NavLink href="/food">DRUNCHIES</NavLink>
+                            </NavItem>
+
+
+                        </Nav>
+                    </Collapse>
+                </Navbar>
+      </div>
         )
     };
 };
 
-export default Navbar;
+export default NewNavbar;
 
