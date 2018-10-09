@@ -3,6 +3,12 @@
     width: 100%;
 }
 
+.headerPhoto {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
 .btn {
     margin: 5px;
     width: 100px;

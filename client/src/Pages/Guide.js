@@ -64,6 +64,7 @@ class Guide extends Component {
                             key={this.state.id}
                             title={this.state.title}
                             rating={this.state.rating}
+                            picture={this.state.picture}
                             upVote={this.upVote}
                             downVote={this.downVote}
                             description={this.state.description}
