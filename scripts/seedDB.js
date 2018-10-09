@@ -284,17 +284,17 @@ const gamesSeed = [
     }
 ]
 
-const foodsSeed = [
-    {
-        title: "Mac N Cheetos",
-        picture: "https://i5.walmartimages.com/asr/cf3a2658-2f36-4d7d-887c-b57f7d5bdd03_1.2acac3766810ce6641b3aede6633b599.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        link: "https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000"
-    },
-    {
-        tile: ""
-    }
-]
+// const foodsSeed = [
+//     {
+//         title: "Mac N Cheetos",
+//         picture: "https://i5.walmartimages.com/asr/cf3a2658-2f36-4d7d-887c-b57f7d5bdd03_1.2acac3766810ce6641b3aede6633b599.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+//         description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+//         link: "https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000"
+//     },
+//     {
+//         tile: ""
+//     }
+// ]
 
 
 
@@ -303,64 +303,64 @@ db.Games
     .then(() => db.Games.collection.insertMany(gamesSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
-    process.exit(0);
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    })
-
-const interactiveSeed = {
-    title: "Just the Tipsy",
-    description: "A fun, interactive drinking game for you and your friends where either you follow the instructions, or you drink!",
-    rating: 0,
-    turns: [
-        "Player 1 has to lick Player 3's face",
-        "Player 2 has to finish his/her drink",
-        "Player 1 has to get spanked by Player 4",
-        "Player 3 has to keep his/her hand on Player 2's lap for the next 5 turns",
-        "Player 4 has to interlock toes with Player 2 for 2 turns",
-        "Player 2 has to drink anytime Player 3 drinks for the next 5 turns"
-    ]
-}
-
-db.Interactive
-    .remove({})
-        .then(() => db.Interactive.collection.insertOne(interactiveSeed))
-        .then(data => {
-            console.log(data.result.n + " record inserted!");
-        process.exit(0);
-        })
-        .catch(err => {
-            console.error(err);
-            process.exit(1);
-        })
-
-const usersSeed = {
-    email: "test@test.com",
-    password: "abc123"
-}
-
-db.Users
-    .remove({})
-    .then(() => db.Users.collection.insertOne(usersSeed))
-    .then(data => {
-        console.log(data.result.n + " record inserted!");
-    process.exit(0);
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    })
-
-db.Food
-    .remove({})
-    .then(() => db.Food.collection.insertMany(foodsSeed))
-    .then(data => {
-        console.log(data.result.n + " record inserted!");
         process.exit(0);
     })
     .catch(err => {
         console.error(err);
         process.exit(1);
     })
+
+// const interactiveSeed = {
+//     title: "Just the Tipsy",
+//     description: "A fun, interactive drinking game for you and your friends where either you follow the instructions, or you drink!",
+//     rating: 0,
+//     turns: [
+//         "Player 1 has to lick Player 3's face",
+//         "Player 2 has to finish his/her drink",
+//         "Player 1 has to get spanked by Player 4",
+//         "Player 3 has to keep his/her hand on Player 2's lap for the next 5 turns",
+//         "Player 4 has to interlock toes with Player 2 for 2 turns",
+//         "Player 2 has to drink anytime Player 3 drinks for the next 5 turns"
+//     ]
+// }
+
+// db.Interactive
+//     .remove({})
+//         .then(() => db.Interactive.collection.insertOne(interactiveSeed))
+//         .then(data => {
+//             console.log(data.result.n + " record inserted!");
+//         process.exit(0);
+//         })
+//         .catch(err => {
+//             console.error(err);
+//             process.exit(1);
+//         })
+
+// const usersSeed = {
+//     email: "test@test.com",
+//     password: "abc123"
+// }
+
+// db.Users
+//     .remove({})
+//     .then(() => db.Users.collection.insertOne(usersSeed))
+//     .then(data => {
+//         console.log(data.result.n + " record inserted!");
+//     process.exit(0);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         process.exit(1);
+//     })
+
+// db.Food
+//     .remove({})
+//     .then(() => db.Food.collection.insertMany(foodsSeed))
+//     .then(data => {
+//         console.log(data.result.n + " record inserted!");
+//         process.exit(0);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         process.exit(1);
+//     })
