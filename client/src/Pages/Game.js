@@ -140,6 +140,7 @@ class Game extends Component {
             display = (<div className="games-img">
                 <span className="playerSpan">
                     <p className="playerHeader">Who's Playing?</p>
+                    <p className="instructions">Instructions: Enter in your names below or take the default player names. There must be at least 2 users to play. Users are given the option to either follow the instructions or take a drink! Drink Responsibly!</p>
                     <input type="text" className="playerName" value={this.state.value} onChange={this.handleChange}/><br></br>
                     <button type="button" className="btn btn-secondary playerButton " onClick={this.addPlayer}>Add Player</button>
                     <button type="button" className="btn btn-success playerButton " onClick={this.setOrder}>Start Game</button>
