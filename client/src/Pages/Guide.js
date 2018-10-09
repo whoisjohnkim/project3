@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 import "../components/Guides.css";
 import GuideWrapper from "../components/GuideWrapper"
 
@@ -15,7 +15,6 @@ class Guide extends Component {
     };
 
     componentDidMount() {
-        console.log(this.props.match.params.id);
         this.loadGuide();
     };
 
@@ -58,7 +57,7 @@ class Guide extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NewNavbar />
                 <div className="guides-img">
                     <GuideWrapper
                             key={this.state.id}

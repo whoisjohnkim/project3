@@ -1,16 +1,16 @@
 import React, {Component} from "react";
 import "../components/Game.css";
-import Navbar from "../components/Navbar";
-import playing from "../images/playing.jpg";
-import { log } from "util";
-import API from "../utils/API";
+import NewNavbar from "../components/Navbar";
+// import playing from "../images/playing.jpg";
+// import { log } from "util";
+// import API from "../utils/API";
 import game from "../game.json";
 
-import token1 from "../images/onePixel.png";
-import token2 from "../images/twoPixel.png";
-import token3 from "../images/threePixel.png";
-import token4 from "../images/fourPixel.png";
-import token5 from "../images/fivePixel.png";
+// import token1 from "../images/onePixel.png";
+// import token2 from "../images/twoPixel.png";
+// import token3 from "../images/threePixel.png";
+// import token4 from "../images/fourPixel.png";
+// import token5 from "../images/fivePixel.png";
 
 
 class Game extends Component {
@@ -87,7 +87,6 @@ class Game extends Component {
 
     nextTurn = () => {
         if(this.state.players.length > 1) {
-            var name1, name2;
             var random1, random2;
             random1 = Math.floor(Math.random() * this.state.players.length);
             random2 = random1;
@@ -137,15 +136,15 @@ class Game extends Component {
         else if(this.state.phase === "players"){
             display = (<div className="games-img">
                 <span className="playerSpan">
-                    <p class="playerHeader">Who's Playing?</p>
+                    <p className="playerHeader">Who's Playing?</p>
                     <input type="text" className="playerName" value={this.state.value} onChange={this.handleChange}/><br></br>
                     <button type="button" className="btn btn-secondary playerButton " onClick={this.addPlayer}>Add Player</button>
                     <button type="button" className="btn btn-success playerButton " onClick={this.setOrder}>Start Game</button>
                     <button type="button" className="btn btn-secondary playerButton " onClick={this.clearPlayers}>Clear Players</button>
                     <span className="players">
-                        <h3 class="currentPlayers">Current Players:</h3>
-                        {this.state.players.map(player => (
-                            <p class="playerList">{player}</p>
+                        <h3 className="currentPlayers">Current Players:</h3>
+                        {this.state.players.map((player, i) => (
+                            <p key={i} className="playerList">{player}</p>
                         ))}
                     </span>
                 </span>
@@ -154,7 +153,7 @@ class Game extends Component {
         }
         return (
             <div>
-                <Navbar />
+                <NewNavbar />
                 {display}
             </div>
         )

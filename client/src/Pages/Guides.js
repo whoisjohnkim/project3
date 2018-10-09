@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 import "../components/Guides.css";
-import GuideWrapper from "../components/GuideWrapper"
+// import GuideWrapper from "../components/GuideWrapper"
 
 
-import API from "../utils/API";
+// import API from "../utils/API";
 
 class Guides extends Component {
     // state = {
@@ -74,7 +74,7 @@ class Guides extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NewNavbar />
                 <div className="guides-img">
                 </div>
 
