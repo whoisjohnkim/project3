@@ -65,7 +65,7 @@ class Food extends Component {
                 
                     <div className="container">
                         <h1 className="display-3">DRUNCHIES</h1>
-                        <br></br>
+                        <br />
                         <p className="lead">ALL THE FRIED AND SAUCY, LATE NIGHT SNACKS WE KNOW YOU'RE CRAVING.</p>
                     </div>
                 </div>

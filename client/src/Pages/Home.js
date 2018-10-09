@@ -23,7 +23,7 @@ class Home extends Component {
                 {/* <Jumbotron /> */}
                 <NewNavbar />
                 <div className="home-img">
-                <p id="we"> we </p>
+                <p id="time"> time to get </p>
                 <div className= "drunk">
                 <span className="part part--left">
                     <span className="letter">D</span>

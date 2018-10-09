@@ -22,12 +22,12 @@
 
 } */
 
-#we {
+#time {
     color: white;
-    margin-top: -2.5%;
-    margin-left: 43%;
-    font-size: 230px;
-    font-family: 'Sacramento', cursive;
+    margin-top: 3%;
+    margin-left: 36%;
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
     text-shadow:
     3px 3px 0 #3E333F,
   -1px -1px 0 #3E333F,  
@@ -58,7 +58,7 @@ $c-shadow: rgba(255 ,255, 255, 1); */
   font-family: 'Open Sans', sans-serif;
   font-size: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
     animation: font_color 1.8s cubic-bezier(.5,.05,.46,1.04) 0s forwards alternate;
-    margin-left: -23%;
+    margin-left: -29%;
     margin-top: 11%;
    
 }

@@ -13,10 +13,24 @@
 
 }
 
- #container-game {
+ #gamesmolbeer {
+    margin-bottom: 2%;
+    height: 10%;
+    width: 6%;
+    margin-left: -24%;
+    margin-top:27%;
+    filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.8));
+ }
 
-
-}
+ #gametoplay {
+    z-index: 99;
+    color: white;
+    margin-left: -6%;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top:34%;
+    font-weight: bold;
+ }
 
 #game {
     display: inline;

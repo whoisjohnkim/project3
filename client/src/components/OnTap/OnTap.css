@@ -13,11 +13,6 @@
 
 }
 
-#MainLogo {
-    height: 150px;
-    width: 50%;
-}
-
 .bg-img:after {
     content: '';
     position: absolute;
