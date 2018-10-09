@@ -139,15 +139,15 @@ class Game extends Component {
         else if(this.state.phase === "players"){
             display = (<div className="games-img">
                 <span className="playerSpan">
-                    <p class="playerHeader">Who's Playing?</p>
+                    <p className="playerHeader">Who's Playing?</p>
                     <input type="text" className="playerName" value={this.state.value} onChange={this.handleChange}/><br></br>
                     <button type="button" className="btn btn-secondary playerButton " onClick={this.addPlayer}>Add Player</button>
                     <button type="button" className="btn btn-success playerButton " onClick={this.setOrder}>Start Game</button>
                     <button type="button" className="btn btn-secondary playerButton " onClick={this.clearPlayers}>Clear Players</button>
                     <span className="players">
-                        <h3 class="currentPlayers">Current Players:</h3>
-                        {this.state.players.map(player => (
-                            <p class="playerList">{player}</p>
+                        <h3 className="currentPlayers">Current Players:</h3>
+                        {this.state.players.map((player, i) => (
+                            <p key={i} className="playerList">{player}</p>
                         ))}
                     </span>
                 </span>

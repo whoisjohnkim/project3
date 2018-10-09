@@ -45,7 +45,7 @@ class Login extends Component {
         })
         this.setState({ email: "", password: ""});
         // Route to homepage
-        <Link to="/home" />
+        return(<Link to="/home" >Home</Link>)
       }
 
       componentDidUpdate(){

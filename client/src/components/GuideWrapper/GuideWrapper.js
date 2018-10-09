@@ -23,8 +23,8 @@ const GuideWrapper = props => (
         <br/>
         <hr />
          <ul className="instructions">
-            {props.description.map( step => (
-                <li>
+            {props.description.map( (step, i) => (
+                <li key={i}>
                     {step}
                 </li>
             ))}

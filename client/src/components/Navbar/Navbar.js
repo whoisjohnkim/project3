@@ -85,7 +85,7 @@ class NewNavbar extends Component {
                                 <DropdownMenu right>
                                     <DropdownItem onClick={this.refreshPage}>
                                     {this.state.guides.map(guide => (
-                                    <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
+                                    <Link to={"/guides/" + guide._id} key={guide._id} id="hovermenu" className="dropdown-item">
                                         {guide.title}
                                     </Link>
                                     ))}

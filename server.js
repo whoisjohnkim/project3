@@ -6,10 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Sign in requires
-// const bcrypt = require("bcrypt");
-// const jwt = require("jsonwebtoken");
-// const dotenv = require("dotenv");
-// dotenv.config();
+const bcrypt = require("bcrypt-nodejs")
+const jwt = require("jsonwebtoken");
+const passport = require("passport");
+const { Strategy: JwtStrategy, ExtractJwt } = require("passport-jwt");
+const dotenv = require("dotenv");
+dotenv.config();
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,6 +42,10 @@ app.get("/users", (req, res) => {
     })
 })
 
+const passportOptions = {
+  jwtFromRequest : ExtractJwt.fromAuthHeaderAsBearerToken(),
+  secretOrKey: "keyboard_cat"
+}
 
 // Register Route
 // app.post("/api/registers/signup", (req, res) => {
@@ -62,36 +68,26 @@ app.get("/users", (req, res) => {
 
 // });
 
-// Login Route
-// app.post("/api/login", (req, res) => {
-//   if(!req.body.email || !req.body.password){
-//       return res.json({success: false, message: "Missing Username or Password"});
-//   }
-//   const { email, password } = req.body;
-//   connection.query("SELECT * FROM users WHERE email =  ?", [email], function(err, results) {
-//       if(err){
-//           return res.json({success: false, message: "Ran into some issue"});
-//       }
-//       console.log(results);
-//       if(results.length === 0){
-//           return res.json({success: false, message: "No User matches that Email"});
-//       }
-//       bcrypt.compare(password, results[0].password, function(err, bcryptResult) {
-//           if(err){
-//               return res.json({success: false, message: "Password and User did not match"});
-//           }else{
+//Login Route
+app.post("/api/login", (req, res) => {
+  User.findOne({
+      email: req.body.email
+  }, (err, user) => {
+      if(!user) {
+          return res.status(401).send({sucess: false})
+      } else {
+          user.comparePassword(req.body.password, (err, isMatch) => {
+              if(err || !isMatch){
+               return res.status(401).send({sucess: false})
+              } else {
 
-//               //this is where we return the data
-//               if(bcryptResult){
-//                   var token = jwt.sign({ id: results[0].id, expires: +Date.now() + 360000 }, process.env.JWT_SECRET); //should be SECRET .env
-//                   return res.json({success: true, token: token});
-//               } else {
-//                   return res.json({success: false});
-//               }
-//           }
-//       });
-//   });
-// });
+               const token = jwt.sign({ _id: user._id }, "keyboard_cat") 
+               return res.status(200).send({sucess: true, token: token})
+              }
+          })
+      }
+  })
+ })
 
 // Start the API server
 app.listen(PORT, function() {

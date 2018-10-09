@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import NewNavbar from "../components/Navbar";
+import SoundWave from "../components/SoundWave/SoundWave";
 import "../components/Playlist.css";
 import {
   Carousel,
@@ -86,9 +87,7 @@ class Playlist extends Component {
                 className="playlist-card"
             >
                 <CardBody>
-                    <iframe src={item.src} width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                
-                    
+                    <iframe title="Spotify Playlist" src={item.src} width="410" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </CardBody>
             </Card>
 
@@ -100,6 +99,7 @@ class Playlist extends Component {
             <div>
                 <NewNavbar />
                 <div className="playlist-img">
+                        <SoundWave />
                     <Carousel
                         activeIndex={activeIndex}
                         next={this.next}
