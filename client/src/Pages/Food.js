@@ -3,11 +3,36 @@ import "./Food/Food.css";
 import NewNavbar from "../components/Navbar";
 import { Card, CardImg, CardText, CardBody, CardLink,
 CardTitle, CardSubtitle, Button } from 'reactstrap';
-
-// const pizza = require('../images/pizza.png');
-
 import food from "../images/food.jpg";
 import pizza from "../images/pizza.png";
+import mac from "../images/macncheetos.jpg";
+import tacos from "../images/tysonstacos.jpg";
+import tots from "../images/tots.jpg";
+import gyro from "../images/gyro.jpeg";
+import pan from "../images/pancake.jpg";
+import pou from "../images/poutine.jpg";
+import lo from "../images/lomein.jpg";
+import nacho from "../images/nachos.jpg";
+import spoon from "../images/spoon.png";
+
+
+
+
+
+
+
+const pizzahut = require('../images/pizza.png');
+const macncheetos = require('../images/macncheetos.jpg');
+const tysons = require('../images/tysonstacos.jpg');
+const tatertots = require('../images/tots.jpg');
+const gyros = require('../images/gyro.jpeg');
+const pancake= require('../images/pancake.jpg');
+const poutine= require('../images/poutine.jpg');
+const lomein= require('../images/lomein.jpg');
+const nachos= require('../images/nachos.jpg');
+
+
+
 
 // import API from "../utils/API";
 
@@ -34,6 +59,7 @@ class Food extends Component {
     render() {
         return (
             
+            <div className="food-img">
             <div className= "FoodDivContainer">
                 <NewNavbar />
                 <div className="foodjumbotron">
@@ -46,36 +72,115 @@ class Food extends Component {
                 </div>
 
                 {/* {this.state.foods.map(food => ( */}
-                    <div className='foodcard'>
-                        <Card>
-                            <CardBody>
-                            <CardTitle className="cardTitle">MAC N CHEETOS</CardTitle>
-                            <br></br>
-                            <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            
-                            </CardBody>
-                            <CardImg className="secondcardimage" width="100%" height="300px" src="https://i5.walmartimages.com/asr/cf3a2658-2f36-4d7d-887c-b57f7d5bdd03_1.2acac3766810ce6641b3aede6633b599.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" alt="Card image cap" />
-                            <CardBody>
-                            <CardText>It's like fried macaroni but better! Instead of regualr breadding around the macaroni it's a Cheetos breading to make it even cheesier!</CardText>
-                            <br></br>
-                            <CardLink className="link" target="_blank" href="https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000">Buy</CardLink>
-                            </CardBody>
-                        </Card>
-                    </div>
 
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">PIZZA HUT</CardTitle>
+                            <CardTitle className="cardTitle">POUTINE</CardTitle>
+                            <hr />
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
                             </CardBody>
-                            <CardImg className="secondcardimage" width="100%" height="300px" src="../images/pizza.png"/>
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={poutine} />
                             <CardBody>
-                            <CardText>Nothing more comforting then a PIZZA this.</CardText>
+                            <CardText> A heart attack waiting to happen. Loaded fries drenched in gravy and cheese curds? Yes, cheese. </CardText> 
+                        
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://www.seriouseats.com/recipes/2015/03/ultimate-perfect-poutine-fries-cheese-curds-gravy-recipe.html">MAKE IT AT HOME</CardLink>
+                            </CardBody>
+                        </Card>
+                    </div>
+
+                    
+                    <div className='foodcard'>
+                        <Card>
+                            <CardBody>
+                            <CardTitle className="cardTitle">LOADED TATER TOTS</CardTitle>
+                            <hr />
                             <br></br>
-                            <CardLink className="link" target="_blank" href="https://www.pizzahut.com/?gclid=Cj0KCQjw9NbdBRCwARIsAPLsnFbOQolxeOtsJpAcdueFQ5IwoM3eKGqaEr4LWeoZTE-b1O4LmC9rzmsaAkAYEALw_wcB&gclsrc=aw.ds&dclid=CJifw83h7d0CFY6-wAodCEwGpA">Order</CardLink>
+                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
+                            <br></br>
+                            </CardBody>
+                            <CardImg className="secondcardimage" width="200px" height="300px" src={tatertots} />
+                            <CardBody>
+                            <CardText>Just when you thought TATER TOTS couldn't get any better. Can I get a little more bacon on that?</CardText>
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://www.savoryexperiments.com/cheesy-bacon-tots/">MAKE IT AT HOME</CardLink>
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className='foodcard'>
+                        <Card>
+                            <CardBody>
+                            <CardTitle className="cardTitle">PIZZA HUT</CardTitle>
+                            <hr />
+                            <br></br>
+                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
+                            <br></br>
+                            </CardBody>
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={pizzahut}/>
+                            <CardBody>
+                            <CardText> Damn, look at that melted cheese. Nothing more comforting then a PIZZA this. </CardText>
+                           
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://www.pizzahut.com/?gclid=Cj0KCQjw9NbdBRCwARIsAPLsnFbOQolxeOtsJpAcdueFQ5IwoM3eKGqaEr4LWeoZTE-b1O4LmC9rzmsaAkAYEALw_wcB&gclsrc=aw.ds&dclid=CJifw83h7d0CFY6-wAodCEwGpA">ORDER</CardLink>
+                            </CardBody>
+                        </Card>
+                    </div>
+
+                        <div className='foodcard'>
+                        <Card>
+                            <CardBody>
+                            <CardTitle className="cardTitle">TSO CHINESE DELIVERY</CardTitle>
+                            <hr />
+                            <br></br>
+                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
+                            <br></br>
+                            </CardBody>
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={lomein} />
+                            <CardBody>
+                            <CardText> Chinese takeout, anyone?? TSO CHINESE DELIVERY revolutionized the game with its delivery of fast and delicious chinese food. It's TSO GOOD! </CardText> 
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://tsodelivery.com/">TSO READY TO ORDER</CardLink>
+                            </CardBody>
+                        </Card>
+                    </div>
+                    
+                    
+                    <div className='foodcard'>
+                        <Card>
+                            <CardBody>
+                            <CardTitle className="cardTitle">KERBEY LANE</CardTitle>
+                            <hr />
+                            <br></br>
+                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
+                            <br></br>
+                            </CardBody>
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={pancake} />
+                            <CardBody>
+                            <CardText>KERBEY LANE is a Austinite fan favorite and is open 24/7! Get your friends together to enjoy a late night breakfast and split some of that Kerby Queso goodness. </CardText> 
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://kerbeylanecafe.com/locations">KERBEY NEAR ME</CardLink>
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className='foodcard'>
+                        <Card>
+                            <CardBody>
+                            <CardTitle className="cardTitle">NACHOS</CardTitle>
+                            <hr />
+
+                            <br></br>
+                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
+                            <br></br>
+                            </CardBody>
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={nachos} />
+                            <CardBody>
+                            <CardText>NEED. <br /> WE. <br /> SAY MORE?</CardText>
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://www.allrecipes.com/recipe/51147/super-nachos/">MAKE IT AT HOME</CardLink>
+                            
                             </CardBody>
                         </Card>
                     </div>
@@ -84,14 +189,34 @@ class Food extends Component {
                         <Card>
                             <CardBody>
                             <CardTitle className="cardTitle">TYSON'S TACOS</CardTitle>
+                            <hr />
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             </CardBody>
-                            <CardImg className="secondcardimage" width="100%" height="300px" src="https://static1.squarespace.com/static/57ae2aaee58c62414bd26a20/57ae31e55016e1690c423e21/57ae322ce3df28c4ce928147/1484591339729/Tyson%27s+Tacos.jpg?format=1500w" alt="Card image cap" />
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={tysons} />
                             <CardBody>
-                            <CardText>Tyson Taco's has some of the best tacos in the Austin area.</CardText>
+                            <br/>
+                            <CardText>Open 24/7 with an unbelievable selection of tacos, TYSON'S TACOS is an Austin gem.</CardText>
+                            <hr />
+                            <CardLink className="link" target="_blank" href="http://www.tysonstacos.com/">ORDER</CardLink>
+                            </CardBody>
+                        </Card>
+                    </div>
+                
+                    <div className='foodcard'>
+                        <Card>
+                            <CardBody>
+                            <CardTitle className="cardTitle">GYRO</CardTitle>
+                            <hr />
                             <br></br>
-                            <CardLink className="link" target="_blank" href="http://www.tysonstacos.com/">Tyson's Taco</CardLink>
+                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
+                            <br></br>
+                            </CardBody>
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={gyro} />
+                            <CardBody>
+                            <CardText>Warm, saucy, and pressed to perfection, GYROS are even more delicious late at night.</CardText> 
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://www.bonappetit.com/recipe/easiest-lamb-gyros-with-creamy-yogurt-sauce">MAKE IT AT HOME</CardLink>
                             </CardBody>
                         </Card>
                     </div>
@@ -99,55 +224,25 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">CHILI DOG</CardTitle>
+                            <CardTitle className="cardTitle">MAC N CHEETOS</CardTitle>
+                            <hr />
                             <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
+                            <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
+                            
                             </CardBody>
-                            <CardImg className="secondcardimage" width="200px" height="300px" src="https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/06/The-chilli-dog-600x398.jpg" alt="Card image cap" />
+                            <CardImg className="secondcardimage" width="100%" height="300px" src={macncheetos} />
                             <CardBody>
-                            <CardText>Chili Dogs are a classic stomach filler. They are easy to make but still amazing.</CardText>
-                            <br></br>
-                            <CardLink className="link" target="_blank" href="https://www.allrecipes.com/recipe/223538/jeffs-hot-dog-chili/">Make Your Own</CardLink>
+                            <CardText>Wait a second... Did someone ay MAC N CHEETOS?? <br/> Help, I've fallen and I can't get up.</CardText>
+                            <hr />
+                            <CardLink className="link" target="_blank" href="https://www.walmart.com/ip/Mac-N-Cheetos-Mac-Cheese-Snacks-Creamy-Cheddar-Flavored-14-4-oz/695622000">Buy</CardLink>
                             </CardBody>
                         </Card>
                     </div>
+                    
 
-                    <div className='foodcard'>
-                        <Card>
-                            <CardBody>
-                            <CardTitle className="cardTitle">NACHOS</CardTitle>
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
-                            </CardBody>
-                            <CardImg className="secondcardimage" width="100%" height="300px" src="https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/06/Nachos_with_Chilli-600x400.jpg" alt="Card image cap" />
-                            <CardBody>
-                            <CardText>Some nachos are always great but you can also add whatever you have at home!</CardText>
-                            <br></br>
-                            <CardLink className="link" target="_blank" href="https://www.allrecipes.com/recipe/51147/super-nachos/">Build Your Own</CardLink>
-                            </CardBody>
-                        </Card>
-                    </div>
-
-                    <div className='foodcard'>
-                        <Card>
-                            <CardBody>
-                            <CardTitle className="cardTitle">KERBEY LANE</CardTitle>
-                            <br></br>
-                            <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
-                            </CardBody>
-                            <CardImg className="secondcardimage" width="100%" height="300px" src="https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fjeffhyman%2Ffiles%2F2018%2F05%2FTaco-Bell-Delivery-2015.jpg" alt="Card image cap" />
-                            <CardBody>
-                            <CardText>KERBEY LANE is a Austinite fan favorite and is open 24/7! Get your friends together and split some of that Kerby Queso goodness. </CardText> 
-                            <br></br>
-                            <CardLink className="link" target="_blank" href="https://kerbeylanecafe.com/locations">Find The Closetest Taco Bell</CardLink>
-                            </CardBody>
-                        </Card>
-                    </div>
                 {/* ))} */}
             </div>
+        </div>
         )
     }
 }
