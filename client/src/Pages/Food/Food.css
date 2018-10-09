@@ -4,13 +4,16 @@
     
 }
 
-.jumbotron{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLJniUr4EFCulbGflXNYssRnOq9GP_RHCksKEqxrO7XnASBxoRQ");
+.foodjumbotron{
+    background-image: url("../../images/food.jpg");
     color: white;
+    height: 400px;
+    background-size: cover;
 }
 
 .h1D{
     font-family: 'Indie Flower', cursive;
+    letter-spacing: 4px;
 }
 
 .cardTitle{

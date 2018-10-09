@@ -4,6 +4,10 @@ import Navbar from "../components/Navbar";
 import { Card, CardImg, CardText, CardBody, CardLink,
 CardTitle, CardSubtitle, Button } from 'reactstrap';
 
+// const pizza = require('../images/pizza.png');
+
+import food from "../images/food.jpg";
+import pizza from "../images/pizza.png";
 
 // import API from "../utils/API";
 
@@ -32,7 +36,7 @@ class Food extends Component {
             
             <div className= "FoodDivContainer">
                 <Navbar />
-                <div className="jumbotron jumbotron-fluid">
+                <div className="foodjumbotron">
                     <div className="container">
                         <h1 className="display-4 h1D">DRUNCHIES</h1>
                         <br></br>
@@ -44,7 +48,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">Mac N Cheetos</CardTitle>
+                            <CardTitle className="cardTitle">MAC N CHEETOS</CardTitle>
                             <br></br>
                             <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
                             
@@ -61,14 +65,14 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">Pizza Hut</CardTitle>
+                            <CardTitle className="cardTitle">PIZZA HUT</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
                             </CardBody>
-                            <CardImg className="secondcardimage" width="100%" height="300px" src="https://www.qsrmagazine.com/sites/qsrmagazine.com/files/styles/story_page/public/slideshow-images/slides/phut.jpg?itok=0DtjruF9" alt="Card image cap" />
+                            <CardImg className="secondcardimage" width="100%" height="300px" src="../images/pizza.png"/>
                             <CardBody>
-                            <CardText>Some warm pizza is always the way to go after a long night of drinking.</CardText>
+                            <CardText>Nothing more comforting then a PIZZA this.</CardText>
                             <br></br>
                             <CardLink className="link" target="_blank" href="https://www.pizzahut.com/?gclid=Cj0KCQjw9NbdBRCwARIsAPLsnFbOQolxeOtsJpAcdueFQ5IwoM3eKGqaEr4LWeoZTE-b1O4LmC9rzmsaAkAYEALw_wcB&gclsrc=aw.ds&dclid=CJifw83h7d0CFY6-wAodCEwGpA">Order</CardLink>
                             </CardBody>
@@ -78,13 +82,13 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">Tyson's Tacos</CardTitle>
+                            <CardTitle className="cardTitle">TYSON'S TACOS</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://static1.squarespace.com/static/57ae2aaee58c62414bd26a20/57ae31e55016e1690c423e21/57ae322ce3df28c4ce928147/1484591339729/Tyson%27s+Tacos.jpg?format=1500w" alt="Card image cap" />
                             <CardBody>
-                            <CardText>Nothing's a better snack to grab with some friends after a night of drinking than tacos! Tyson Taco's has some of the best tacos in the Austin area.</CardText>
+                            <CardText>Tyson Taco's has some of the best tacos in the Austin area.</CardText>
                             <br></br>
                             <CardLink className="link" target="_blank" href="http://www.tysonstacos.com/">Tyson's Taco</CardLink>
                             </CardBody>
@@ -94,7 +98,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">Chili Dog</CardTitle>
+                            <CardTitle className="cardTitle">CHILI DOG</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -111,7 +115,7 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">Nachos</CardTitle>
+                            <CardTitle className="cardTitle">NACHOS</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
@@ -128,16 +132,16 @@ class Food extends Component {
                     <div className='foodcard'>
                         <Card>
                             <CardBody>
-                            <CardTitle className="cardTitle">Taco Bell</CardTitle>
+                            <CardTitle className="cardTitle">KERBEY LANE</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
                             <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fjeffhyman%2Ffiles%2F2018%2F05%2FTaco-Bell-Delivery-2015.jpg" alt="Card image cap" />
                             <CardBody>
-                            <CardText>Some foods are just only enjoyed after you've had a lot to drink. This place is the first on that list.</CardText> 
+                            <CardText>KERBEY LANE is a Austinite fan favorite and is open 24/7! Get your friends together and split some of that Kerby Queso goodness. </CardText> 
                             <br></br>
-                            <CardLink className="link" target="_blank" href="https://www.tacobell.com/locations">Find The Closetest Taco Bell</CardLink>
+                            <CardLink className="link" target="_blank" href="https://kerbeylanecafe.com/locations">Find The Closetest Taco Bell</CardLink>
                             </CardBody>
                         </Card>
                     </div>
