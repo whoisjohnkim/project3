@@ -13,13 +13,6 @@
     display: flex;
 
 }
-
-.card-playlist {
-    margin-left: 65%;
-    margin-top: 20%;
-    width: 18rem;
-    background-color: #B1DFE8;
-}
     
 #playlist {
     position: absolute;
@@ -29,3 +22,24 @@
     height: 50%;
 
 }
+
+.playlist-card {
+    background-color: #f9fbe4;
+    border-radius: 9px;
+}
+
+.cardsubtitle{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
+
+.carousel {
+    margin-left: 33%;
+    margin-top: 5%;
+    margin-bottom: 14%;
+}
+
+
+/* for the sound wave */
+

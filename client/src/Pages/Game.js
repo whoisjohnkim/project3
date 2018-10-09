@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "../components/Game.css";
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 import playing from "../images/playing.jpg";
 import { log } from "util";
 import API from "../utils/API";
@@ -154,7 +154,7 @@ class Game extends Component {
         }
         return (
             <div>
-                <Navbar />
+                <NewNavbar />
                 {display}
             </div>
         )
