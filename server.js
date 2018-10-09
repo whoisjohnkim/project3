@@ -34,15 +34,15 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 var db = require('./models');
 
-// app.get("/users", (req, res) => {
-//     connection.query("SELECT * FROM users", function(err, results){
-//         res.json(results);
-//     })
-// })
+app.get("/users", (req, res) => {
+    connection.query("SELECT * FROM users", function(err, results){
+        res.json(results);
+    })
+})
 
 
 // Register Route
-// app.post("/api/register", (req, res) => {
+// app.post("/api/registers/signup", (req, res) => {
 //     console.log("app post on server.js ran");
 //   if(!req.body.email || !req.body.password){
 //       return res.json({success: false, message: "Missing Username or Password"});

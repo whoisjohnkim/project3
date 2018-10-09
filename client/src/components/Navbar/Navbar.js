@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import API from "../../utils/API";
+import Logged from "../Logged/Logged";
 
 import onTapLogo from "../../images/OnTapLogoUpdated.svg";
 
@@ -46,7 +47,7 @@ class Navbar extends Component {
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
-            <img id="logo" src={ onTapLogo } alt="logo" />
+            <img id="logoNav" src={ onTapLogo } alt="logo" />
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -74,8 +75,8 @@ class Navbar extends Component {
                     <Link
                         to="/guides"
                         className={
-                             "nav-link dropdown-toggle"
-                        } 
+                             "nav-link dropdown-toggle" 
+                        } id="dropdownMenuButton"
                         >
                         GUIDE
                     </Link>
@@ -83,10 +84,10 @@ class Navbar extends Component {
                         this.state.showGuide
 
                         ? (
-                        <div aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
+                        <div id="hovermenu" aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
                             
                             {this.state.guides.map(guide => (
-                                <Link to={"/guides/" + guide._id} className="dropdown-item">
+                                <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
                                     {guide.title}
                                 </Link>
                             ))}
@@ -125,11 +126,7 @@ class Navbar extends Component {
                     </Link>
                     </li>
                 </ul>
-
-            <form className="form-inline my-2 my-lg-0">
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+                {/* ${ this.state.logged ? <Logged /> : "No user currently Logged In"} */}
             </div>
         </nav>
         )
