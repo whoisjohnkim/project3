@@ -39,7 +39,7 @@ class Home extends Component {
                 <span className="part part--center">
                     <span className="letter letter--i">I</span>
                     {/* <span class="letter letter--o">A</span> */}
-                    <span className="letter letter--U">U</span>
+                    {/* <span class="letter letter--U">U</span> */}
                 </span>
                 <span className="part part--right">
                     <span className="letter">N</span>
