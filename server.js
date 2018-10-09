@@ -36,29 +36,37 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 var db = require('./models');
 
-// app.get("/users", (req, res) => {
-//     connection.query("SELECT * FROM users", function(err, results){
-//         res.json(results);
-//     })
-// })
+app.get("/users", (req, res) => {
+    connection.query("SELECT * FROM users", function(err, results){
+        res.json(results);
+    })
+})
 
 const passportOptions = {
   jwtFromRequest : ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: "keyboard_cat"
 }
 
-passport.use(new JwtStrategy(
-  passportOptions, 
-  (jwt_payload, done) => {
-    User.findOne({_id: jwt_payload._id}, (err, user) => {
-        if(user){
-            done(null, user)
-        } else {
-            done(null, false)
-        }
-    })
-  }
-));
+// Register Route
+// app.post("/api/registers/signup", (req, res) => {
+//     console.log("app post on server.js ran");
+//   if(!req.body.email || !req.body.password){
+//       return res.json({success: false, message: "Missing Username or Password"});
+//   }
+//   const { email, password } = req.body;
+//   bcrypt.hash(password, 10, function(err, hash) {
+//      if(err){
+//       res.json({success: false, message: "Problem creating account"});
+//      }
+//      connection.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash], function(err, results){
+//       if(err){
+//           res.json({success: false, message: "Email address is taken"});
+//       }
+//       res.json({success: true, results: results});
+//       });
+//   });
+
+// });
 
 //Login Route
 app.post("/api/login", (req, res) => {

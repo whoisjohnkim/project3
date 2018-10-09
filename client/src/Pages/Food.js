@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import "./Food/Food.css";
-import Navbar from "../components/Navbar";
+import NewNavbar from "../components/Navbar";
 import { Card, CardImg, CardText, CardBody, CardLink,
-CardTitle, CardSubtitle, Button } from 'reactstrap';
+CardTitle, CardSubtitle} from 'reactstrap';
 
 
 // import API from "../utils/API";
@@ -29,9 +29,9 @@ class Food extends Component {
 
     render() {
         return (
-            
-            <div className= "divContainer">
-                <Navbar />
+
+            <div className= "FoodDivContainer">
+                <NewNavbar />
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
                         <h1 className="display-4 h1D">DRUNCHIES!!!</h1>
@@ -46,8 +46,8 @@ class Food extends Component {
                             <CardBody>
                             <CardTitle className="cardTitle">Mac N Cheetos</CardTitle>
                             <br></br>
-                            <CardSubtitle className="cardsubtitle">If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
+                            <CardSubtitle className="CardSubtitle">If you haven't had it, you have to try it!</CardSubtitle>
+
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://i5.walmartimages.com/asr/cf3a2658-2f36-4d7d-887c-b57f7d5bdd03_1.2acac3766810ce6641b3aede6633b599.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" alt="Card image cap" />
                             <CardBody>
@@ -81,7 +81,6 @@ class Food extends Component {
                             <CardTitle className="cardTitle">Tyson's Tacos</CardTitle>
                             <br></br>
                             <CardSubtitle>If you haven't had it, you have to try it!</CardSubtitle>
-                            <br></br>
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://static1.squarespace.com/static/57ae2aaee58c62414bd26a20/57ae31e55016e1690c423e21/57ae322ce3df28c4ce928147/1484591339729/Tyson%27s+Tacos.jpg?format=1500w" alt="Card image cap" />
                             <CardBody>
@@ -136,7 +135,7 @@ class Food extends Component {
                             </CardBody>
                             <CardImg className="secondcardimage" width="100%" height="300px" src="https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fjeffhyman%2Ffiles%2F2018%2F05%2FTaco-Bell-Delivery-2015.jpg" alt="Card image cap" />
                             <CardBody>
-                            <CardText>Some foods are just only enjoyed after you've had a lot to drink. This place is the first on that list.</CardText> 
+                            <CardText>Some foods are just only enjoyed after you've had a lot to drink. This place is the first on that list.</CardText>
                             <br></br>
                             <CardLink className="link" target="_blank" href="https://www.tacobell.com/locations">Find The Closetest Taco Bell</CardLink>
                             </CardBody>
@@ -149,3 +148,5 @@ class Food extends Component {
 }
 
 export default Food;
+
+

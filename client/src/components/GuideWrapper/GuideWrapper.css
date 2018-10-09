@@ -2,7 +2,19 @@
     display: block;
     width: 100%;
 }
+
+.headerPhoto {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    margin: 5px;
+    width: 100px;
+}
  .game {
+    padding: 20px;
     width: 80%;
     display: block;
     margin: 2% auto;

@@ -1,9 +1,10 @@
 import React from "react";
 import "./Jumbotron.css";
+import logo from "../../images/OnTapLogoUpdated.png";
 
 const Jumbotron = () => (
   <div className="jumbotron text-center">
-    <h1>ON TAP</h1>
+    <img src={ logo } alt="logo" />
     {/* <a
       target="_blank"
       rel="noopener noreferrer"

@@ -1,10 +1,16 @@
 import React, {Component} from "react";
 import "../components/Game.css";
-import Navbar from "../components/Navbar";
-import playing from "../images/playing.jpg";
-import { log } from "util";
-import API from "../utils/API";
+import NewNavbar from "../components/Navbar";
+// import playing from "../images/playing.jpg";
+// import { log } from "util";
+// import API from "../utils/API";
 import game from "../game.json";
+
+// import token1 from "../images/onePixel.png";
+// import token2 from "../images/twoPixel.png";
+// import token3 from "../images/threePixel.png";
+// import token4 from "../images/fourPixel.png";
+// import token5 from "../images/fivePixel.png";
 
 
 class Game extends Component {
@@ -17,7 +23,8 @@ class Game extends Component {
         order: [],
         turnNumber: 0,
         currentTurn: "",
-        phase: "title"
+        phase: "title",
+        value: ""
     };
 
     componentDidMount() {
@@ -39,21 +46,27 @@ class Game extends Component {
             description: game.description,
             turns: game.turns,
             players: ["Player1", "Player2", "Player3", "Player4"],
-            phase: "started"
+            phase: "players"
         })
-        this.setOrder();
     };
+
     handleChange(event) {
         this.setState({value: event.target.value});
     };
 
     setOrder = () => {
-        var order = [];
-        for(var i = 0; i < this.state.turns.length; i++){
-            order.push(i);
+        if(this.state.players.length < 2){
+            this.setState({phase: "players"})
         }
-        this.setState({order: order, turnNumber: 0, currentTurn: "Everyone Take a Drink!"});
-        this.shuffle();
+        else{
+            var order = [];
+            for(var i = 0; i < this.state.turns.length; i++){
+                order.push(i);
+            }
+            this.setState({order: order, turnNumber: 0, phase: "started",  currentTurn: "Everyone Take a Drink!"});
+            this.shuffle();
+        }
+
     };
 
     shuffle = () => {
@@ -73,27 +86,45 @@ class Game extends Component {
     };
 
     nextTurn = () => {
-        var name1, name2;
-        var random1, random2;
-        random1 = Math.floor(Math.random() * this.state.players.length);
-        random2 = random1;
-        while(random1 === random2){
-            random2 = Math.floor(Math.random() * this.state.players.length)
-        };
-        if(this.state.turnNumber === this.state.turns.length){
-            this.setOrder();
+        if(this.state.players.length > 1) {
+            var random1, random2;
+            random1 = Math.floor(Math.random() * this.state.players.length);
+            random2 = random1;
+            while(random1 === random2){
+                random2 = Math.floor(Math.random() * this.state.players.length)
+            };
+            if(this.state.turnNumber === this.state.turns.length){
+                this.setOrder();
+            }
+            else{
+                this.setState({currentTurn: this.state.players[random1] + this.state.turns[this.state.turnNumber] + this.state.players[random2], turnNumber: this.state.turnNumber + 1});
+            }
         }
         else{
-            this.setState({currentTurn: this.state.players[random1] + this.state.turns[this.state.turnNumber] + this.state.players[random2], turnNumber: this.state.turnNumber + 1});
+            this.setState({currentTurn: "Please Enter At Least Two Players To Play This Game", phase: "players"});
         }
 
+    };
+
+    restart = () => {
+        this.setState({phase: "title"});
+    }
+
+    addPlayer = () => {
+        var array = this.state.players;
+        array.push(this.state.value);
+        this.setState({players: array, value: ""});
     }
 
     render () {
         let display;
         if(this.state.phase === "started"){
             display = (<div className="games-img" onClick={this.nextTurn}>
-                        <p id="gameText">{this.state.currentTurn}</p>
+                        <span className="gameSpan">
+                            <p id="gameText">{this.state.currentTurn}</p>
+                            <br/>
+                            <button type="button" className="btn btn-success playerButton " onClick={this.restart}>Restart Game</button>
+                        </span>
                     </div>)
         }
         else if(this.state.phase === "title"){
@@ -104,14 +135,25 @@ class Game extends Component {
         }
         else if(this.state.phase === "players"){
             display = (<div className="games-img">
-                <input type="text" value={this.state.playerName} onChange={this.handleChange}/>
-                <button type="button" onClick={this.addPlayer}>Add Player</button>
-                <button type="button" onClick={this.clearPlayers}>Clear Players</button>
+                <span className="playerSpan">
+                    <p className="playerHeader">Who's Playing?</p>
+                    <input type="text" className="playerName" value={this.state.value} onChange={this.handleChange}/><br></br>
+                    <button type="button" className="btn btn-secondary playerButton " onClick={this.addPlayer}>Add Player</button>
+                    <button type="button" className="btn btn-success playerButton " onClick={this.setOrder}>Start Game</button>
+                    <button type="button" className="btn btn-secondary playerButton " onClick={this.clearPlayers}>Clear Players</button>
+                    <span className="players">
+                        <h3 className="currentPlayers">Current Players:</h3>
+                        {this.state.players.map((player, i) => (
+                            <p key={i} className="playerList">{player}</p>
+                        ))}
+                    </span>
+                </span>
+
             </div>)
         }
         return (
             <div>
-                <Navbar />
+                <NewNavbar />
                 {display}
             </div>
         )
