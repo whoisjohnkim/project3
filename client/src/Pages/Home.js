@@ -1,16 +1,9 @@
 import React, {Component} from 'react';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Game from './Game';
-// import Guides from './Guides';
-// import Food from './Food';
-// import Playlist from './Playlist';
-// import KingsCup from './KingsCup';
-// import Waterfall from './Waterfall';
-// import BeerPong from './BeerPong';
-// import Cup from './21cup';
-// import Odds from './Odds';
-// import Skull from './SkullAndDice';
-// import Cheers from './CheersToTheGovernor';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Game from './Game';
+import Guides from './Guides';
+import Food from './Food';
+import Playlist from './Playlist';
 import NewNavbar from "../components/Navbar";
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
@@ -30,7 +23,7 @@ class Home extends Component {
                 {/* <Jumbotron /> */}
                 <NewNavbar />
                 <div className="home-img">
-                <p id="we"> we </p>
+                <p id="time"> time to get </p>
                 <div className= "drunk">
                 <span className="part part--left">
                     <span className="letter">D</span>

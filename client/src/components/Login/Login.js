@@ -9,11 +9,10 @@ import {
   // withRouter
 } from "react-router-dom";
 // import logo from "../../images/OnTapLogoUpdated.png";
-
-
+import Helmet from 'react-helmet';
 import './Login.css';
 const cheers = require('../../images/cheers.jpg');
-const logo = require('../../images/OnTapLogoUpdated.png');
+const loglogo = require('../../images/OnTapLogoUpdated.png');
 class Login extends Component {
 
     state = {
@@ -75,6 +74,7 @@ class Login extends Component {
     render() {
         return (
             <div>
+              <Helmet bodyAttributes={{style: 'background: #eee'}}/>
               <div id="content">
                 <img id="cheers" alt="cheers" src={ cheers } />
                     <center>
@@ -84,7 +84,7 @@ class Login extends Component {
                     </center>
               </div>
               <div id="sidebar">
-              <img id= "logo" alt="logo" src={ logo } />
+              <img id= "loglogo" src={ loglogo } />
               <br/>
                 <p id="usual"> the usual for you?</p>
                 <br/>
@@ -94,13 +94,15 @@ class Login extends Component {
                     <div class="form-group">
                         <label for="exampleInputEmail1" id="formquestion">email address</label>
                         <input name="email" onChange={this.handleInputChange} type="email" value={this.state.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter email" />
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <small id="emailHelp" class="form-text text-muted">we'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1" id="formquestion">password</label>
                         <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="password" />
                     </div>
-                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Log In</button>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">log in</button>
+                    <p id= "dont"> don't have an account? </p>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">sign up</button>
                     </center>
                     </form>
 

@@ -1,33 +1,53 @@
 .FoodDivContainer {
     text-align: center;
     margin: auto;
-    
+    color: grey;
+    letter-spacing: 1px;
+
 }
 
-.jumbotron{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLJniUr4EFCulbGflXNYssRnOq9GP_RHCksKEqxrO7XnASBxoRQ");
+/* .food-img {
+    background: url("../../images/spoon.png");
+    background-repeat: repeat;
+} */
+
+
+.foodjumbotron{
+    background-image: url("../../images/food.jpg");
     color: white;
+    height: 300px;
+    background-size: cover;
+
 }
 
-.h1D{
-    font-family: 'Indie Flower', cursive;
+.display-3{
+    letter-spacing: 7px;
+    font-family: 'Oswald', sans-serif;
+    top: 20%;
+    font-size: 80px;
+    padding-top: 5%;
+    opacity: 0.95;
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
+    
+
+
 }
 
-.cardTitle{
-    font-family: 'Comfortaa', cursive;
-    font-size: 25px;
-}
 
 .foodcard{
-    width: 450px;
+    width: 425px;
     height: 584px;
-    margin: 20px 50px ;
+    margin: 0px 25px;
+    padding-top: 30px;
+    padding-left: 5px; 
     float: left;
     position: relative;
 }
 
 .secondcardimage{
-    width: 420px;
+    width: 418px;
+    padding: 20px;
+    margin-top: -40px;
     
 }
 
@@ -37,5 +57,43 @@
     
 }
 .link:visited{
-    color: purple;
+    color: lightslategrey;
+}
+
+.lead {
+    font-weight: bold;
+    filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.9));
+
+}
+
+.cardTitle {
+    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    /* color: rgb(153, 151, 151); */
+    background-color: lightblue;
+    padding: 10px;
+    border-style: dotted;
+    text-shadow:
+    2px 2px 0 rgb(153, 153, 153),
+  -1px -1px 0 rgb(153, 153, 153),  
+   1px -1px 0 rgb(153, 153, 153),
+   -1px 1px 0 rgb(153, 153, 153),
+    1px 1px 0 rgb(153, 153, 153);
+}
+
+
+    /* background-color: lightblue;
+    height: 100%;
+} */
+
+
+.link {
+    letter-spacing: 1px;
+    color: lightgrey;
+    padding: 8px;
+    font-weight: bold;
+
+    
 }
