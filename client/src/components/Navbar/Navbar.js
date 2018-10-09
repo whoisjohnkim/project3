@@ -69,7 +69,7 @@ class Navbar extends Component {
                 {/* ////////////////////////////////////////// */}
 
                     <li className="nav-item dropdown"
-                        onMouseOver={this.showGuide}
+                        // onMouseOver={this.showGuide}
                     >
                     <Link
                         to="/guides"

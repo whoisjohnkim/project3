@@ -1,25 +1,38 @@
 import React, {Component} from "react";
 import Navbar from "../components/Navbar";
 import "../components/Playlist.css";
-import { Card, CardImg, CardText, CardBody, CardLink,
-CardTitle, CardSubtitle, Button } from 'reactstrap';
 import "./Playlist/Playlist.css";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 class Playlist extends Component {
     render() {
         return (
-            <div className="wholePage">
+            <div>
                 <Navbar />
-                <div className="jumbotron jumbotron-fluid">
-                    <div className="container">
-                        <h1 className="display-4 h1D">Music Time!</h1>
-                        <br></br>
-                        <p className="lead">Let's get some music playing!</p>
-                    </div>
-                </div>
+                    <div className="wholePage">
+                        <Carousel>
+                            <div>
+                                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXdgnLr18vPvu" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                            <div>
+                                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4WYpdgoIcn6" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
 
-                <div className="playlistContainer">
+                            <div>
+                                    <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX0XUsuxWHRQd" width="410" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </Carousel>
+                    </div>
+            </div>
+        )
+    }
+}
+
+export default Playlist;
+
+                {/* <div className="playlistContainer">
                     <div className='playlistcard'>
                         <Card>
                             <CardBody>
@@ -88,14 +101,5 @@ class Playlist extends Component {
                             </CardBody>
                         </Card>
                     </div>
-                </div>
-            </div>
-                           
-                        
-                        
-        )
-    }
-}
-
-export default Playlist;
+                </div> */}                        
 

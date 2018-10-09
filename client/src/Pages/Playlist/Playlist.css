@@ -10,15 +10,25 @@
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
 }
-.playlistContainer{
-    background-color: black;
-}
+
 .wholePage{
-    background-color: black;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(20,20,20, .3),
+        rgba(20,20,20, .3)),
+        url("../../images/vinyls.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+
 }
 
-.jumbotron{
-    background-image: url("http://getwallpapers.com/wallpaper/full/c/c/6/698350-cool-music-backgrounds-1920x1080-hd-1080p.jpg");
+.playlist-jumbo{
+    background-image: url("../../images/vinyls.jpg");
     color: white;
     text-align: center;
 }
