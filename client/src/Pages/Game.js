@@ -1,16 +1,16 @@
 import React, {Component} from "react";
 import "../components/Game.css";
 import NewNavbar from "../components/Navbar";
-import playing from "../images/playing.jpg";
-import { log } from "util";
-import API from "../utils/API";
+// import playing from "../images/playing.jpg";
+// import { log } from "util";
+// import API from "../utils/API";
 import game from "../game.json";
 
-import token1 from "../images/onePixel.png";
-import token2 from "../images/twoPixel.png";
-import token3 from "../images/threePixel.png";
-import token4 from "../images/fourPixel.png";
-import token5 from "../images/fivePixel.png";
+// import token1 from "../images/onePixel.png";
+// import token2 from "../images/twoPixel.png";
+// import token3 from "../images/threePixel.png";
+// import token4 from "../images/fourPixel.png";
+// import token5 from "../images/fivePixel.png";
 
 
 class Game extends Component {
@@ -87,7 +87,6 @@ class Game extends Component {
 
     nextTurn = () => {
         if(this.state.players.length > 1) {
-            var name1, name2;
             var random1, random2;
             random1 = Math.floor(Math.random() * this.state.players.length);
             random2 = random1;

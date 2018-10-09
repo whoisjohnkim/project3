@@ -7,10 +7,10 @@ import Playlist from './Playlist';
 import NewNavbar from "../components/Navbar";
 // import Footer from "./components/Footer";
 // import Wrapper from "./components/Wrapper";
-import Jumbotron from "../components/Jumbotron";
-import cheers from "../images/cheers.jpg";
-import playing from "../images/playing.jpg";
-import shots from "../images/shots.jpg";
+// import Jumbotron from "../components/Jumbotron";
+// import cheers from "../images/cheers.jpg";
+// import playing from "../images/playing.jpg";
+// import shots from "../images/shots.jpg";
 
 import "../components/Home.css";
 
@@ -26,8 +26,8 @@ class Home extends Component {
                 <p id="we"> we </p>
                 <div className= "drunk">
                 <span className="part part--left">
-                    <span className="letter">D</span>	
-                    <span className="letter">R</span>	
+                    <span className="letter">D</span>
+                    <span className="letter">R</span>
                 </span>
                 <span class="part part--center">
                     <span class="letter letter--U">U</span>

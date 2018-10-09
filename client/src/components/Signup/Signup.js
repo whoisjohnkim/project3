@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
+  BrowserRouter as
+  // Router,
+  // Route,
+  Link
+  // Redirect,
+  // withRouter
 } from "react-router-dom";
 import Helmet from 'react-helmet';
 
@@ -20,7 +21,7 @@ class Signup extends Component {
         password: ""
       }
       componentDidMount(){
-    
+
         // setInterval(() => {
         //   const timeSince = (+Date.now() - this.state.startTime)/1000;
         //   this.setState({title: `Are you still there? It's been ${timeSince} seconds`}, function(){
@@ -28,7 +29,7 @@ class Signup extends Component {
         //   })
         // }, 1000)
       }
-    
+
       handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -41,13 +42,13 @@ class Signup extends Component {
         //console.log(event.target);
         axios.post("/api/registers/signup", {email: this.state.email, password: this.state.password}).then(function(response){
             console.log("test1")
-          
+
         })
         this.setState({ email: "", password: ""});
         // Route to homepage
 
       }
-    
+
       componentDidUpdate(){
         console.log();
       }
@@ -58,7 +59,7 @@ class Signup extends Component {
             <div>
                <Helmet bodyAttributes={{style: 'background: #eee'}}/>
               <div id="content">
-                <img id="hip" src={ hip } />
+                <img id="hip" alt="hip" src={ hip } />
                     <center>
                     <p id= "hello"> HELLO. </p>
                     <p id= "seat"> come on in and take a seat. </p>
@@ -70,7 +71,7 @@ class Signup extends Component {
               <br/>
                 <p id="what"> what can we get for you to drink?</p>
                 <br/>
-                
+
                     <form>
                     <center>
                     <div class="form-group">
@@ -88,9 +89,9 @@ class Signup extends Component {
                     
                     </center>
                     </form>
-                    
+
                 </div>
-               
+
             </div>
         )
     }
