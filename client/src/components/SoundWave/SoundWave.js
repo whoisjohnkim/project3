@@ -2,17 +2,9 @@ import React, { Component } from "react";
 import "./SoundWave.css";
 
 class SoundWave extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            n: 12,
-            elements: []
-        };
-        this.theWave = this.theWave.bind(this);
-    }
 
     theWave () {
-            const n = 12;
+            const n = 20;
             while(n > 0){
                 const elements = [
                     <div key="1" className="animation-container"></div>    
@@ -31,6 +23,14 @@ class SoundWave extends Component {
                     <div className="rect-3"></div>	
                     <div className="rect-4"></div>	
                     <div className="rect-5"></div>	
+                    <div className="rect-6"></div>
+                    <div className="rect-7"></div>
+                    <div className="rect-8"></div>
+                    <div className="rect-9"></div>	
+                    <div className="rect-10"></div>		
+                    <div className="rect-9"></div>
+                    <div className="rect-8"></div>
+                    <div className="rect-7"></div>
                     <div className="rect-6"></div>	
                     <div className="rect-5"></div>
                     <div className="rect-4"></div>	

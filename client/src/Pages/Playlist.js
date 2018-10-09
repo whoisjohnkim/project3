@@ -99,7 +99,7 @@ class Playlist extends Component {
             <div>
                 <NewNavbar />
                 <div className="playlist-img">
-                    <SoundWave />
+                        <SoundWave />
                     <Carousel
                         activeIndex={activeIndex}
                         next={this.next}
