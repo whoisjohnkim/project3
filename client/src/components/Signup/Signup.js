@@ -80,7 +80,9 @@ class Signup extends Component {
                         <label for="exampleInputPassword1" id="formquestion">password</label>
                         <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="password" />
                     </div>
-                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Log In</button>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">sign up</button>
+                    <p id= "log"> already have an account? </p>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">login</button>
                     </center>
                     </form>
                     

@@ -17,7 +17,7 @@ body {
 }
 
 #logo {
-    margin-top: 20%;
+    margin-top: 10%;
     padding-top: 30px;
     height: 90%;
     width: 90%;
@@ -26,7 +26,7 @@ body {
 
 #what {
     text-align: center;
-    margin-top: 50%;
+    margin-top: 10%;
     font-size: 35px;
     font-family: 'Cookie', cursive;
     /* color: #B1DFE8; */
@@ -64,26 +64,18 @@ input {
     1px 1px 0 rgb(100, 97, 97); */
     filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
 
-
-    
-
-
-
 }
-/* 
-center {
-    text-align: left;
-} */
-/* 
-center label#formquestion {
-    text-align: left;
-} */
+
+#log {
+    font-size: 12px;
+    color: grey;
+    padding-top: 5px;
+}
 
 #seat {
     color: white;
-    font-size: 16px;
+    letter-spacing: 2px;
     font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
     opacity: 0.9;
 
 }

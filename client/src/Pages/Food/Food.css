@@ -7,13 +7,19 @@
 .foodjumbotron{
     background-image: url("../../images/food.jpg");
     color: white;
-    height: 400px;
+    height: 300px;
     background-size: cover;
+
 }
 
-.h1D{
-    font-family: 'Indie Flower', cursive;
-    letter-spacing: 4px;
+.display-3{
+    letter-spacing: 7px;
+    font-family: 'Oswald', sans-serif;
+    top: 20%;
+    font-size: 80px;
+    padding-top: 5%;
+    opacity: 0.9;
+
 }
 
 .cardTitle{

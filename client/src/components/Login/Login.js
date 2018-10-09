@@ -12,7 +12,7 @@ import {
 
 import './Login.css';
 const cheers = require('../../images/cheers.jpg');
-const logo = require('../../images/OnTapLogoUpdated.png');
+const loglogo = require('../../images/OnTapLogoUpdated.png');
 class Login extends Component {
 
     state = {
@@ -83,7 +83,7 @@ class Login extends Component {
                     </center>
               </div>
               <div id="sidebar">
-              <img id= "logo" src={ logo } />
+              <img id= "loglogo" src={ loglogo } />
               <br/>
                 <p id="usual"> the usual for you?</p>
                 <br/>
@@ -100,6 +100,8 @@ class Login extends Component {
                         <input name="password" type="password" onChange={this.handleInputChange}  class="form-control" value={this.state.password} id="exampleInputPassword1" placeholder="password" />
                     </div>
                     <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">Log In</button>
+                    <p id= "dont"> don't have an account? </p>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">sign up</button>
                     </center>
                     </form>
                     

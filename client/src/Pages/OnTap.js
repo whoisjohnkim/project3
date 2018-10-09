@@ -15,7 +15,7 @@ class OnTap extends Component {
                             {/* <h1 id= "ontapword"> ON TAP </h1>                             */}
                             <img id="landinglogo" src={ landinglogo } />
                             <br/>
-                            <a href="./Home">
+                            <a href="./Signup">
                                 <img id= "smolbeer" src={require('../images/smolbeer.png')} />
                             </a>
                             <h4 id= "toplay"> click to play! </h4>                        
