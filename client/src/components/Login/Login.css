@@ -10,6 +10,7 @@ body {
 #sidebar {
     float:left;
     width:33%;
+ 
 }
 
 .form-group {
@@ -19,14 +20,15 @@ body {
 #loglogo {
     margin-top: 13%; 
     /* padding-top: 30px; */
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
     
 }
 
 #usual {
     text-align: center;
-    margin-top: 10%;
+    margin-top: -2%;
     font-size: 45px;
     font-family: 'Cookie', cursive;
     /* color: #B1DFE8; */
@@ -39,8 +41,7 @@ body {
 #cheers {
     width: 100%;
     padding-left: 10px;
-    /* height:100%; */
-    margin-top: -2.5%;
+    margin-top: 6%;
 }
 
 input {
@@ -60,14 +61,6 @@ input {
     filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
 
 }
-/* 
-center {
-    text-align: left;
-} */
-/* 
-center label#formquestion {
-    text-align: left;
-} */
 
 #waiting {
     color: white;

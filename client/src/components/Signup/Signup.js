@@ -84,7 +84,7 @@ class Signup extends Component {
                     </div>
                     <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">sign up</button>
                     <p id= "log"> already have an account? </p>
-                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">login</button>
+                    <button type="submit" onClick={this.handleLoginButton} class="btn btn-primary">log in</button>
                     
                     </center>
                     </form>
