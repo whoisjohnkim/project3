@@ -11,20 +11,20 @@ class Navbar extends Component {
     constructor () {
         super();
         this.state = {
-            showGuide: false,
+            isOpen: false,
             guides: []
         };
 
-        this.showGuide = this.showGuide.bind(this);
-
     }
 
-    showGuide(event) {
+    handleOpen (event) {
         event.preventDefault();
+        
+        this.setState({isOpen: true})
+    }
 
-        this.setState({
-            showGuide: true,
-        });
+    handleClose () {
+
     }
 
     componentDidMount() {
@@ -44,6 +44,9 @@ class Navbar extends Component {
     }
 
     render(){
+
+        const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
+
         return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/home">
@@ -69,7 +72,8 @@ class Navbar extends Component {
                     </li>
                 {/* ////////////////////////////////////////// */}
 
-                    <li className="nav-item dropdown"
+                    <li 
+                        className="nav-item dropdown"
                         // onMouseOver={this.showGuide}
                     >
                     <Link
@@ -84,7 +88,7 @@ class Navbar extends Component {
                         this.state.showGuide
 
                         ? (
-                        <div id="hovermenu" aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
+                        <div className={menuClass} id="hovermenu" aria-labelledby="navbarDropdown" onClick={this.refreshPage}>
                             
                             {this.state.guides.map(guide => (
                                 <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
@@ -135,4 +139,3 @@ class Navbar extends Component {
 
 export default Navbar;
 
-// const menuClass = `dropdown-menu${this.state.isOpen ? "" : ""}`;
