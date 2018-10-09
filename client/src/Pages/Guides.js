@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import NewNavbar from "../components/Navbar";
 import "../components/Guides.css";
-import GuideWrapper from "../components/GuideWrapper"
+// import GuideWrapper from "../components/GuideWrapper"
 
 
-import API from "../utils/API";
+// import API from "../utils/API";
 
 class Guides extends Component {
     // state = {

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import API from "../../utils/API";
-import Logged from "../Logged/Logged";
+// import Logged from "../Logged/Logged";
 
 //stuff from reactstrap for new nav
 import {
@@ -26,7 +26,7 @@ class NewNavbar extends Component {
     // new navbar states
     constructor(props) {
         super(props);
-    
+
         this.toggle = this.toggle.bind(this);
         this.state = {
           isOpen: false,
@@ -82,10 +82,10 @@ class NewNavbar extends Component {
                                 </DropdownToggle>
 
                                 {/* RENDERING THE GUIDES */}
-                                <DropdownMenu right>                            
+                                <DropdownMenu right>
                                     <DropdownItem onClick={this.refreshPage}>
                                     {this.state.guides.map(guide => (
-                                    <Link to={"/guides/" + guide._id} id="hovermenu" className="dropdown-item">
+                                    <Link to={"/guides/" + guide._id} key={guide._id} id="hovermenu" className="dropdown-item">
                                         {guide.title}
                                     </Link>
                                     ))}
