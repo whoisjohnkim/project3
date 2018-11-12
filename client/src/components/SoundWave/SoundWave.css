@@ -1,0 +1,115 @@
+.animation-container {
+  /* width: 300%; */
+  margin-left: 32%;
+  margin-top: 4%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin: auto; */
+
+}
+  
+.sound-container {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    margin-left: 4px  ; 
+}
+
+  
+.animation-container .sound-container>div {
+    position: relative;
+    height: 100%;
+    width: 25px;
+    background: #540D6E;
+    display: inline-block;
+    animation: wave 3s infinite ease-in-out;
+    -webkit-animation: wave 3s infinite ease-in-out;
+  
+}
+
+.animation-container .sound-container .rect-2 {
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+  
+}
+
+.animation-container .sound-container .rect-3 {
+   animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+   
+}
+ 
+
+.animation-container .sound-container .rect-4 {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+
+}
+  
+.animation-container .sound-container .rect-5 {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  
+} 
+.animation-container .sound-container .rect-6 {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+
+}
+.animation-container .sound-container .rect-7 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+
+} 
+.animation-container .sound-container .rect-8 {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+
+} 
+.animation-container .sound-container .rect-9 {
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+
+} 
+.animation-container .sound-container .rect-10 {
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+
+} 
+
+  
+@keyframes wave{
+    0% {
+        
+    }
+    100%{
+      transform: scaleY(1);
+      background: #008DD5
+    }
+    16.67%{
+      transform: scaleY(3);
+      background: #FFF38E
+    }
+    33.33%{
+      transform: scaleY(1);
+      background: #FF8C42
+    }
+    50%{
+      transform: scaleY(3);
+      background: #FF514F
+    }
+    66.67%{
+      transform: scaleY(1);
+      background: #B0228C
+    }
+    83.34%{
+      transform: scaleY(3);
+      background: #7DDF64
+    }
+
+}
